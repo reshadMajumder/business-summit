@@ -1,0 +1,89 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "app-logo",
+      "description": "Business Summit Official Logo",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1779648074/bs_rsgucp.png",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "speaker-1",
+      "description": "Tech CEO on stage",
+      "imageUrl": "https://picsum.photos/seed/apex1/800/1000",
+      "imageHint": "business leader"
+    },
+    {
+      "id": "speaker-2",
+      "description": "Innovation Director speaking",
+      "imageUrl": "https://picsum.photos/seed/apex2/800/1000",
+      "imageHint": "executive portrait"
+    },
+    {
+      "id": "speaker-3",
+      "description": "Global Strategist",
+      "imageUrl": "https://picsum.photos/seed/apex3/800/1000",
+      "imageHint": "professional speaker"
+    },
+    {
+      "id": "speaker-4",
+      "description": "Future Tech Leader",
+      "imageUrl": "https://picsum.photos/seed/apex4/800/1000",
+      "imageHint": "business woman"
+    },
+    {
+      "id": "live-keynote",
+      "description": "Live keynote background",
+      "imageUrl": "https://picsum.photos/seed/live/1200/800",
+      "imageHint": "conference stage"
+    },
+    {
+      "id": "partner-1",
+      "description": "Partner Logo 1",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_3c20512e52384a689b5d97796f765737mv2.jpg",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "partner-2",
+      "description": "Partner Logo 2",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_4eb779ddaa2d480ea2a98cf706fcdab4mv2.png",
+      "imageHint": "corporate identity"
+    },
+    {
+      "id": "partner-3",
+      "description": "Partner Logo 3",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_7a5d6a920a61419593e290d401d21e7bmv2.jpg",
+      "imageHint": "brand mark"
+    },
+    {
+      "id": "partner-4",
+      "description": "Partner Logo 4",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_032d1a8d3cc3484a95d6353c0154d6f1mv2.png",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "mou-1",
+      "description": "Preparation for MOU signing",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/05/prepare.jpeg",
+      "imageHint": "business preparation"
+    },
+    {
+      "id": "mou-2",
+      "description": "MOU Handshake with Governor",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/05/hand-shake-1024x768.jpeg",
+      "imageHint": "official handshake"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Summit Discussion Panel",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/05/0901-1-1024x576.jpg",
+      "imageHint": "conference discussion"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Summit Presentation Hall",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/05/DSC06283-1-1024x576.jpg",
+      "imageHint": "keynote audience"
+    }
+  ]
+}
