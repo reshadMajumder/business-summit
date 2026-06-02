@@ -2,15 +2,15 @@
   "placeholderImages": [
     {
       "id": "app-logo",
-      "description": "Apex Summit Official Logo",
+      "description": "Business Summit Official Logo",
       "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1779648074/bs_rsgucp.png",
       "imageHint": "company logo"
     },
     {
       "id": "speaker-1",
-      "description": "Tech CEO on stage",
-      "imageUrl": "https://picsum.photos/seed/apex1/800/1000",
-      "imageHint": "business leader"
+      "description": "Dr. M. Haider Uzzaman - Chairman",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2024/12/744786_5216b5a1ffdf404bae1d280ac96fa1cemv2.avif",
+      "imageHint": "executive portrait"
     },
     {
       "id": "speaker-2",
@@ -83,6 +83,12 @@
       "description": "Summit Presentation Hall",
       "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/05/DSC06283-1-1024x576.jpg",
       "imageHint": "keynote audience"
+    },
+    {
+      "id": "mentoring-promo",
+      "description": "Mentoring Session Promotion",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2024/12/744786_b5a796c4cac3481ea32160d99c82831emv2.avif",
+      "imageHint": "business professional"
     }
   ]
 }

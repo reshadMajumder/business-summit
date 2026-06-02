@@ -1,18 +1,19 @@
+
 "use client"
 
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export function Partners() {
-  const partnerLogos = [
-    "partner-1",
-    "partner-2",
-    "partner-3",
-    "partner-4"
-  ].map(id => PlaceHolderImages.find(img => img.id === id)).filter(Boolean)
+  const logos = [
+    PlaceHolderImages.find(img => img.id === 'partner-1'),
+    PlaceHolderImages.find(img => img.id === 'partner-2'),
+    PlaceHolderImages.find(img => img.id === 'partner-3'),
+    PlaceHolderImages.find(img => img.id === 'partner-4'),
+  ].filter(Boolean)
 
-  // Duplicate logos to create seamless loop
-  const duplicatedLogos = [...partnerLogos, ...partnerLogos, ...partnerLogos, ...partnerLogos, ...partnerLogos, ...partnerLogos]
+  // Duplicating for seamless loop
+  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos]
 
   return (
     <section className="py-24 bg-white overflow-hidden border-y border-black/5">
@@ -28,18 +29,21 @@ export function Partners() {
         </div>
       </div>
 
-      <div className="space-y-12">
+      <div className="space-y-8">
         {/* Row 1: Scrolling Left */}
         <div className="relative flex overflow-hidden">
-          <div className="flex gap-12 animate-scroll-left whitespace-nowrap">
+          <div className="flex gap-8 animate-scroll-left whitespace-nowrap">
             {duplicatedLogos.map((logo, index) => (
-              <div key={`row1-${index}`} className="relative w-48 h-24 md:w-64 md:h-32 bg-background flex items-center justify-center p-6 border border-black/5 grayscale hover:grayscale-0 transition-all duration-500">
+              <div 
+                key={`row1-${index}`} 
+                className="relative w-40 h-20 md:w-64 md:h-32 bg-white flex items-center justify-center p-6 border border-black/5 transition-all duration-500 hover:border-accent"
+              >
                 {logo?.imageUrl && (
                   <Image
                     src={logo.imageUrl}
                     alt={logo?.description || "Partner"}
                     fill
-                    className="object-contain p-4"
+                    className="object-contain p-4 transition-all"
                     data-ai-hint={logo?.imageHint}
                   />
                 )}
@@ -50,15 +54,18 @@ export function Partners() {
 
         {/* Row 2: Scrolling Right */}
         <div className="relative flex overflow-hidden">
-          <div className="flex gap-12 animate-scroll-right whitespace-nowrap">
+          <div className="flex gap-8 animate-scroll-right whitespace-nowrap">
             {duplicatedLogos.map((logo, index) => (
-              <div key={`row2-${index}`} className="relative w-48 h-24 md:w-64 md:h-32 bg-background flex items-center justify-center p-6 border border-black/5 grayscale hover:grayscale-0 transition-all duration-500">
+              <div 
+                key={`row2-${index}`} 
+                className="relative w-40 h-20 md:w-64 md:h-32 bg-white flex items-center justify-center p-6 border border-black/5 transition-all duration-500 hover:border-accent"
+              >
                 {logo?.imageUrl && (
                   <Image
                     src={logo.imageUrl}
                     alt={logo?.description || "Partner"}
                     fill
-                    className="object-contain p-4"
+                    className="object-contain p-4 transition-all"
                     data-ai-hint={logo?.imageHint}
                   />
                 )}

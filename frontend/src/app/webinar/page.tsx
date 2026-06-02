@@ -1,0 +1,180 @@
+
+"use client"
+
+import { Navbar } from "@/components/layout/navbar"
+import { Footer } from "@/components/layout/footer"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Calendar, Clock, Play, ArrowRight } from "lucide-react"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
+
+const upcomingWebinars = [
+  {
+    title: "Strategic Global Expansion Masterclass",
+    date: "OCTOBER 15, 2026",
+    time: "02:00 PM GMT",
+    description: "Learn the architectural foundations of scaling your business across four continents with Dr. Haider.",
+    image: "https://picsum.photos/seed/web1/800/600",
+    status: "Upcoming"
+  },
+  {
+    title: "Institutional Capital Procurement",
+    date: "NOVEMBER 05, 2026",
+    time: "11:00 AM GMT",
+    description: "Navigate the complexities of institutional investment and secure the capital your venture deserves.",
+    image: "https://picsum.photos/seed/web2/800/600",
+    status: "Upcoming"
+  }
+]
+
+const previousWebinars = [
+  {
+    title: "Digital Banking Infrastructure in West Africa",
+    date: "JUNE 2024",
+    duration: "45 Mins",
+    image: "https://picsum.photos/seed/web3/800/600"
+  },
+  {
+    title: "M&A Strategies for Growth-Stage Companies",
+    date: "MAY 2024",
+    duration: "60 Mins",
+    image: "https://picsum.photos/seed/web4/800/600"
+  },
+  {
+    title: "The Future of Sustainable Manufacturing",
+    date: "MARCH 2024",
+    duration: "55 Mins",
+    image: "https://picsum.photos/seed/web5/800/600"
+  }
+]
+
+export default function WebinarPage() {
+  const featuredImg = PlaceHolderImages.find(img => img.id === 'webinar-featured')
+
+  return (
+    <main className="relative min-h-screen bg-background">
+      <Navbar variant="solid" />
+      
+      {/* Narrative Hero - Highly compressed to show content below */}
+      <section className="relative pt-20 pb-8 md:pt-24 md:pb-10 overflow-hidden bg-white border-b border-black/5">
+        <div className="container mx-auto px-4 md:px-24">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div className="space-y-6 md:space-y-8 animate-fade-in">
+              <div className="space-y-2 md:space-y-4">
+                <span className="text-[10px] md:text-xs font-bold tracking-[0.5em] text-accent uppercase">Educational Core</span>
+                <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline font-bold uppercase leading-[0.9]">Webinar</h1>
+              </div>
+              <p className="text-base md:text-xl font-light leading-relaxed text-muted-foreground max-w-lg">
+                Exclusive digital masterclasses designed for the modern executive. Access global intelligence from the comfort of your headquarters.
+              </p>
+            </div>
+            
+            <div className="relative aspect-video bg-muted border border-black/5 overflow-hidden group max-h-[180px] md:max-h-[280px]">
+              {featuredImg && (
+                <Image 
+                  src={featuredImg.imageUrl} 
+                  alt="Featured Webinar" 
+                  fill 
+                  className="object-contain transition-transform duration-1000 group-hover:scale-105"
+                />
+              )}
+              <div className="absolute inset-0 bg-black/5"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 md:px-24">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-12 md:mb-16 gap-6 md:gap-8">
+            <div className="space-y-2 md:space-y-4">
+              <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Live Sessions</span>
+              <h2 className="text-3xl md:text-5xl font-headline font-bold uppercase">Upcoming <br /> Masterclasses</h2>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            {upcomingWebinars.map((webinar, i) => (
+              <div key={i} className="group bg-white border border-black/5 p-8 md:p-12 space-y-6 md:space-y-8 hover:border-accent transition-all duration-500 shadow-sm">
+                <div className="relative aspect-video overflow-hidden">
+                  <Image src={webinar.image} alt={webinar.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                  <div className="absolute top-4 left-4 md:top-6 md:left-6">
+                    <span className="px-3 py-1.5 md:px-4 md:py-2 bg-black text-white text-[8px] md:text-[9px] font-bold tracking-widest uppercase">
+                      {webinar.status}
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="space-y-4 md:space-y-6">
+                  <div className="flex flex-wrap gap-4 md:gap-6 text-[9px] md:text-[10px] font-bold tracking-widest text-muted-foreground uppercase">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-3 md:w-3.5 h-3 md:h-3.5 text-accent" />
+                      {webinar.date}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-3 md:w-3.5 h-3 md:h-3.5 text-accent" />
+                      {webinar.time}
+                    </div>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-headline font-bold uppercase tracking-tight leading-tight">{webinar.title}</h3>
+                  <p className="text-sm font-light text-muted-foreground leading-relaxed">{webinar.description}</p>
+                </div>
+                
+                <Button className="w-full h-14 md:h-16 rounded-none bg-black text-white hover:bg-accent transition-all text-[10px] font-bold tracking-[0.3em] uppercase group">
+                  Register For Access
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Archive Section */}
+      <section className="py-24 bg-primary text-white">
+        <div className="container mx-auto px-4 md:px-24">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+            <div className="space-y-4">
+              <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Insights Archive</span>
+              <h2 className="text-5xl font-headline font-bold uppercase">Past <br /> Webinars</h2>
+            </div>
+            <p className="max-w-xs text-left md:text-right text-white/40 font-light text-sm uppercase tracking-widest">
+              Access the vault of institutional knowledge and strategic dialogues.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {previousWebinars.map((webinar, i) => (
+              <div key={i} className="group cursor-pointer space-y-6">
+                <div className="relative aspect-video overflow-hidden border border-white/10">
+                  <Image src={webinar.image} alt={webinar.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100 group-hover:bg-black/20 transition-all">
+                    <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Play className="w-6 h-6 text-white fill-white ml-1" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 right-4 text-[9px] font-bold tracking-widest uppercase bg-black/60 px-3 py-1">
+                    {webinar.duration}
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-[10px] font-bold text-accent tracking-widest uppercase">{webinar.date}</p>
+                  <h4 className="text-xl font-headline font-bold uppercase tracking-tight group-hover:text-accent transition-colors">{webinar.title}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-20 text-center">
+            <Button variant="outline" className="h-16 px-12 rounded-none border-white/10 text-white hover:bg-white hover:text-black transition-all text-[10px] font-bold tracking-[0.4em] uppercase">
+              Explore Full Archive
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  )
+}

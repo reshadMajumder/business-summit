@@ -1,3 +1,4 @@
+
 "use client"
 
 import {
@@ -11,7 +12,7 @@ import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 const speakerData = [
-  { id: 'speaker-1', name: 'JULIAN THORNE', role: 'CHIEF STRATEGY OFFICER, NEXUS', quote: 'Strategic mastery is the intersection of architecture and intent.' },
+  { id: 'speaker-1', name: 'DR. M. HAIDER UZZAMAN', role: 'CHAIRMAN & FOUNDER', quote: 'Connecting businesses globally to scale financial results is our primary mission.' },
   { id: 'speaker-2', name: 'ELENA ROSSI', role: 'DIRECTOR OF INNOVATION, ARTE', quote: 'Design is not just appearance, it is the soul of performance.' },
   { id: 'speaker-3', name: 'MARCUS VANE', role: 'MANAGING PARTNER, VANE CAP', quote: 'Liquidity is the oxygen of global innovation cycles.' },
   { id: 'speaker-4', name: 'DR. ARIS CHEN', role: 'HEAD OF AI RESEARCH, ETHEREA', quote: 'Intelligence is the ultimate leverage in a competitive world.' },

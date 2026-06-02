@@ -7,6 +7,16 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 export function Footer() {
   const logo = PlaceHolderImages.find(img => img.id === 'app-logo')
 
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Our Story", href: "/our-story" },
+    { name: "InvEX", href: "/invex" },
+    { name: "Summit", href: "/summit" },
+    { name: "Blogs", href: "/blogs" },
+    { name: "Webinar", href: "/webinar" },
+    { name: "Become A Client", href: "/mentoring" },
+  ]
+
   return (
     <footer className="bg-[#0A0A0A] border-t border-white/5 py-24 text-white">
       <div className="container mx-auto px-4 md:px-24">
@@ -37,20 +47,21 @@ export function Footer() {
           <div className="md:col-span-1 space-y-6">
             <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-white/80">Navigation</h4>
             <div className="flex flex-col gap-4 text-sm font-light text-white/40">
-              <Link href="/" className="hover:text-accent transition-colors">Home</Link>
-              <Link href="#" className="hover:text-accent transition-colors">Our Story</Link>
-              <Link href="#" className="hover:text-accent transition-colors">InvEX</Link>
-              <Link href="#" className="hover:text-accent transition-colors">Become A Client</Link>
+              {navLinks.map((link) => (
+                <Link key={link.name} href={link.href} className="hover:text-accent transition-colors">
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
 
           <div className="md:col-span-1 space-y-6">
             <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-white/80">Information</h4>
             <div className="flex flex-col gap-4 text-sm font-light text-white/40">
-              <Link href="#" className="hover:text-accent transition-colors">Summit</Link>
-              <Link href="#" className="hover:text-accent transition-colors">News</Link>
-              <Link href="#" className="hover:text-accent transition-colors">Webinar</Link>
-              <Link href="#" className="hover:text-accent transition-colors">Contact</Link>
+              <Link href="#" className="hover:text-accent transition-colors">Privacy Policy</Link>
+              <Link href="#" className="hover:text-accent transition-colors">Terms of Service</Link>
+              <Link href="#" className="hover:text-accent transition-colors">Cookie Policy</Link>
+              <Link href="#" className="hover:text-accent transition-colors">Contact Us</Link>
             </div>
           </div>
 
