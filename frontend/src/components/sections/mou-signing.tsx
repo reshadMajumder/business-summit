@@ -3,12 +3,22 @@
 
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 export function MOUSigning() {
   const mouImages = [
-    PlaceHolderImages.find(img => img.id === 'mou-1'),
-    PlaceHolderImages.find(img => img.id === 'mou-2')
-  ].filter(Boolean)
+    { ...PlaceHolderImages.find(img => img.id === 'mou-1'), caption: "Preparing the Strategic Alliance" },
+    { ...PlaceHolderImages.find(img => img.id === 'mou-2'), caption: "Formal Handshake with the Governor" },
+    { imageUrl: "https://picsum.photos/seed/mou3/1200/800", description: "Signing the Agreement", caption: "Committing to Regional Excellence", imageHint: "business meeting" },
+    { imageUrl: "https://picsum.photos/seed/mou4/1200/800", description: "Strategic Briefing", caption: "Mapping Global Expansion", imageHint: "corporate strategy" }
+  ].filter(img => img.imageUrl)
 
   return (
     <section className="py-24 bg-white border-b border-black/5">
@@ -16,29 +26,45 @@ export function MOUSigning() {
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
           <div className="space-y-4">
             <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Diplomatic Milestone</span>
-            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-none">MOU signing with <br /> Governor of Plateau State</h2>
+            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-none">Diplomatic <br /> Milestones</h2>
           </div>
           <p className="max-w-xs text-right text-muted-foreground font-light text-sm uppercase tracking-widest">
             Formalizing strategic collaboration for regional excellence.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {mouImages.map((img, i) => (
-            <div key={i} className="relative aspect-[4/3] md:aspect-video overflow-hidden border border-black/5 group bg-muted">
-               {img?.imageUrl && (
-                 <Image
-                  src={img.imageUrl}
-                  alt={img.description || "MOU Signing Ceremony"}
-                  fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                  data-ai-hint={img.imageHint}
-                />
-               )}
-               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
-            </div>
-          ))}
-        </div>
+        <Carousel 
+          opts={{ align: "start", loop: true }}
+          plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-8">
+            {mouImages.map((img, i) => (
+              <CarouselItem key={i} className="pl-8 md:basis-1/2 lg:basis-2/3">
+                <div className="relative group">
+                  <div className="relative aspect-video overflow-hidden border border-black/5 bg-muted">
+                    <Image
+                      src={img.imageUrl!}
+                      alt={img.description || "MOU Signing Ceremony"}
+                      fill
+                      className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                      data-ai-hint={img.imageHint}
+                    />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                  </div>
+                  <div className="mt-6 space-y-2">
+                    <p className="text-[10px] font-bold text-accent tracking-[0.3em] uppercase">{img.description}</p>
+                    <h3 className="text-xl font-headline font-bold uppercase">{img.caption}</h3>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-end gap-4 mt-8">
+            <CarouselPrevious className="static translate-y-0 rounded-none w-12 h-12 border-black/10" />
+            <CarouselNext className="static translate-y-0 rounded-none w-12 h-12 border-black/10" />
+          </div>
+        </Carousel>
       </div>
     </section>
   )

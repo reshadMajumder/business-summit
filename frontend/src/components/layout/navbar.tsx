@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X, User } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { cn } from "@/lib/utils"
 
@@ -30,7 +30,6 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden'
@@ -47,8 +46,8 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
     { name: "OUR STORY", href: "/our-story" },
     { name: "INVEX", href: "/invex" },
     { name: "SUMMIT", href: "/summit" },
+    { name: "SHOP", href: "/shop" },
     { name: "BLOGS", href: "/blogs" },
-    { name: "WEBINAR", href: "/webinar" },
   ]
 
   const isScrolled = mounted ? (scrolled || variant === "solid") : (variant === "solid")
@@ -69,14 +68,16 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
                   src={logo.imageUrl} 
                   alt="Business Summit" 
                   fill 
-                  className={cn("object-contain transition-all duration-300")}
+                  className={cn(
+                    "object-contain transition-all duration-300",
+                    isScrolled ? "brightness-0" : "brightness-100"
+                  )}
                   priority
                 />
               </div>
             )}
           </Link>
 
-          {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link 
@@ -109,13 +110,12 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
                     isScrolled ? "bg-black text-white hover:bg-accent" : "bg-white text-black hover:bg-accent hover:text-white"
                   )}
                 >
-                  JOIN SUMMIT
+                  JOIN
                 </Button>
               </Link>
             </div>
           </div>
 
-          {/* Mobile Toggle */}
           <button 
             className="lg:hidden p-2 relative z-[60]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -129,14 +129,12 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
         </div>
       </nav>
 
-      {/* Mobile Sidebar Menu */}
       <div 
         className={cn(
           "fixed inset-0 z-[55] lg:hidden transition-all duration-500",
           mobileMenuOpen ? "visible" : "invisible"
         )}
       >
-        {/* Backdrop */}
         <div 
           className={cn(
             "absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-500",
@@ -145,7 +143,6 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
           onClick={() => setMobileMenuOpen(false)}
         />
 
-        {/* Sidebar Panel */}
         <div 
           className={cn(
             "absolute top-0 right-0 h-full w-[280px] bg-white shadow-2xl transition-transform duration-500 ease-out flex flex-col p-8",
@@ -175,7 +172,7 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
           <div className="mt-auto">
             <Link href="/register" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full h-16 bg-black text-white rounded-none text-[10px] font-bold tracking-[0.4em] uppercase">
-                REGISTER NOW
+                JOIN NOW
               </Button>
             </Link>
           </div>

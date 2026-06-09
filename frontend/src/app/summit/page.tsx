@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { MapPin, Calendar, ArrowRight, CheckCircle2, Globe, Users, Zap } from "lucide-react"
+import { MapPin, Calendar, Globe, Users, Zap } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import {
   Carousel,
@@ -34,37 +34,19 @@ const events = [
   }
 ]
 
+const eventPhotos = [
+  { url: "https://picsum.photos/seed/event1/800/600", caption: "Diplomatic Milestone - signing the MOU with Plateau State Government" },
+  { url: "https://picsum.photos/seed/event2/800/600", caption: "Dr. Haider speaking with international delegates in Abuja" },
+  { url: "https://picsum.photos/seed/event3/800/600", caption: "Executive networking luncheon at Lagos Continental" },
+  { url: "https://picsum.photos/seed/event4/800/600", caption: "Strategic B2B matchmaking session in action" },
+  { url: "https://picsum.photos/seed/event5/800/600", caption: "Main keynote audience at Northern Nigeria Summit" },
+  { url: "https://picsum.photos/seed/event6/800/600", caption: "Awarding the excellence in regional industrialization" },
+]
+
 const featuredSpeakers = [
-  {
-    name: "Dr. M Haider Uzzaman",
-    role: "Global Business Leader, President of Business Summit",
-    id: "speaker-1"
-  },
-  {
-    name: "Prof. Ahmed Salawudeen",
-    role: "Chairman, Signature Global Real Estate & Standard Insurance Consultants Ltd",
-    id: "speaker-3"
-  },
-  {
-    name: "Mr. Gonçalo Terenas",
-    role: "Head of Corporate & International Business at Tuga Innovations Inc.",
-    id: "speaker-2"
-  },
-  {
-    name: "Dr. M Haider Uzzaman",
-    role: "Global Business Leader, President of Business Summit",
-    id: "speaker-1"
-  },
-  {
-    name: "Prof. Ahmed Salawudeen",
-    role: "Chairman, Signature Global Real Estate & Standard Insurance Consultants Ltd",
-    id: "speaker-3"
-  },
-  {
-    name: "Mr. Gonçalo Terenas",
-    role: "Head of Corporate & International Business at Tuga Innovations Inc.",
-    id: "speaker-2"
-  }
+  { name: "Dr. M Haider Uzzaman", role: "Global Business Leader, President of Business Summit", id: "speaker-1" },
+  { name: "Prof. Ahmed Salawudeen", role: "Chairman, Signature Global Real Estate", id: "speaker-3" },
+  { name: "Mr. Gonçalo Terenas", role: "Head of Corporate & International Business", id: "speaker-2" },
 ]
 
 export default function SummitPage() {
@@ -72,7 +54,6 @@ export default function SummitPage() {
     <main className="relative min-h-screen bg-background">
       <Navbar variant="solid" />
       
-      {/* Hero Section */}
       <section className="relative pt-48 pb-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-24">
           <div className="max-w-4xl space-y-8 animate-fade-in">
@@ -87,8 +68,29 @@ export default function SummitPage() {
         </div>
       </section>
 
-      {/* Schedule / Locations Grid */}
+      {/* Event Photos Grid */}
       <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 md:px-24">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+            <div className="space-y-4">
+              <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Moments</span>
+              <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase">Summit Memories</h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {eventPhotos.map((photo, i) => (
+              <div key={i} className="group space-y-4">
+                <div className="relative aspect-[4/3] overflow-hidden border border-black/5 bg-muted">
+                  <Image src={photo.url} alt={photo.caption} fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                </div>
+                <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground leading-relaxed">{photo.caption}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-24">
           <div className="grid md:grid-cols-2 gap-px bg-black/5 border border-black/5">
             {events.map((event, i) => (
@@ -120,7 +122,6 @@ export default function SummitPage() {
         </div>
       </section>
 
-      {/* Featured Speakers Carousel */}
       <section className="py-32 bg-primary text-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-24">
           <div className="mb-20 space-y-4 text-center md:text-left">
@@ -159,14 +160,13 @@ export default function SummitPage() {
               })}
             </CarouselContent>
             <div className="flex justify-end gap-4 mt-12 px-4">
-              <CarouselPrevious className="static translate-y-0 rounded-none w-14 h-14 border-white/10 hover:bg-white hover:text-black transition-all" />
-              <CarouselNext className="static translate-y-0 rounded-none w-14 h-14 border-white/10 hover:bg-white hover:text-black transition-all" />
+              <CarouselPrevious className="static translate-y-0 rounded-none w-14 h-14 border-white/10" />
+              <CarouselNext className="static translate-y-0 rounded-none w-14 h-14 border-white/10" />
             </div>
           </Carousel>
         </div>
       </section>
 
-      {/* Narrative Section */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-4 md:px-24">
           <div className="grid lg:grid-cols-2 gap-20">
@@ -178,9 +178,6 @@ export default function SummitPage() {
               <p className="text-lg font-light leading-relaxed text-muted-foreground">
                 Participants build meaningful partnerships, expand into new markets, and secure funding on the spot.
               </p>
-              <Button variant="outline" className="h-16 px-12 rounded-none border-black/10 text-[10px] font-bold tracking-[0.4em] uppercase hover:bg-black hover:text-white transition-all">
-                View Past Summit
-              </Button>
             </div>
             
             <div className="bg-background p-16 space-y-12 border border-black/5">
@@ -218,29 +215,6 @@ export default function SummitPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Registration CTA */}
-      <section className="py-32 bg-accent text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 -skew-x-12 translate-x-20"></div>
-        <div className="container mx-auto px-4 md:px-24 text-center relative z-10">
-          <div className="max-w-3xl mx-auto space-y-12">
-            <h2 className="text-4xl md:text-6xl font-headline font-bold uppercase">Register To <br /> Secure Your Seat</h2>
-            <p className="text-lg font-light text-white/80">
-              We connect You with the right Investors through professional matchmaking for deal closure.
-            </p>
-            <div className="flex flex-col items-center gap-8">
-              <Link href="https://www.eventbrite.ca/e/investors-summit-nigeria-2026-tickets-1977017519621?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer">
-                <Button className="h-20 px-16 rounded-none bg-white text-black hover:bg-black hover:text-white transition-all duration-500 text-sm font-bold tracking-[0.4em] uppercase shadow-2xl">
-                  Register Now
-                </Button>
-              </Link>
-              <p className="text-xs font-bold tracking-widest uppercase opacity-60">
-                For further assistance: <span className="text-white">info@businesssummit.net</span>
-              </p>
             </div>
           </div>
         </div>

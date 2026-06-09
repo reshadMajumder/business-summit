@@ -1,7 +1,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import { Twitter, Linkedin, Instagram } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export function Footer() {
@@ -12,16 +12,15 @@ export function Footer() {
     { name: "Our Story", href: "/our-story" },
     { name: "InvEX", href: "/invex" },
     { name: "Summit", href: "/summit" },
+    { name: "Shop", href: "/shop" },
     { name: "Blogs", href: "/blogs" },
-    { name: "Webinar", href: "/webinar" },
-    { name: "Become A Client", href: "/mentoring" },
   ]
 
   return (
     <footer className="bg-[#0A0A0A] border-t border-white/5 py-24 text-white">
       <div className="container mx-auto px-4 md:px-24">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 lg:gap-32">
-          <div className="md:col-span-1 space-y-8">
+          <div className="md:col-span-2 space-y-12">
             <div className="flex items-center">
               {logo && (
                 <div className="relative h-16 w-56">
@@ -34,9 +33,12 @@ export function Footer() {
                 </div>
               )}
             </div>
-            <p className="text-sm font-light text-white/40 leading-relaxed">
-              An architectural exploration of global leadership and strategic innovation. Designed for the executive mind.
-            </p>
+            <div className="space-y-4">
+              <p className="text-sm font-bold tracking-[0.3em] text-accent uppercase">Global Presence</p>
+              <p className="text-xl font-headline font-bold text-white/80 leading-relaxed max-w-lg">
+                Canada | Malaysia | Kosovo | Portugal | Nigeria | UAE | Bangladesh 
+              </p>
+            </div>
             <div className="flex gap-6">
               <Linkedin className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
               <Twitter className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
@@ -63,15 +65,6 @@ export function Footer() {
               <Link href="#" className="hover:text-accent transition-colors">Cookie Policy</Link>
               <Link href="#" className="hover:text-accent transition-colors">Contact Us</Link>
             </div>
-          </div>
-
-          <div className="md:col-span-1 space-y-6">
-            <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-white/80">Headquarters</h4>
-            <p className="text-sm font-light text-white/40 leading-relaxed">
-              One World Trade Center<br />
-              New York, NY 10007<br />
-              info@businesssummit.com
-            </p>
           </div>
         </div>
 

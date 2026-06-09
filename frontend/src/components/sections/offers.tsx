@@ -11,21 +11,22 @@ const tiers = [
     posts: "1 Post",
     database: "Specific Client Database",
     frequency: "Yearly",
-    price: "USD3000.00",
+    price: "Free",
+    oldPrice: "USD 3,000.00"
   },
   {
     name: "PREMIUM",
     posts: "3 Posts",
     database: "Access To All Client Database",
     frequency: "Yearly",
-    price: "USD10000.00",
+    price: "USD 10,000.00",
   },
   {
     name: "EXECUTIVE",
     posts: "Unlimited Post",
     database: "Access To All Client Database",
     frequency: "Yearly",
-    price: "USD25000.00",
+    price: "USD 25,000.00",
   },
 ]
 
@@ -33,7 +34,6 @@ export function Offers() {
   return (
     <section className="py-32 bg-[#0A0A0A] text-white border-b border-white/5">
       <div className="container mx-auto px-4 md:px-24">
-        {/* Architectural Header Pattern */}
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
           <div className="space-y-4 text-left">
             <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Investment</span>
@@ -55,8 +55,15 @@ export function Offers() {
                   <h3 className="text-sm font-bold tracking-[0.3em] text-accent uppercase">
                     {tier.name}
                   </h3>
-                  <div className="text-3xl font-headline font-bold uppercase tracking-tight text-white">
-                    {tier.price}
+                  <div className="flex flex-col items-center gap-1">
+                    {tier.oldPrice && (
+                      <span className="text-xs text-white/30 line-through tracking-widest font-bold">
+                        {tier.oldPrice}
+                      </span>
+                    )}
+                    <div className="text-3xl font-headline font-bold uppercase tracking-tight text-white">
+                      {tier.price}
+                    </div>
                   </div>
                 </div>
                 

@@ -3,6 +3,7 @@
 
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -20,17 +21,16 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-7xl mx-auto space-y-10 animate-fade-in">
-        <h1 className="text-5xl md:text-8xl lg:text-9xl font-headline font-bold text-white tracking-tighter leading-none uppercase">
-          BUSINESS SUMMIT
-        </h1>
-        <p className="text-lg md:text-2xl text-white/90 font-light max-w-4xl mx-auto tracking-[0.15em] uppercase border-y border-white/20 py-4 inline-block">
-          Get Funded | Build Partnerships | Expand Globally
+        <p className="text-lg md:text-2xl text-white/90 font-light max-w-4xl mx-auto tracking-[0.25em] uppercase border-y border-white/20 py-6 inline-block">
+          Get Funded | Build Partnerships <br /> Expand Globally
         </p>
         <div className="flex items-center justify-center pt-8">
-          <Button className="bg-white text-black hover:bg-accent hover:text-white h-16 px-14 text-xs font-bold tracking-[0.4em] uppercase rounded-none group transition-all duration-500 shadow-2xl">
-            MARKET PLACE
-            <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
-          </Button>
+          <Link href="/invex">
+            <Button className="bg-white/5 backdrop-blur-md border border-white text-white hover:bg-white hover:text-black h-16 px-14 text-xs font-bold tracking-[0.4em] uppercase rounded-none group transition-all duration-500 shadow-2xl">
+              InvEX
+              <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </div>
 
