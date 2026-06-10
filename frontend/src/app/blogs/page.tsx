@@ -12,7 +12,7 @@ import { ArrowRight, Calendar, User, Search } from "lucide-react"
 import { posts } from "@/lib/blog-data"
 import { cn } from "@/lib/utils"
 
-const categories = ["All Posts", "Business Summits", "Franchising", "Pitch decks"]
+const categories = ["All Posts", "Global News", "Summit Happenings", "Strategic Insights"]
 
 export default function BlogsPage() {
   const [activeCategory, setActiveCategory] = useState("All Posts")
@@ -35,15 +35,15 @@ export default function BlogsPage() {
       <Navbar variant="solid" />
       
       {/* Narrative Hero */}
-      <section className="relative pt-48 pb-24 overflow-hidden border-b border-black/5 bg-white">
+      <section className="relative pt-32 pb-20 overflow-hidden border-b border-black/5 bg-white">
         <div className="container mx-auto px-4 md:px-24">
           <div className="max-w-4xl space-y-12 animate-fade-in">
             <div className="space-y-4">
-              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Strategic Insights</span>
+              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Editorial Core</span>
               <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Blogs</h1>
             </div>
-            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground">
-              Read some news on how to get funding for your business, the right career path to choose, discovering new business opportunities and how to get the right exposure for your business to grow.
+            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-3xl">
+              Gain insights into current Global News & Recent Business Summit Happenings.
             </p>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function BlogsPage() {
                   </p>
                   <Link href={`/blogs/${post.slug}`}>
                     <Button variant="link" className="p-0 h-auto text-[10px] font-bold tracking-[0.3em] uppercase group">
-                      Read More
+                      Read Insight
                       <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
@@ -133,13 +133,13 @@ export default function BlogsPage() {
 
           {mounted && filteredPosts.length === 0 && (
             <div className="text-center py-20 space-y-4 animate-fade-in">
-              <p className="text-muted-foreground text-sm uppercase tracking-widest">No articles found matching your criteria.</p>
+              <p className="text-muted-foreground text-sm uppercase tracking-widest">No insights match your criteria.</p>
               <Button 
                 variant="outline" 
                 onClick={() => { setActiveCategory("All Posts"); setSearchQuery(""); }}
                 className="rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase"
               >
-                Clear Filters
+                Reset Feed
               </Button>
             </div>
           )}
@@ -147,7 +147,7 @@ export default function BlogsPage() {
           {mounted && filteredPosts.length > 0 && (
             <div className="mt-32 text-center">
               <Button size="lg" className="h-16 px-12 rounded-none bg-black text-white hover:bg-accent transition-all duration-500 text-[10px] font-bold tracking-[0.4em] uppercase">
-                Load More Insights
+                Load More Archives
               </Button>
             </div>
           )}
@@ -160,26 +160,26 @@ export default function BlogsPage() {
         <div className="container mx-auto px-4 md:px-24 relative z-10">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
-              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Strategic Updates</span>
+              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Strategic Intelligence</span>
               <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-tight">
-                Get Your Best Ideas <br /> And Latest Updates <br /> To Your Inbox
+                Subscribe to our <br /> Executive Insights
               </h2>
               <p className="text-lg font-light text-white/40">
-                We’ll send our articles and exclusive contents right to your inbox.
+                Direct intelligence on global expansion and funding architecture delivered to your headquarters.
               </p>
             </div>
             
             <form className="space-y-6 bg-white/5 p-12 backdrop-blur-sm border border-white/10">
               <div className="space-y-2">
-                <label className="text-[10px] font-bold tracking-widest uppercase text-white/40">First Name</label>
+                <label className="text-[10px] font-bold tracking-widest uppercase text-white/40">Full Name</label>
                 <Input placeholder="ENTER YOUR NAME" className="h-14 bg-white/10 border-white/20 rounded-none text-white focus:border-accent" />
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] font-bold tracking-widest uppercase text-white/40">Email Address</label>
+                <label className="text-[10px] font-bold tracking-widest uppercase text-white/40">Corporate Email</label>
                 <Input type="email" placeholder="ENTER YOUR EMAIL" className="h-14 bg-white/10 border-white/20 rounded-none text-white focus:border-accent" />
               </div>
               <Button className="w-full h-16 bg-accent text-white hover:bg-white hover:text-black transition-all duration-500 rounded-none text-[10px] font-bold tracking-[0.4em] uppercase">
-                Subscribe Now
+                Secure Subscription
               </Button>
             </form>
           </div>

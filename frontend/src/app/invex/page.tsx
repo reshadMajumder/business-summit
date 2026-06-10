@@ -34,14 +34,14 @@ export default function InvexPage() {
       <Navbar variant="solid" />
       
       {/* Marketplace Hero */}
-      <section className="relative pt-48 pb-24 overflow-hidden bg-white border-b border-black/5">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="max-w-4xl space-y-12 animate-fade-in">
+      <section className="relative pt-32 pb-12 sm:pt-48 sm:pb-24 overflow-hidden bg-white border-b border-black/5">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <div className="max-w-4xl space-y-8 sm:space-y-12 animate-fade-in">
             <div className="space-y-4">
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Investment Exchange</span>
-              <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">InvEX</h1>
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">InvEX</h1>
             </div>
-            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground">
+            <p className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-muted-foreground">
               A premium marketplace connecting visionary entrepreneurs with institutional capital. Access curated, high-potential projects and verified financial data.
             </p>
           </div>
@@ -49,16 +49,16 @@ export default function InvexPage() {
       </section>
 
       {/* Control Bar */}
-      <section className="sticky top-[72px] z-30 bg-white/80 backdrop-blur-md border-b border-black/5">
-        <div className="container mx-auto px-4 md:px-24 py-6 flex flex-col lg:flex-row justify-between items-center gap-8">
-          <div className="flex flex-wrap justify-center lg:justify-start gap-6">
+      <section className="sticky top-[64px] sm:top-[72px] z-30 bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24 py-4 sm:py-6 flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-8">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
             {industries.map((ind) => (
               <button 
                 key={ind} 
                 onClick={() => setActiveIndustry(ind)}
                 suppressHydrationWarning
                 className={cn(
-                  "text-[10px] font-bold tracking-[0.3em] uppercase transition-all duration-300 relative py-2",
+                  "text-[9px] sm:text-[10px] font-bold tracking-[0.3em] uppercase transition-all duration-300 relative py-2",
                   activeIndustry === ind ? "text-accent" : "text-muted-foreground hover:text-black"
                 )}
               >
@@ -82,8 +82,8 @@ export default function InvexPage() {
       </section>
 
       {/* Grid */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-24">
+      <section className="py-16 sm:py-24 bg-background">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mounted && filteredProjects.map((project, i) => (
               <div 
@@ -111,9 +111,9 @@ export default function InvexPage() {
                   </div>
                 </div>
                 
-                <div className="p-10 space-y-6">
+                <div className="p-6 sm:p-10 space-y-6">
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-headline font-bold uppercase tracking-tight">{project.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-headline font-bold uppercase tracking-tight">{project.title}</h3>
                     <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase">Entrepreneur: {project.entrepreneur}</p>
                   </div>
                   
@@ -121,12 +121,12 @@ export default function InvexPage() {
                     {project.description}
                   </p>
                   
-                  <div className="pt-6 border-t border-black/5 flex items-center justify-between">
+                  <div className="pt-6 border-t border-black/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div>
                       <p className="text-[9px] font-bold text-muted-foreground tracking-widest uppercase mb-1">Target Capital</p>
                       <p className="text-xl font-headline font-bold">{project.investmentGoal}</p>
                     </div>
-                    <Button className="h-12 px-6 rounded-none bg-black text-white hover:bg-accent transition-all text-[9px] font-bold tracking-[0.2em] uppercase group">
+                    <Button className="w-full sm:w-auto h-12 px-6 rounded-none bg-black text-white hover:bg-accent transition-all text-[9px] font-bold tracking-[0.2em] uppercase group">
                       Purchase Data
                       <ArrowUpRight className="ml-2 w-3 h-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </Button>
@@ -137,7 +137,7 @@ export default function InvexPage() {
           </div>
 
           {mounted && filteredProjects.length === 0 && (
-            <div className="text-center py-32 space-y-6 animate-fade-in">
+            <div className="text-center py-24 sm:py-32 space-y-6 animate-fade-in">
               <TrendingUp className="w-12 h-12 text-accent mx-auto opacity-20" />
               <div className="space-y-2">
                 <p className="text-muted-foreground text-sm uppercase tracking-widest">No strategic opportunities match your criteria.</p>
@@ -154,25 +154,25 @@ export default function InvexPage() {
       </section>
 
       {/* Market Stats */}
-      <section className="py-32 bg-primary text-white overflow-hidden">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="grid md:grid-cols-3 gap-20 items-center">
-            <div className="space-y-6">
-              <h2 className="text-4xl font-headline font-bold uppercase">Market <br /> Liquidity</h2>
-              <p className="text-white/40 font-light leading-relaxed">
+      <section className="py-24 sm:py-32 bg-primary text-white overflow-hidden">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <div className="grid md:grid-cols-3 gap-12 sm:gap-20 items-center">
+            <div className="space-y-6 text-center md:text-left">
+              <h2 className="text-3xl sm:text-4xl font-headline font-bold uppercase">Market <br className="hidden sm:block" /> Liquidity</h2>
+              <p className="text-white/40 font-light leading-relaxed max-w-sm mx-auto md:mx-0">
                 InvEX processes over $100M in strategic capital commitments annually across 4 continents.
               </p>
             </div>
-            <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-8">
+            <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-12">
               {[
                 { label: "Active Deals", val: "142" },
                 { label: "Vetted Funds", val: "$1.2B" },
                 { label: "Closed M&A", val: "28" },
                 { label: "Growth Rate", val: "34%" }
               ].map((stat, i) => (
-                <div key={i} className="space-y-2 border-l border-white/10 pl-6">
-                  <p className="text-3xl font-headline font-bold text-accent">{stat.val}</p>
-                  <p className="text-[9px] font-bold tracking-widest text-white/40 uppercase">{stat.label}</p>
+                <div key={i} className="space-y-2 border-l border-white/10 pl-4 sm:pl-6">
+                  <p className="text-2xl sm:text-3xl font-headline font-bold text-accent">{stat.val}</p>
+                  <p className="text-[8px] sm:text-[9px] font-bold tracking-widest text-white/40 uppercase leading-tight">{stat.label}</p>
                 </div>
               ))}
             </div>

@@ -5,6 +5,7 @@ import { Partners } from "@/components/sections/partners"
 import { MOUSigning } from "@/components/sections/mou-signing"
 import { Offers } from "@/components/sections/offers"
 import { Testimonials } from "@/components/sections/testimonials"
+import { AdvisoryBoard } from "@/components/sections/advisory-board"
 import { Gallery } from "@/components/sections/gallery"
 import { WhyChooseUs } from "@/components/sections/why-choose-us"
 import { Footer } from "@/components/layout/footer"
@@ -25,6 +26,8 @@ export default function Home() {
       <Offers />
 
       <Testimonials />
+
+      <AdvisoryBoard />
 
       <Gallery />
       

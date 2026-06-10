@@ -10,6 +10,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react"
 import { posts } from "@/lib/blog-data"
 import { use } from "react"
 import { notFound } from "next/navigation"
+import { cn } from "@/lib/utils"
 
 export default function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params)
@@ -24,24 +25,24 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
       <Navbar variant="solid" />
       
       {/* Blog Detail Hero */}
-      <section className="relative pt-48 pb-24 bg-white">
-        <div className="container mx-auto px-4 md:px-24">
-          <Link href="/blogs" className="inline-flex items-center gap-3 text-[10px] font-bold tracking-[0.3em] uppercase text-accent hover:text-primary transition-colors mb-12">
+      <section className="relative pt-32 sm:pt-48 pb-12 sm:pb-24 bg-white">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <Link href="/blogs" className="inline-flex items-center gap-3 text-[10px] font-bold tracking-[0.3em] uppercase text-accent hover:text-primary transition-colors mb-8 sm:mb-12">
             <ArrowLeft className="w-4 h-4" />
             Back to Insights
           </Link>
           
-          <div className="max-w-5xl space-y-10">
-            <div className="space-y-6">
+          <div className="max-w-5xl space-y-8 sm:space-y-10">
+            <div className="space-y-4 sm:space-y-6">
               <span className="px-4 py-2 bg-accent text-white text-[9px] font-bold tracking-widest uppercase inline-block">
                 {post.category}
               </span>
-              <h1 className="text-4xl md:text-7xl font-headline font-bold uppercase leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-7xl font-headline font-bold uppercase leading-tight">
                 {post.title}
               </h1>
             </div>
 
-            <div className="flex items-center gap-8 text-[10px] font-bold tracking-[0.3em] text-muted-foreground uppercase border-y border-black/5 py-8">
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-[10px] font-bold tracking-[0.3em] text-muted-foreground uppercase border-y border-black/5 py-6 sm:py-8">
               <div className="flex items-center gap-3">
                 <Calendar className="w-4 h-4 text-accent" />
                 {post.date}
@@ -57,8 +58,8 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
 
       {/* Featured Image */}
       <section className="bg-white">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="relative aspect-[21/9] overflow-hidden bg-muted">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <div className="relative aspect-[21/9] overflow-hidden bg-muted shadow-2xl">
             <Image 
               src={post.image} 
               alt={post.title} 
@@ -71,18 +72,23 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
       </section>
 
       {/* Blog Content */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-24">
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <div className="max-w-3xl mx-auto">
-            <div className="prose prose-xl prose-neutral max-w-none">
-              <p className="text-xl md:text-2xl font-light leading-relaxed text-foreground first-letter:text-6xl first-letter:font-headline first-letter:font-bold first-letter:text-accent first-letter:mr-3 first-letter:float-left">
-                {post.content}
-              </p>
+            <div className="prose prose-xl prose-neutral max-w-none space-y-12">
+              {post.content.split('\n\n').map((para, i) => (
+                <p key={i} className={cn(
+                  "text-lg sm:text-xl md:text-2xl font-light leading-relaxed text-foreground",
+                  i === 0 && "first-letter:text-6xl first-letter:font-headline first-letter:font-bold first-letter:text-accent first-letter:mr-3 first-letter:float-left"
+                )}>
+                  {para}
+                </p>
+              ))}
             </div>
             
-            <div className="mt-20 pt-20 border-t border-black/5">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-                <div className="space-y-2">
+            <div className="mt-16 sm:mt-20 pt-16 sm:pt-20 border-t border-black/5">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                <div className="space-y-2 text-center md:text-left">
                   <p className="text-[10px] font-bold tracking-[0.3em] text-muted-foreground uppercase">Author Profile</p>
                   <h4 className="text-2xl font-headline font-bold uppercase">{post.author}</h4>
                 </div>
@@ -98,10 +104,10 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
       </section>
 
       {/* Related Footer CTA */}
-      <section className="py-32 bg-primary text-white">
-        <div className="container mx-auto px-4 md:px-24 text-center">
-          <div className="max-w-2xl mx-auto space-y-10">
-            <h2 className="text-4xl font-headline font-bold uppercase">Ready to scale your business?</h2>
+      <section className="py-24 sm:py-32 bg-primary text-white">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24 text-center">
+          <div className="max-w-2xl mx-auto space-y-8 sm:space-y-10">
+            <h2 className="text-3xl sm:text-4xl font-headline font-bold uppercase">Ready to scale your business?</h2>
             <p className="text-white/60 font-light leading-relaxed">
               Join the next Business Summit and connect with global leaders who can take your company to the next level of financial performance.
             </p>

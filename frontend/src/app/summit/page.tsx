@@ -43,10 +43,9 @@ const eventPhotos = [
   { url: "https://picsum.photos/seed/event6/800/600", caption: "Awarding the excellence in regional industrialization" },
 ]
 
-const featuredSpeakers = [
-  { name: "Dr. M Haider Uzzaman", role: "Global Business Leader, President of Business Summit", id: "speaker-1" },
-  { name: "Prof. Ahmed Salawudeen", role: "Chairman, Signature Global Real Estate", id: "speaker-3" },
-  { name: "Mr. Gonçalo Terenas", role: "Head of Corporate & International Business", id: "speaker-2" },
+const keyPeople = [
+  { name: "Senator Anyim Pius Anyim", role: "Former Secretary to the Government of the Federation", id: "speaker-anyim" },
+  { name: "Governor Caleb Mutfwang", role: "Executive Governor of Plateau State", id: "speaker-caleb" },
 ]
 
 export default function SummitPage() {
@@ -54,44 +53,59 @@ export default function SummitPage() {
     <main className="relative min-h-screen bg-background">
       <Navbar variant="solid" />
       
-      <section className="relative pt-48 pb-24 bg-white overflow-hidden">
+      {/* Centralized Hero */}
+      <section className="relative pt-32 pb-12 bg-white overflow-hidden text-center">
         <div className="container mx-auto px-4 md:px-24">
-          <div className="max-w-4xl space-y-8 animate-fade-in">
-            <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Strategic Global Event</span>
+          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">
-              Investors <br /> Summit <br /> <span className="text-accent">Nigeria 2026</span>
+              The <br /> Investors <br /> <span className="text-accent">Summit</span>
             </h1>
-            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-2xl">
+            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-2xl mx-auto">
               A Premier Annual 4-day Global event convening Investors, High Net Worth Individuals, and Government Dignitaries from 100+ countries.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Event Photos Grid */}
+      {/* Previous Editions Rotating Gallery */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 md:px-24">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
-            <div className="space-y-4">
-              <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Moments</span>
-              <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase">Summit Memories</h2>
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase text-center md:text-left">Previous Editions</h2>
+          </div>
+          
+          <Carousel 
+            opts={{ align: "start", loop: true }}
+            plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-8">
+              {eventPhotos.map((photo, i) => (
+                <CarouselItem key={i} className="pl-8 md:basis-1/2 lg:basis-1/3">
+                  <div className="group space-y-4">
+                    <div className="relative aspect-[4/3] overflow-hidden border border-black/5 bg-muted">
+                      <Image src={photo.url} alt={photo.caption} fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                    </div>
+                    <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground leading-relaxed">{photo.caption}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-end gap-4 mt-8">
+              <CarouselPrevious className="static translate-y-0 rounded-none w-12 h-12 border-black/10" />
+              <CarouselNext className="static translate-y-0 rounded-none w-12 h-12 border-black/10" />
             </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {eventPhotos.map((photo, i) => (
-              <div key={i} className="group space-y-4">
-                <div className="relative aspect-[4/3] overflow-hidden border border-black/5 bg-muted">
-                  <Image src={photo.url} alt={photo.caption} fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
-                </div>
-                <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground leading-relaxed">{photo.caption}</p>
-              </div>
-            ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      {/* Upcoming Section Above Venues */}
+      <section className="pt-24 bg-white">
         <div className="container mx-auto px-4 md:px-24">
+           <div className="mb-12 border-l-4 border-accent pl-8">
+             <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block mb-2">Roadmap</span>
+             <h2 className="text-5xl font-headline font-bold uppercase">Upcoming</h2>
+           </div>
           <div className="grid md:grid-cols-2 gap-px bg-black/5 border border-black/5">
             {events.map((event, i) => (
               <div key={i} className="bg-white p-12 space-y-8 group relative overflow-hidden">
@@ -122,11 +136,11 @@ export default function SummitPage() {
         </div>
       </section>
 
+      {/* Key People Section */}
       <section className="py-32 bg-primary text-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-24">
           <div className="mb-20 space-y-4 text-center md:text-left">
-            <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">The Faculty</span>
-            <h2 className="text-5xl font-headline font-bold uppercase">Featuring</h2>
+            <h2 className="text-5xl font-headline font-bold uppercase">Key People</h2>
           </div>
           
           <Carousel 
@@ -135,29 +149,25 @@ export default function SummitPage() {
             className="w-full"
           >
             <CarouselContent className="-ml-12">
-              {featuredSpeakers.map((speaker, i) => {
-                const img = PlaceHolderImages.find(p => p.id === speaker.id)
-                return (
-                  <CarouselItem key={i} className="pl-12 md:basis-1/2 lg:basis-1/3">
-                    <div className="space-y-8 group">
-                      <div className="relative aspect-[4/5] bg-white/5 overflow-hidden border border-white/5">
-                        {img && (
-                          <Image 
-                            src={img.imageUrl} 
-                            alt={speaker.name} 
-                            fill 
-                            className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                          />
-                        )}
-                      </div>
-                      <div className="space-y-2">
-                        <h4 className="text-2xl font-headline font-bold uppercase tracking-tight">{speaker.name}</h4>
-                        <p className="text-xs font-bold text-accent tracking-[0.2em] uppercase leading-relaxed">{speaker.role}</p>
-                      </div>
+              {keyPeople.map((person, i) => (
+                <CarouselItem key={i} className="pl-12 md:basis-1/2 lg:basis-1/2">
+                  <div className="space-y-8 group">
+                    <div className="relative aspect-[4/5] bg-white/5 overflow-hidden border border-white/5">
+                      <Image 
+                        src={`https://picsum.photos/seed/${person.id}/800/1000`} 
+                        alt={person.name} 
+                        fill 
+                        className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                        data-ai-hint="official portrait"
+                      />
                     </div>
-                  </CarouselItem>
-                )
-              })}
+                    <div className="space-y-2">
+                      <h4 className="text-2xl font-headline font-bold uppercase tracking-tight">{person.name}</h4>
+                      <p className="text-xs font-bold text-accent tracking-[0.2em] uppercase leading-relaxed">{person.role}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <div className="flex justify-end gap-4 mt-12 px-4">
               <CarouselPrevious className="static translate-y-0 rounded-none w-14 h-14 border-white/10" />
@@ -206,7 +216,7 @@ export default function SummitPage() {
                   </div>
                 </div>
                 <div className="flex gap-6">
-                  <Users className="w-8 h-8 text-accent shrink-0" />
+                  <Zap className="w-8 h-8 text-accent shrink-0" />
                   <div className="space-y-1">
                     <p className="text-sm font-bold tracking-widest uppercase">Matchmaking</p>
                     <p className="text-sm font-light leading-relaxed text-muted-foreground">
