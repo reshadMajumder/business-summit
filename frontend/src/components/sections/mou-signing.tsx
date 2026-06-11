@@ -2,7 +2,6 @@
 "use client"
 
 import Image from "next/image"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
 import {
   Carousel,
   CarouselContent,
@@ -14,21 +13,37 @@ import Autoplay from "embla-carousel-autoplay"
 
 export function MOUSigning() {
   const mouImages = [
-    { ...PlaceHolderImages.find(img => img.id === 'mou-1'), caption: "MOU signing with Governor of Plateau State" },
-    { ...PlaceHolderImages.find(img => img.id === 'mou-2'), caption: "MOU signing with Governor of Plateau State" },
     { 
-      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781115307/mic_gta4lj.jpg", 
-      description: "Official Address", 
-      caption: "MOU signing with Governor of Plateau State", 
-      imageHint: "official address" 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202688/10_Lunching-Hertz-in-Bangladesh_waekuu.jpg", 
+      description: "10 LUNCHING HERTZ IN BANGLADESH", 
+      imageHint: "business launch" 
     },
     { 
-      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781115307/chairman-sign_fxsccx.jpg", 
-      description: "Chairman Signing", 
-      caption: "MOU signing with Governor of Plateau State", 
-      imageHint: "contract signing" 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202679/Business_Summit_Team_With_Investors_Summit_Nigeria_Team_ylwhgq.jpg", 
+      description: "BUSINESS SUMMIT TEAM WITH INVESTORS SUMMIT NIGERIA TEAM", 
+      imageHint: "team meeting" 
+    },
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203873/Dr._M_Haider_Uzzaman_in_a_strategic_high-level_meeting_with_the_Deputy_Foreign_Minister_of_Kosovo_exploring_international_trade_opportunities_and_bilateral_economic_cooperation._asyzxj.jpg", 
+      description: "DR. M HAIDER UZZAMAN IN A STRATEGIC HIGH LEVEL MEETING WITH THE DEPUTY FOREIGN MINISTER OF KOSOVO EXPLORING INTERNATIONAL TRADE OPPORTUNITIES AND BILATERAL ECONOMIC COOPERATION", 
+      imageHint: "diplomatic meeting" 
+    },
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202675/Dr._M_Haider_Uzzaman_in_a_strategic_high-level_meeting_with_the_Deputy_Foreign_Minister_of_Kosovo_exploring_international_trade_opportunities_and_bilateral_economic_cooperation._1_ifbepm.jpg", 
+      description: "DR. M HAIDER UZZAMAN IN A STRATEGIC HIGH LEVEL MEETING WITH THE DEPUTY FOREIGN MINISTER OF KOSOVO EXPLORING INTERNATIONAL TRADE OPPORTUNITIES AND BILATERAL ECONOMIC COOPERATION", 
+      imageHint: "high level talk" 
+    },
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202675/MOU_signing_with_Governor_of_Plateau_State_1_ow6ixj.jpg", 
+      description: "MOU SIGNING WITH GOVERNOR OF PLATEAU STATE", 
+      imageHint: "mou ceremony" 
+    },
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202675/MOU_signing_with_Governor_of_Plateau_State_cbxfhw.jpg", 
+      description: "MOU SIGNING WITH GOVERNOR OF PLATEAU STATE", 
+      imageHint: "handshake ceremony" 
     }
-  ].filter(img => img.imageUrl)
+  ]
 
   return (
     <section className="py-24 bg-white border-b border-black/5">
@@ -55,20 +70,19 @@ export function MOUSigning() {
               <CarouselItem key={i} className="pl-8 md:basis-1/2 lg:basis-2/3">
                 <div className="relative group">
                   <div className="relative aspect-video overflow-hidden border border-black/5 bg-muted">
-                    {img.imageUrl && (
-                      <Image
-                        src={img.imageUrl}
-                        alt={img.description || "MOU Signing Ceremony"}
-                        fill
-                        className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                        data-ai-hint={img.imageHint}
-                      />
-                    )}
+                    <Image
+                      src={img.imageUrl}
+                      alt={img.description}
+                      fill
+                      className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                      data-ai-hint={img.imageHint}
+                    />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
                   </div>
-                  <div className="mt-6 space-y-2">
-                    <p className="text-[10px] font-bold text-accent tracking-[0.3em] uppercase">{img.description}</p>
-                    <h3 className="text-xl font-headline font-bold uppercase">{img.caption}</h3>
+                  <div className="mt-6">
+                    <p className="text-[10px] font-bold text-accent tracking-[0.3em] uppercase line-clamp-2 min-h-[2.4em]">
+                      {img.description}
+                    </p>
                   </div>
                 </div>
               </CarouselItem>

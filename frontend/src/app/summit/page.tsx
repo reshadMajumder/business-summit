@@ -16,6 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
+import { cn } from "@/lib/utils"
 
 const events = [
   {
@@ -35,20 +36,30 @@ const events = [
 ]
 
 const eventPhotos = [
-  { url: "https://picsum.photos/seed/event1/800/600", caption: "Diplomatic Milestone - signing the MOU with Plateau State Government" },
-  { url: "https://picsum.photos/seed/event2/800/600", caption: "Dr. Haider speaking with international delegates in Abuja" },
-  { url: "https://picsum.photos/seed/event3/800/600", caption: "Executive networking luncheon at Lagos Continental" },
-  { url: "https://picsum.photos/seed/event4/800/600", caption: "Strategic B2B matchmaking session in action" },
-  { url: "https://picsum.photos/seed/event5/800/600", caption: "Main keynote audience at Northern Nigeria Summit" },
-  { url: "https://picsum.photos/seed/event6/800/600", caption: "Awarding the excellence in regional industrialization" },
+  { url: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203527/f7cdd33a-7386-4a29-ad0e-41f59086645b.png", caption: "Global Strategic Engagement" },
+  { url: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203481/152577a0-7883-42b7-9ffa-8b418ca97f53.png", caption: "Institutional Networking Excellence" },
+  { url: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203405/0845486f-7644-4742-bf2a-b2046fcd11a0.png", caption: "Executive Leadership Session" },
+  { url: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203200/Investors_Summit_Lisbon_2024_htap25.jpg", caption: "Investors Summit Lisbon 2024" },
+  { url: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203143/Investors_Summit_Kuala_Lumpur_2017_qhyndj.jpg", caption: "Investors Summit Kuala Lumpur 2017" },
+  { url: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203143/Investors_Summit_Kuala_Lumpur_2018_mtngrd.jpg", caption: "Investors Summit Kuala Lumpur 2018" },
 ]
 
 const keyPeople = [
-  { name: "Senator Anyim Pius Anyim", role: "Former Secretary to the Government of the Federation", id: "speaker-anyim" },
-  { name: "Governor Caleb Mutfwang", role: "Executive Governor of Plateau State", id: "speaker-caleb" },
+  { 
+    name: "GOVERNOR H.E. CALEB MUTFWANG", 
+    role: "EXECUTIVE GOVERNOR OF PLATEAU STATE", 
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203005/Governor_H.E._Caleb_Mutfwang_imdcn5.jpg" 
+  },
+  { 
+    name: "H.E. SENATOR ANYIM PIUS ANYIM", 
+    role: "FORMER SECRETARY TO THE GOVERNMENT OF THE FEDERATION", 
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202999/H.E._Senator_Anyim_Pius_Anyim_uvmoov.jpg" 
+  },
 ]
 
 export default function SummitPage() {
+  const isScrolling = keyPeople.length > 4;
+
   return (
     <main className="relative min-h-screen bg-background">
       <Navbar variant="solid" />
@@ -114,7 +125,7 @@ export default function SummitPage() {
         </div>
       </section>
 
-      {/* Key People Scrolling Section */}
+      {/* Key People Section */}
       <section className="py-32 bg-primary text-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-24 mb-20">
           <div className="space-y-4 text-center md:text-left">
@@ -124,13 +135,15 @@ export default function SummitPage() {
         </div>
         
         <div className="relative flex overflow-hidden">
-          <div className="flex gap-12 animate-scroll-left whitespace-nowrap">
-            {/* Doubling for seamless scroll */}
-            {[...keyPeople, ...keyPeople, ...keyPeople, ...keyPeople].map((person, i) => (
+          <div className={cn(
+            "flex gap-12",
+            isScrolling ? "animate-scroll-left whitespace-nowrap" : "container mx-auto px-4 md:px-24 justify-center md:justify-start flex-wrap"
+          )}>
+            {(isScrolling ? [...keyPeople, ...keyPeople, ...keyPeople, ...keyPeople] : keyPeople).map((person, i) => (
               <div key={i} className="space-y-6 group w-72 shrink-0 inline-block whitespace-normal">
                 <div className="relative aspect-[4/5] bg-white/5 overflow-hidden border border-white/10 shadow-2xl transition-all duration-700">
                   <Image 
-                    src={`https://picsum.photos/seed/${person.id}/800/1000`} 
+                    src={person.image} 
                     alt={person.name} 
                     fill 
                     className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"

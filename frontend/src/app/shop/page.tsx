@@ -10,7 +10,6 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function ShopPage() {
-  const drHaiderImg = PlaceHolderImages.find(img => img.id === 'speaker-1')
   const bookImg = PlaceHolderImages.find(img => img.id === 'book-featured')
 
   const masterclasses = [
@@ -40,14 +39,12 @@ export default function ShopPage() {
         <div className="mb-16 animate-fade-in">
           <div className="group bg-white border border-black/5 overflow-hidden shadow-2xl flex flex-col lg:flex-row max-w-6xl mx-auto h-auto lg:min-h-[600px]">
             <div className="relative lg:w-[45%] h-[350px] sm:h-[450px] lg:h-auto bg-muted overflow-hidden">
-               {drHaiderImg && (
                 <Image 
-                  src={drHaiderImg.imageUrl} 
+                  src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781205426/b1e86619-ef1d-468a-aa65-c249c335b3fd.png" 
                   alt="Dr. M. Haider Uzzaman" 
                   fill 
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
                 />
-              )}
             </div>
             
             <div className="p-8 sm:p-12 lg:p-14 flex-1 flex flex-col bg-white">
