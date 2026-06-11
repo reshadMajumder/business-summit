@@ -15,7 +15,7 @@ export function MOUSigning() {
   const mouImages = [
     { 
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202688/10_Lunching-Hertz-in-Bangladesh_waekuu.jpg", 
-      description: "10 LUNCHING HERTZ IN BANGLADESH", 
+      description: "LUNCHING HERTZ IN BANGLADESH", 
       imageHint: "business launch" 
     },
     { 
