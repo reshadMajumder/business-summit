@@ -21,17 +21,17 @@ import { cn } from "@/lib/utils"
 const events = [
   {
     city: "ABUJA, NIGERIA",
-    hotel: "ABUJA Continental hotel",
+    hotel: "ABUJA CONTINENTAL VENUE",
     room: "GRAND BALLROOM",
-    dates: "10, 11 NOVEMBER 2026",
-    image: "https://picsum.photos/seed/abuja-summit/1200/800"
+    dates: "10 & 11 NOVEMBER 2026",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781211529/55f0a1b7-a2db-49c8-ae29-ef732a86c1b6.png"
   },
   {
     city: "LAGOS, NIGERIA",
-    hotel: "LAGOS Continental hotel",
+    hotel: "LAGOS CONTINENTAL HOTEL",
     room: "GRAND BALLROOM",
-    dates: "13, 14 NOVEMBER 2026",
-    image: "https://picsum.photos/seed/lagos-summit/1200/800"
+    dates: "13 & 14 NOVEMBER 2026",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781211325/bfdd5376-3520-4a60-8345-9f2618bde2fd.png"
   }
 ]
 
@@ -178,17 +178,14 @@ export default function SummitPage() {
             </div>
             
             <div className="relative aspect-video bg-black overflow-hidden shadow-2xl group">
-               <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="h-full w-full object-cover opacity-80"
-              >
-                <source src="https://video.wixstatic.com/video/aeffa8_a5b1c4ede328407284baacb3c9986f58/1080p/mp4/file.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-              <div className="absolute bottom-6 left-6 text-white z-10">
+               <iframe
+                src="https://www.youtube.com/embed/euR3i1M0Gs8?autoplay=1&mute=1&loop=1&playlist=euR3i1M0Gs8&controls=0&modestbranding=1&rel=0"
+                className="absolute inset-0 w-full h-full border-0 opacity-80 group-hover:opacity-100 transition-opacity"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+              <div className="absolute bottom-6 left-6 text-white z-10 pointer-events-none">
                 <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-accent mb-1">Global Highlights</p>
                 <h4 className="text-xl font-headline font-bold uppercase">The Investors Summit Experience</h4>
               </div>

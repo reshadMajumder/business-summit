@@ -38,7 +38,9 @@ export function AdvisoryBoard() {
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
           <div className="space-y-4">
             <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">The Council</span>
-            <h2 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-none">Advisory <br /> Board</h2>
+            <h2 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-none">
+              Advisory <br /> <span className="text-accent">Board</span>
+            </h2>
           </div>
           <p className="max-w-md text-right text-muted-foreground font-light text-lg">
             Institutional intelligence guided by a collective of global industry veterans and strategic visionaries.
