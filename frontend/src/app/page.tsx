@@ -3,14 +3,13 @@ import { Navbar } from "@/components/layout/navbar"
 import { Hero } from "@/components/sections/hero"
 import { Partners } from "@/components/sections/partners"
 import { MOUSigning } from "@/components/sections/mou-signing"
-import { Offers } from "@/components/sections/offers"
 import { Testimonials } from "@/components/sections/testimonials"
 import { AdvisoryBoard } from "@/components/sections/advisory-board"
-import { Gallery } from "@/components/sections/gallery"
 import { WhyChooseUs } from "@/components/sections/why-choose-us"
 import { Footer } from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
-import { Linkedin } from "lucide-react"
+import { ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -23,37 +22,38 @@ export default function Home() {
       
       <MOUSigning />
       
-      <Offers />
-
-      <Testimonials />
-
-      <AdvisoryBoard />
-
-      <Gallery />
-      
-      <WhyChooseUs />
-
-      {/* LinkedIn Section */}
-      <section className="py-24 bg-background border-t border-black/5">
+      {/* InvEX Introduction Section */}
+      <section className="py-32 bg-white">
         <div className="container mx-auto px-4 md:px-24">
-          <div className="max-w-4xl mx-auto bg-white p-12 md:p-20 border border-black/5 text-center space-y-8 animate-fade-in shadow-sm">
-            <div className="flex flex-col items-center gap-6">
-              <div className="p-4 bg-[#0A66C2]/5 rounded-full text-center flex items-center justify-center">
-                <Linkedin className="w-12 h-12 text-[#0A66C2]" />
-              </div>
-              <h3 className="text-3xl font-headline font-bold uppercase tracking-tight">Connect On LinkedIn</h3>
+          <div className="max-w-4xl mx-auto text-center space-y-12">
+            <div className="space-y-4">
+              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Institutional Portal</span>
+              <h2 className="text-5xl md:text-8xl font-headline font-bold leading-none">
+                Inv<span className="text-accent">EX</span>
+              </h2>
             </div>
-            <p className="text-lg text-muted-foreground font-light max-w-lg mx-auto leading-relaxed">
-              Follow our executive feed for real-time updates on global scaling, strategic partnerships, and institutional intelligence.
-            </p>
-            <div className="pt-4">
-              <Button variant="outline" className="rounded-none border-black/10 px-12 h-16 text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-black hover:text-white transition-all">
-                View Official Profile
-              </Button>
+            <div className="space-y-8">
+              <p className="text-2xl md:text-3xl font-light leading-relaxed text-foreground max-w-3xl mx-auto text-center">
+                Join our latest & state of the art exchange to secure your investment. EXchange ideas, EXchange projects, EXchange capital.
+              </p>
+              <div className="pt-6">
+                <Link href="/invex">
+                  <Button className="h-16 px-14 bg-black text-white hover:bg-accent transition-all duration-500 rounded-none text-[10px] font-bold tracking-[0.4em] uppercase group shadow-2xl">
+                    Access Marketplace
+                    <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <AdvisoryBoard />
+
+      <WhyChooseUs />
+
+      <Testimonials />
 
       <Footer />
     </main>

@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { MapPin, Calendar, Globe, Users, Zap } from "lucide-react"
+import { MapPin, Calendar, Globe, Users, Zap, Ticket } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import {
   Carousel,
@@ -19,14 +19,14 @@ import Autoplay from "embla-carousel-autoplay"
 
 const events = [
   {
-    city: "ABUJA",
+    city: "ABUJA, NIGERIA",
     hotel: "ABUJA Continental hotel",
     room: "GRAND BALLROOM",
     dates: "10, 11 NOVEMBER 2026",
     image: "https://picsum.photos/seed/abuja-summit/1200/800"
   },
   {
-    city: "LAGOS",
+    city: "LAGOS, NIGERIA",
     hotel: "LAGOS Continental hotel",
     room: "GRAND BALLROOM",
     dates: "13, 14 NOVEMBER 2026",
@@ -54,57 +54,35 @@ export default function SummitPage() {
       <Navbar variant="solid" />
       
       {/* Centralized Hero */}
-      <section className="relative pt-32 pb-12 bg-white overflow-hidden text-center">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+      <section className="relative pt-32 pb-12 sm:pt-48 sm:pb-32 bg-white border-b border-black/5 overflow-hidden text-center">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <div className="max-w-5xl mx-auto space-y-12 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">
-              The <br /> Investors <br /> <span className="text-accent">Summit</span>
+              Investors <br /> <span className="text-accent">Summit</span>
             </h1>
-            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-2xl mx-auto">
-              A Premier Annual 4-day Global event convening Investors, High Net Worth Individuals, and Government Dignitaries from 100+ countries.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Previous Editions Rotating Gallery */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase text-center md:text-left">Previous Editions</h2>
-          </div>
-          
-          <Carousel 
-            opts={{ align: "start", loop: true }}
-            plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-8">
-              {eventPhotos.map((photo, i) => (
-                <CarouselItem key={i} className="pl-8 md:basis-1/2 lg:basis-1/3">
-                  <div className="group space-y-4">
-                    <div className="relative aspect-[4/3] overflow-hidden border border-black/5 bg-muted">
-                      <Image src={photo.url} alt={photo.caption} fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
-                    </div>
-                    <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground leading-relaxed">{photo.caption}</p>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-end gap-4 mt-8">
-              <CarouselPrevious className="static translate-y-0 rounded-none w-12 h-12 border-black/10" />
-              <CarouselNext className="static translate-y-0 rounded-none w-12 h-12 border-black/10" />
+            <div className="space-y-8">
+              <p className="text-base md:text-xl font-light leading-relaxed text-muted-foreground max-w-4xl mx-auto text-justify">
+                An Exclusive & Premier 4-day Annual Event in a major city crowdsourced from around the world to convene Investors, HNWI’s, Government Dignitaries & Project owners from 100+ countries. Investors Summit has been running since 2016 acting as a vehicle for connection, funding and growth. Designed as a platform to facilitate G2G, G2B, B2B engagements, the summit is built on one mission; High-Level Cross Border Collaboration.
+              </p>
+              <div className="pt-6">
+                <Link href="https://www.eventbrite.com" target="_blank" rel="noopener noreferrer">
+                  <Button className="h-16 px-12 bg-black text-white hover:bg-accent transition-all duration-500 rounded-none text-[10px] font-bold tracking-[0.4em] uppercase group shadow-2xl">
+                    Purchase Ticket
+                    <Ticket className="ml-3 w-4 h-4 group-hover:rotate-12 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
             </div>
-          </Carousel>
+          </div>
         </div>
       </section>
 
-      {/* Upcoming Section Above Venues */}
-      <section className="pt-24 bg-white">
+      {/* Upcoming Section */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-24">
            <div className="mb-12 border-l-4 border-accent pl-8">
              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block mb-2">Roadmap</span>
-             <h2 className="text-5xl font-headline font-bold uppercase">Upcoming</h2>
+             <h2 className="text-5xl font-headline font-bold uppercase">Investors Summit <br /> Nigeria 2026</h2>
            </div>
           <div className="grid md:grid-cols-2 gap-px bg-black/5 border border-black/5">
             {events.map((event, i) => (
@@ -136,10 +114,11 @@ export default function SummitPage() {
         </div>
       </section>
 
-      {/* Key People Section */}
+      {/* Key People Scrolling Section */}
       <section className="py-32 bg-primary text-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-24">
           <div className="mb-20 space-y-4 text-center md:text-left">
+             <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block">Dignitaries</span>
             <h2 className="text-5xl font-headline font-bold uppercase">Key People</h2>
           </div>
           
@@ -177,56 +156,71 @@ export default function SummitPage() {
         </div>
       </section>
 
+      {/* Event Video Testimonial Section */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-4 md:px-24">
-          <div className="grid lg:grid-cols-2 gap-20">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-10">
-              <h2 className="text-4xl md:text-6xl font-headline font-bold uppercase leading-none">Exclusive <br /> Engagement <br /> Platform</h2>
-              <p className="text-xl font-light leading-relaxed text-muted-foreground">
-                Designed as an exclusive platform for strategic G2G, G2B, B2B, and investor engagements, the Summit fosters high-level cross-border collaboration and direct access to capital. 
+              <h2 className="text-4xl md:text-6xl font-headline font-bold uppercase leading-none">Event <br /> Testimonial <br /> <span className="text-accent">Archive</span></h2>
+              <p className="text-xl font-light leading-relaxed text-muted-foreground text-justify">
+                Witness the culmination of global industrial intelligence. Our summit archives provide a narrative of the connections, capital procurement, and strategic alignments that define the Business Summit experience.
               </p>
-              <p className="text-lg font-light leading-relaxed text-muted-foreground">
-                Participants build meaningful partnerships, expand into new markets, and secure funding on the spot.
-              </p>
+              <Link href="https://www.linkedin.com/company/bsummitdotnet/posts/?feedView=all" target="_blank">
+                <Button variant="outline" className="h-14 px-8 rounded-none border-black/10 text-[10px] font-bold tracking-[0.3em] uppercase">
+                  View More Highlights
+                </Button>
+              </Link>
             </div>
             
-            <div className="bg-background p-16 space-y-12 border border-black/5">
-              <div className="space-y-4">
-                <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Architecture</span>
-                <h3 className="text-3xl font-headline font-bold uppercase">What To Expect</h3>
-              </div>
-              
-              <div className="space-y-8">
-                <div className="flex gap-6">
-                  <Zap className="w-8 h-8 text-accent shrink-0" />
-                  <div className="space-y-1">
-                    <p className="text-sm font-bold tracking-widest uppercase">Direct Capital Access</p>
-                    <p className="text-sm font-light leading-relaxed text-muted-foreground">
-                      Latest strategy and on-the-spot solutions on how to get funding and business solutions.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-6">
-                  <Globe className="w-8 h-8 text-accent shrink-0" />
-                  <div className="space-y-1">
-                    <p className="text-sm font-bold tracking-widest uppercase">Summit Concierge</p>
-                    <p className="text-sm font-light leading-relaxed text-muted-foreground">
-                      Access to the brains behind Business Summit and an exclusive community of hundreds of like-minded individuals.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-6">
-                  <Zap className="w-8 h-8 text-accent shrink-0" />
-                  <div className="space-y-1">
-                    <p className="text-sm font-bold tracking-widest uppercase">Matchmaking</p>
-                    <p className="text-sm font-light leading-relaxed text-muted-foreground">
-                      Quality matchmaking to ensure closure of deals and a clear pathway to effortless globalization.
-                    </p>
-                  </div>
-                </div>
+            <div className="relative aspect-video bg-black overflow-hidden shadow-2xl group">
+               <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-full w-full object-cover opacity-80"
+              >
+                <source src="https://video.wixstatic.com/video/aeffa8_a5b1c4ede328407284baacb3c9986f58/1080p/mp4/file.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+              <div className="absolute bottom-6 left-6 text-white z-10">
+                <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-accent mb-1">Global Highlights</p>
+                <h4 className="text-xl font-headline font-bold uppercase">The Investors Summit Experience</h4>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Previous Editions Rotating Gallery */}
+      <section className="py-24 bg-background border-t border-black/5">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <div className="mb-16">
+            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase text-center md:text-left">Previous Editions</h2>
+          </div>
+          
+          <Carousel 
+            opts={{ align: "start", loop: true }}
+            plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-8">
+              {eventPhotos.map((photo, i) => (
+                <CarouselItem key={i} className="pl-8 md:basis-1/2 lg:basis-1/3">
+                  <div className="group space-y-4">
+                    <div className="relative aspect-[4/3] overflow-hidden border border-black/5 bg-muted">
+                      <Image src={photo.url} alt={photo.caption} fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                    </div>
+                    <p className="text-[10px] font-bold tracking-widest uppercase text-muted-foreground leading-relaxed text-justify">{photo.caption}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-end gap-4 mt-8">
+              <CarouselPrevious className="static translate-y-0 rounded-none w-12 h-12 border-black/10" />
+              <CarouselNext className="static translate-y-0 rounded-none w-12 h-12 border-black/10" />
+            </div>
+          </Carousel>
         </div>
       </section>
 

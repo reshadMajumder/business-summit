@@ -44,7 +44,7 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
   const navLinks = [
     { name: "HOME", href: "/" },
     { name: "OUR STORY", href: "/our-story" },
-    { name: "INVEX", href: "/invex" },
+    { name: "InvEX", href: "/invex" },
     { name: "SUMMIT", href: "/summit" },
     { name: "SHOP", href: "/shop" },
     { name: "BLOGS", href: "/blogs" },
@@ -84,11 +84,13 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
                 key={link.name} 
                 href={link.href}
                 className={cn(
-                  "text-[9px] font-bold tracking-[0.3em] transition-all duration-300 hover:text-accent",
+                  "text-[9px] font-bold tracking-[0.3em] transition-all duration-300 hover:text-accent flex items-center",
                   isScrolled ? "text-black" : "text-white/80"
                 )}
               >
-                {link.name}
+                {link.name === "InvEX" ? (
+                  <>Inv<span className="text-accent">EX</span></>
+                ) : link.name}
               </Link>
             ))}
             <div className="flex items-center gap-4 ml-4 pl-4 border-l border-black/10">
@@ -119,6 +121,7 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
           <button 
             className="lg:hidden p-2 relative z-[60]"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            suppressHydrationWarning
           >
             {mobileMenuOpen ? (
               <X className="text-black" />
@@ -157,7 +160,9 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-lg font-headline font-bold uppercase tracking-[0.2em] text-black hover:text-accent transition-colors border-b border-black/5 pb-2"
               >
-                {link.name}
+                {link.name === "InvEX" ? (
+                  <>Inv<span className="text-accent">EX</span></>
+                ) : link.name}
               </Link>
             ))}
             <Link 

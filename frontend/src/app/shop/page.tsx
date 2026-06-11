@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Zap, Target, ArrowRight, ShieldCheck, ShoppingCart, BookOpen, Briefcase, UserCheck } from "lucide-react"
+import { ArrowRight, ShoppingCart, BookOpen, Briefcase, UserCheck } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -24,19 +24,22 @@ export default function ShopPage() {
     <main className="min-h-screen bg-background">
       <Navbar variant="solid" />
       
-      <section className="pt-48 pb-24 container mx-auto px-4 md:px-24">
-        <div className="max-w-4xl space-y-6 mb-20 animate-fade-in">
-          <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Curated Excellence</span>
-          <h1 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-[0.9] text-accent">Executive <br /> Boutique</h1>
-          <p className="text-lg md:text-xl font-light leading-relaxed text-muted-foreground max-w-2xl">
-            Reserved for high-impact leaders. Access exclusive 1-on-1 strategy calls, institutional advisory packages, and strategic intelligence.
-          </p>
+      {/* Refined Narrative Hero */}
+      <section className="relative pt-32 pb-12 sm:pt-48 sm:pb-32 overflow-hidden border-b border-black/5 bg-white text-center">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+            <h1 className="text-5xl md:text-8xl font-headline font-bold uppercase leading-[0.9] text-accent tracking-tighter">
+              Executive <br /> Boutique
+            </h1>
+          </div>
         </div>
+      </section>
 
-        {/* Featured: Direct Counsel */}
-        <div className="mb-24 animate-fade-in">
-          <div className="group bg-white border border-black/5 overflow-hidden shadow-xl flex flex-col md:flex-row max-w-6xl mx-auto h-auto md:h-[400px]">
-            <div className="relative md:w-2/5 h-[300px] md:h-full bg-muted overflow-hidden">
+      <section className="py-24 container mx-auto px-6 sm:px-12 md:px-24">
+        {/* Flagship: Direct Counsel - Fully Responsive Flagship */}
+        <div className="mb-16 animate-fade-in">
+          <div className="group bg-white border border-black/5 overflow-hidden shadow-2xl flex flex-col lg:flex-row max-w-6xl mx-auto h-auto lg:min-h-[600px]">
+            <div className="relative lg:w-[45%] h-[350px] sm:h-[450px] lg:h-auto bg-muted overflow-hidden">
                {drHaiderImg && (
                 <Image 
                   src={drHaiderImg.imageUrl} 
@@ -45,97 +48,113 @@ export default function ShopPage() {
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
                 />
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
             
-            <div className="p-8 md:p-12 flex-1 flex flex-col justify-center space-y-6">
-              <div className="space-y-2">
-                <span className="text-[9px] font-bold tracking-[0.4em] text-accent uppercase">Institutional Advisory</span>
-                <h2 className="text-3xl md:text-4xl font-headline font-bold uppercase leading-none">
-                  Direct Counsel <br /> with the <span className="text-accent">Chairman</span>
+            <div className="p-8 sm:p-12 lg:p-14 flex-1 flex flex-col bg-white">
+              <div className="space-y-6 flex-1 flex flex-col pt-4 lg:pt-8">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-headline font-bold uppercase leading-[0.9]">
+                  Direct <br /> Counsel <br /> With the <br /> 
+                  <span className="text-accent">Chairman</span>
                 </h2>
-                <p className="text-sm font-light text-muted-foreground leading-relaxed max-w-md">
-                  A personalized 60-minute coaching architecture designed to audit your business model and map a global expansion path.
+                <p className="text-sm sm:text-base font-light text-muted-foreground leading-relaxed max-w-lg text-justify">
+                  A personalized 60-minute coaching architecture designed to audit your business model, identify strategic bottlenecks, and map a definitive path for global expansion and funding procurement.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
-                <div className="text-2xl font-headline font-bold uppercase">$5,000.00 <span className="text-[9px] text-muted-foreground font-body">/ SESSION</span></div>
-                <Button size="sm" className="h-12 px-8 rounded-none bg-black text-white hover:bg-accent transition-all duration-500 text-[9px] font-bold tracking-[0.4em] uppercase group">
-                  Book Now
-                  <ShoppingCart className="ml-2 w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+              <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6 pt-8 mt-8 border-t border-black/5">
+                <div className="text-2xl md:text-3xl font-headline font-bold uppercase tracking-tight">
+                  $5,000.00 <span className="text-[10px] text-muted-foreground font-body font-normal">/ SESSION</span>
+                </div>
+                <Button className="h-14 px-8 rounded-none bg-black text-white hover:bg-accent transition-all duration-500 text-[10px] font-bold tracking-[0.3em] uppercase group flex items-center gap-4 w-full sm:w-auto">
+                  BOOK NOW
+                  <ShoppingCart className="w-4 h-4" />
                 </Button>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+        {/* Advisory & Intelligence Grid - 2 Columns on Desktop */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-24">
           {/* Business Plan Development */}
-          <Card className="rounded-none border-black/5 shadow-md group hover:border-accent transition-all duration-500 bg-white">
-            <CardContent className="p-10 space-y-6 text-center flex flex-col items-center">
-              <div className="p-4 bg-accent/5 rounded-full mb-2">
-                <Briefcase className="w-8 h-8 text-accent" />
+          <Card className="rounded-none border border-black/5 shadow-xl group hover:border-accent transition-all duration-500 bg-white overflow-hidden">
+            <CardContent className="p-12 space-y-8 flex flex-col items-center text-center">
+              <div className="p-6 bg-accent/5 rounded-full">
+                <Briefcase className="w-12 h-12 text-accent" />
               </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-headline font-bold uppercase tracking-tight">Business Plan <br />Development</h3>
-                <p className="text-xs font-light text-muted-foreground leading-relaxed">Professional institutional blueprints architected for global funding rounds and G2G expansion.</p>
+              <div className="space-y-4">
+                <h3 className="text-3xl font-headline font-bold uppercase tracking-tight">Business Plan <br />Architecture</h3>
+                <p className="text-sm font-light text-muted-foreground leading-relaxed text-justify">
+                  Professional institutional blueprints architected for global funding rounds, M&A activity, and G2G expansion. Our plans are vetted by a network of over 100 high-net-worth and institutional investors.
+                </p>
               </div>
-              <div className="pt-4 border-t border-black/5 w-full">
-                <p className="text-xl font-headline font-bold uppercase mb-4">Starting at $3,500</p>
-                <Button variant="outline" className="w-full h-12 rounded-none border-black/10 text-[9px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
+              <div className="pt-8 border-t border-black/5 w-full">
+                <p className="text-2xl font-headline font-bold uppercase mb-6">Starting at $3,500</p>
+                <Button variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
                   Inquire Service
                 </Button>
               </div>
             </CardContent>
           </Card>
 
-          {/* Published Books */}
-          <Card className="rounded-none border-black/5 shadow-md group hover:border-accent transition-all duration-500 bg-white overflow-hidden">
-            <div className="relative aspect-video bg-muted border-b border-black/5 overflow-hidden">
+          {/* Digital Library */}
+          <Card className="rounded-none border border-black/5 shadow-xl group hover:border-accent transition-all duration-500 bg-white overflow-hidden">
+            <div className="relative aspect-[21/9] bg-muted border-b border-black/5 overflow-hidden">
               {bookImg && (
                 <Image src={bookImg.imageUrl} alt="Strategic Publications" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
               )}
-              <div className="absolute inset-0 bg-black/10"></div>
-              <div className="absolute top-4 left-4">
-                 <BookOpen className="w-5 h-5 text-white" />
+              <div className="absolute inset-0 bg-black/20"></div>
+              <div className="absolute top-6 left-6">
+                 <BookOpen className="w-6 h-6 text-white" />
               </div>
             </div>
-            <CardContent className="p-8 space-y-6">
-              <div className="space-y-2">
-                <span className="text-[8px] font-bold tracking-[0.3em] text-accent uppercase">Strategic Publications</span>
-                <h3 className="text-xl font-headline font-bold uppercase leading-tight">Digital Library <br />by Dr. Haider</h3>
-                <p className="text-xs font-light text-muted-foreground leading-relaxed">Distilled institutional intelligence for the modern visionary.</p>
+            <CardContent className="p-12 space-y-8">
+              <div className="space-y-4">
+                <span className="text-[9px] font-bold tracking-[0.4em] text-accent uppercase">Strategic Publications</span>
+                <h3 className="text-3xl font-headline font-bold uppercase leading-tight">Digital Library <br />by Dr. Haider</h3>
+                <p className="text-sm font-light text-muted-foreground leading-relaxed text-justify">
+                  Distilled institutional intelligence for the modern visionary. Access a curated collection of guidelines on business architecture, international expansion, and funding procurement.
+                </p>
               </div>
-              <Button variant="outline" className="w-full h-12 rounded-none border-black/10 text-[9px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
+              <Button variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
                 View on Amazon
-                <ArrowRight className="ml-2 w-3 h-3" />
+                <ArrowRight className="ml-3 w-4 h-4" />
               </Button>
             </CardContent>
           </Card>
+        </div>
 
-          {/* Masterclass Category Header */}
-          <div className="bg-black text-white p-10 flex flex-col justify-center space-y-6 text-center border-l-4 border-accent">
-            <div className="space-y-4">
-              <UserCheck className="w-10 h-10 text-accent mx-auto" />
-              <h3 className="text-3xl font-headline font-bold uppercase leading-none">Executive <br /> Masterclasses</h3>
-              <p className="text-sm font-light text-white/40">Exclusive digital sessions from our core faculty designed for rapid institutional scaling.</p>
+        {/* Masterclasses Section Header */}
+        <div className="mb-12 bg-black text-white p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12 border-l-8 border-accent animate-fade-in shadow-2xl">
+          <div className="space-y-6 max-w-xl text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-4">
+              <UserCheck className="w-10 h-10 text-accent" />
+              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Educational Core</span>
             </div>
+            <h3 className="text-4xl md:text-6xl font-headline font-bold uppercase leading-none">Executive <br /> Masterclasses</h3>
+            <p className="text-base font-light text-white/40 text-justify">
+              Exclusive digital sessions from our core faculty designed for rapid institutional scaling, operational optimization, and high-stakes global sales.
+            </p>
+          </div>
+          <div className="hidden lg:block w-[1px] h-32 bg-white/10 mx-12"></div>
+          <div className="text-center md:text-right space-y-4">
+            <p className="text-[10px] font-bold text-accent tracking-[0.3em] uppercase">Status: Live Access</p>
+            <p className="text-2xl font-headline font-bold">4 Modules Available</p>
           </div>
         </div>
 
         {/* Masterclasses Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in">
           {masterclasses.map((mc, i) => (
-            <div key={i} className="bg-white border border-black/5 p-8 space-y-6 hover:shadow-lg transition-all duration-500 border-t-2 hover:border-t-accent">
-               <div className="space-y-2">
-                 <p className="text-[8px] font-bold tracking-widest text-accent uppercase">Faculty: {mc.faculty}</p>
-                 <h4 className="text-lg font-headline font-bold uppercase leading-tight">{mc.name}</h4>
+            <div key={i} className="bg-white border border-black/5 p-10 space-y-8 hover:shadow-2xl transition-all duration-500 border-t-4 hover:border-t-accent group">
+               <div className="space-y-3">
+                 <p className="text-[9px] font-bold tracking-widest text-accent uppercase">Faculty: {mc.faculty}</p>
+                 <h4 className="text-2xl font-headline font-bold uppercase leading-tight group-hover:text-accent transition-colors">{mc.name}</h4>
                </div>
-               <div className="pt-4 border-t border-black/5 flex items-center justify-between">
-                 <span className="text-lg font-headline font-bold">{mc.price}</span>
-                 <Button variant="link" className="p-0 h-auto text-[9px] font-bold tracking-widest uppercase text-black hover:text-accent">
-                   Details <ArrowRight className="ml-1 w-2.5 h-2.5" />
+               <div className="pt-6 border-t border-black/5 flex items-center justify-between">
+                 <span className="text-xl font-headline font-bold">{mc.price}</span>
+                 <Button variant="link" className="p-0 h-auto text-[10px] font-bold tracking-widest uppercase text-black hover:text-accent group">
+                   Details <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
                  </Button>
                </div>
             </div>

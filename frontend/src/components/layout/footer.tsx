@@ -50,8 +50,10 @@ export function Footer() {
             <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-white/80">Navigation</h4>
             <div className="flex flex-col gap-4 text-sm font-light text-white/40">
               {navLinks.map((link) => (
-                <Link key={link.name} href={link.href} className="hover:text-accent transition-colors">
-                  {link.name}
+                <Link key={link.name} href={link.href} className="hover:text-accent transition-colors flex items-center gap-1">
+                  {link.name === "InvEX" ? (
+                    <>Inv<span className="text-accent">EX</span></>
+                  ) : link.name}
                 </Link>
               ))}
             </div>

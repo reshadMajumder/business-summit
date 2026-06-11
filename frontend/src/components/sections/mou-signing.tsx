@@ -16,8 +16,18 @@ export function MOUSigning() {
   const mouImages = [
     { ...PlaceHolderImages.find(img => img.id === 'mou-1'), caption: "Preparing the Strategic Alliance" },
     { ...PlaceHolderImages.find(img => img.id === 'mou-2'), caption: "Formal Handshake with the Governor" },
-    { imageUrl: "https://picsum.photos/seed/mou3/1200/800", description: "Signing the Agreement", caption: "Committing to Regional Excellence", imageHint: "business meeting" },
-    { imageUrl: "https://picsum.photos/seed/mou4/1200/800", description: "Strategic Briefing", caption: "Mapping Global Expansion", imageHint: "corporate strategy" }
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781115307/mic_gta4lj.jpg", 
+      description: "Official Address", 
+      caption: "Committing to Regional Excellence", 
+      imageHint: "official address" 
+    },
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781115307/chairman-sign_fxsccx.jpg", 
+      description: "Chairman Signing", 
+      caption: "Mapping Global Expansion", 
+      imageHint: "contract signing" 
+    }
   ].filter(img => img.imageUrl)
 
   return (
@@ -43,13 +53,15 @@ export function MOUSigning() {
               <CarouselItem key={i} className="pl-8 md:basis-1/2 lg:basis-2/3">
                 <div className="relative group">
                   <div className="relative aspect-video overflow-hidden border border-black/5 bg-muted">
-                    <Image
-                      src={img.imageUrl!}
-                      alt={img.description || "MOU Signing Ceremony"}
-                      fill
-                      className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                      data-ai-hint={img.imageHint}
-                    />
+                    {img.imageUrl && (
+                      <Image
+                        src={img.imageUrl}
+                        alt={img.description || "MOU Signing Ceremony"}
+                        fill
+                        className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                        data-ai-hint={img.imageHint}
+                      />
+                    )}
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
                   </div>
                   <div className="mt-6 space-y-2">

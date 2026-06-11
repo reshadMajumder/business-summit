@@ -6,10 +6,10 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Shield, Globe, Users, Landmark, UserCircle } from "lucide-react"
 
 const coreTeam = [
-  { name: "Dr. M. Haider Uzzaman", role: "Chairman & Founder", image: "https://businesssummit.net/wp-content/uploads/2024/12/744786_5216b5a1ffdf404bae1d280ac96fa1cemv2.avif" },
-  { name: "Abid Haider", role: "Director", image: "https://picsum.photos/seed/abid/800/1000" },
-  { name: "Avishek Busviah", role: "Executive Director", image: "https://picsum.photos/seed/avishek/800/1000" },
-  { name: "Lima Akter", role: "Management Lead", image: "https://picsum.photos/seed/lima/800/1000" },
+  { name: "Dr. M. Haider Uzzaman", role: "Chairman & Founder", image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781114636/9fef9adf-dcd8-4ad9-b24e-bc734c8a2502.png" },
+  { name: "Abid Haider", role: "Director", image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781115307/mic_gta4lj.jpg" },
+  { name: "Avishek Busviah", role: "Executive Director", image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781114312/avishek_szlhj1.jpg" },
+  { name: "Lima Akter", role: "Management Lead", image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781114518/d3045420-41ce-4b2a-8bec-6365800b19e7.png" },
   { name: "Sharafat Hossain", role: "Operations Lead", image: "https://picsum.photos/seed/sharafat/800/1000" },
 ]
 
@@ -30,36 +30,34 @@ export default function OurStory() {
       <Navbar variant="solid" />
       
       {/* Narrative Hero */}
-      <section className="relative pt-48 pb-32 overflow-hidden border-b border-black/5 bg-white">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-12 animate-fade-in">
-              <div className="space-y-4">
-                <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">The Genesis</span>
-                <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Our <br />Story</h1>
-              </div>
-              <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground">
-                Business Summit is the brainchild of a highly respected business innovator, <span className="text-primary font-medium">Dr. M. Haider Uzzaman</span>. 
-                Dr. Haider started his journey in business with 35 cents and built it into a multi-million dollar empire. 
-                Following this he realized with his thousands of connections around the globe he could craft and assist in creating the next generation of entrepreneurs and this led to the culmination and creation of what is today Business Summit Limited.
-              </p>
+      <section className="relative pt-32 pb-12 sm:pt-48 sm:pb-32 overflow-hidden border-b border-black/5 bg-white text-center">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <div className="max-w-4xl mx-auto space-y-12 animate-fade-in mb-20">
+            <div className="space-y-4">
+              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">The Genesis</span>
+              <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Our <br />Story</h1>
             </div>
-            
-            <div className="relative aspect-[4/5] bg-muted overflow-hidden group shadow-2xl">
-              {visionaryImg && (
-                <Image 
-                  src={visionaryImg.imageUrl} 
-                  alt="Dr. M. Haider Uzzaman" 
-                  fill 
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                  priority
-                />
-              )}
-              <div className="absolute inset-0 bg-black/10"></div>
-              <div className="absolute bottom-10 left-10 text-white z-10">
-                <p className="text-xs font-bold tracking-[0.4em] uppercase opacity-60 mb-2">The Visionary</p>
-                <h3 className="text-3xl font-headline font-bold uppercase">Dr. M. Haider Uzzaman</h3>
-              </div>
+            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground text-justify">
+              Business Summit is the brainchild of a highly respected business innovator, <span className="text-primary font-medium">Dr. M. Haider Uzzaman</span>. 
+              Dr. Haider started his journey in business with 35 cents and built it into a multi-million dollar empire. 
+              Following this he realized with his thousands of connections around the globe he could craft and assist in creating the next generation of entrepreneurs and this led to the culmination and creation of what is today Business Summit Limited.
+            </p>
+          </div>
+          
+          <div className="relative aspect-[21/9] bg-muted overflow-hidden group shadow-2xl mx-auto max-w-6xl">
+            {visionaryImg && (
+              <Image 
+                src={visionaryImg.imageUrl} 
+                alt="Dr. M. Haider Uzzaman" 
+                fill 
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                priority
+              />
+            )}
+            <div className="absolute inset-0 bg-black/10"></div>
+            <div className="absolute bottom-10 left-10 text-white z-10 text-left">
+              <p className="text-xs font-bold tracking-[0.4em] uppercase opacity-60 mb-2">The Visionary</p>
+              <h3 className="text-3xl font-headline font-bold uppercase">Dr. M. Haider Uzzaman</h3>
             </div>
           </div>
         </div>
@@ -68,7 +66,7 @@ export default function OurStory() {
       {/* Values & Mission Section */}
       <section className="py-32 bg-primary text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 translate-x-20"></div>
-        <div className="container mx-auto px-4 md:px-24 relative z-10">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24 relative z-10">
           <div className="max-w-5xl mx-auto space-y-24">
             {/* Values */}
             <div className="text-center space-y-12">
@@ -86,9 +84,9 @@ export default function OurStory() {
             </div>
 
             {/* Unified Mission Paragraph */}
-            <div className="space-y-12 pt-12 border-t border-white/10">
+            <div className="space-y-12 pt-12 border-t border-white/10 text-center">
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Our Mission</span>
-              <p className="text-2xl md:text-4xl font-headline font-light leading-snug text-white/90">
+              <p className="text-2xl md:text-4xl font-headline font-light leading-snug text-white/90 text-justify">
                 Business Summit was created with two simple missions; <span className="text-accent font-bold italic">Connecting Investors with Businesses</span> & <span className="text-accent font-bold italic">Connecting Businesses to the World.</span> 
                 Today, Business Summit deals as a broker to assist projects and business owners in all sectors to receive funding to make their dreams a reality with the assistance of our dedicated 100+ Investor base from around the globe (HNWI & Institutional) whilst also assisting in providing market expansion and creating key partnerships in their required segment in just about every corner of the world. 
                 Business Summit also hosts their marquee event annually to culminate the achievements of everyone on the platform at <span className="text-white font-bold underline decoration-accent">‘The Investors Summit’</span> in a crowdsourced global mega city to facilitate deals on the spot.
@@ -100,13 +98,13 @@ export default function OurStory() {
 
       {/* Core Team Section */}
       <section className="py-32 bg-white">
-        <div className="container mx-auto px-4 md:px-24">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
             <div className="space-y-4">
               <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Leadership</span>
               <h2 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-none">Core <br /> Team</h2>
             </div>
-            <p className="max-w-xs text-right text-muted-foreground font-light text-sm uppercase tracking-[0.2em]">
+            <p className="max-w-xs text-right text-muted-foreground font-light text-sm uppercase tracking-[0.2em] text-justify">
               The institutional intelligence driving global strategic alignment.
             </p>
           </div>

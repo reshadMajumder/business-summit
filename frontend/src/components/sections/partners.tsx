@@ -5,15 +5,10 @@ import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export function Partners() {
-  const logos = [
-    PlaceHolderImages.find(img => img.id === 'partner-1'),
-    PlaceHolderImages.find(img => img.id === 'partner-2'),
-    PlaceHolderImages.find(img => img.id === 'partner-3'),
-    PlaceHolderImages.find(img => img.id === 'partner-4'),
-  ].filter(Boolean)
+  const logos = PlaceHolderImages.filter(img => img.id.startsWith('partner-'))
 
   // Duplicating for seamless loop
-  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos]
+  const duplicatedLogos = [...logos, ...logos]
 
   return (
     <section className="py-24 bg-white overflow-hidden border-y border-black/5">
@@ -29,21 +24,21 @@ export function Partners() {
         </div>
       </div>
 
-      <div className="space-y-8">
-        {/* Row 1: Scrolling Left */}
+      <div className="space-y-12">
+        {/* Row 1: Scrolling Left - Faster speed for more logos */}
         <div className="relative flex overflow-hidden">
-          <div className="flex gap-8 animate-scroll-left whitespace-nowrap">
+          <div className="flex gap-12 animate-scroll-left whitespace-nowrap">
             {duplicatedLogos.map((logo, index) => (
               <div 
                 key={`row1-${index}`} 
-                className="relative w-40 h-20 md:w-64 md:h-32 bg-white flex items-center justify-center p-6 border border-black/5 transition-all duration-500 hover:border-accent"
+                className="relative w-32 h-16 md:w-48 md:h-24 bg-white flex items-center justify-center p-4 border border-black/5 transition-all duration-500 hover:border-accent group shrink-0"
               >
                 {logo?.imageUrl && (
                   <Image
                     src={logo.imageUrl}
                     alt={logo?.description || "Partner"}
                     fill
-                    className="object-contain p-4 transition-all"
+                    className="object-contain p-2 transition-all group-hover:scale-110"
                     data-ai-hint={logo?.imageHint}
                   />
                 )}
@@ -54,18 +49,18 @@ export function Partners() {
 
         {/* Row 2: Scrolling Right */}
         <div className="relative flex overflow-hidden">
-          <div className="flex gap-8 animate-scroll-right whitespace-nowrap">
+          <div className="flex gap-12 animate-scroll-right whitespace-nowrap">
             {duplicatedLogos.map((logo, index) => (
               <div 
                 key={`row2-${index}`} 
-                className="relative w-40 h-20 md:w-64 md:h-32 bg-white flex items-center justify-center p-6 border border-black/5 transition-all duration-500 hover:border-accent"
+                className="relative w-32 h-16 md:w-48 md:h-24 bg-white flex items-center justify-center p-4 border border-black/5 transition-all duration-500 hover:border-accent group shrink-0"
               >
                 {logo?.imageUrl && (
                   <Image
                     src={logo.imageUrl}
                     alt={logo?.description || "Partner"}
                     fill
-                    className="object-contain p-4 transition-all"
+                    className="object-contain p-2 transition-all group-hover:scale-110"
                     data-ai-hint={logo?.imageHint}
                   />
                 )}

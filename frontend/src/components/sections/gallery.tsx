@@ -16,10 +16,10 @@ export function Gallery() {
   const galleryItems = [
     { ...PlaceHolderImages.find(img => img.id === 'gallery-1'), caption: "High-level Executive Panel Discussion" },
     { ...PlaceHolderImages.find(img => img.id === 'gallery-2'), caption: "Main Hall Keynote Presentation" },
-    { imageUrl: "https://picsum.photos/seed/summit1/1200/800", description: "B2B Networking Session", caption: "Forging Global Partnerships", imageHint: "business networking" },
-    { imageUrl: "https://picsum.photos/seed/summit2/1200/800", description: "Investors Gala", caption: "Celebrating Corporate Excellence", imageHint: "gala dinner" },
-    { imageUrl: "https://picsum.photos/seed/summit3/1200/800", description: "Digital Innovation Hub", caption: "Showcasing Future Technologies", imageHint: "tech hub" },
-  ].filter(img => img.imageUrl)
+    { ...PlaceHolderImages.find(img => img.id === 'gallery-lisbon'), caption: "Forging Global Partnerships" },
+    { ...PlaceHolderImages.find(img => img.id === 'gallery-bkk'), caption: "Celebrating Corporate Excellence" },
+    { ...PlaceHolderImages.find(img => img.id === 'gallery-kl'), caption: "Showcasing Future Technologies" },
+  ].filter(img => img && img.imageUrl)
 
   return (
     <section className="py-32 bg-white">

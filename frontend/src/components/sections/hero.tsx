@@ -21,12 +21,12 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-7xl mx-auto space-y-10 animate-fade-in">
-        <p className="text-lg md:text-2xl text-white/90 font-light max-w-4xl mx-auto tracking-[0.25em] uppercase border-y border-white/20 py-6 inline-block">
+        <p className="text-lg md:text-2xl text-white/90 font-light max-w-4xl mx-auto tracking-[0.25em] uppercase border-y border-white/20 py-6 inline-block text-center">
           Get Funded | Build Partnerships <br /> Expand Globally
         </p>
         <div className="flex items-center justify-center pt-8">
           <Link href="/invex">
-            <Button className="bg-white/5 backdrop-blur-md border border-white text-white hover:bg-white hover:text-black h-16 px-14 text-xs font-bold tracking-[0.4em] uppercase rounded-none group transition-all duration-500 shadow-2xl">
+            <Button className="bg-white/5 backdrop-blur-md border border-white text-white hover:bg-white hover:text-black h-16 px-14 text-xs font-bold tracking-[0.4em] rounded-none group transition-all duration-500 shadow-2xl">
               InvEX
               <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
             </Button>

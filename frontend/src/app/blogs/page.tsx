@@ -8,7 +8,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { ArrowRight, Calendar, User, Search } from "lucide-react"
+import { ArrowRight, Calendar, User, Search, Linkedin } from "lucide-react"
 import { posts } from "@/lib/blog-data"
 import { cn } from "@/lib/utils"
 
@@ -35,14 +35,14 @@ export default function BlogsPage() {
       <Navbar variant="solid" />
       
       {/* Narrative Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden border-b border-black/5 bg-white">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="max-w-4xl space-y-12 animate-fade-in">
+      <section className="relative pt-32 pb-12 sm:pt-48 sm:pb-32 overflow-hidden border-b border-black/5 bg-white text-center">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <div className="max-w-4xl mx-auto space-y-12 animate-fade-in">
             <div className="space-y-4">
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Editorial Core</span>
               <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Blogs</h1>
             </div>
-            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-3xl">
+            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-3xl mx-auto text-justify">
               Gain insights into current Global News & Recent Business Summit Happenings.
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function BlogsPage() {
 
       {/* Category Navigation & Search */}
       <section className="sticky top-[72px] z-30 bg-white/80 backdrop-blur-md border-b border-black/5">
-        <div className="container mx-auto px-4 md:px-24 py-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24 py-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-wrap gap-8">
             {categories.map((cat) => (
               <button 
@@ -84,7 +84,7 @@ export default function BlogsPage() {
 
       {/* Blog Feed */}
       <section className="py-24 bg-background min-h-[600px]">
-        <div className="container mx-auto px-4 md:px-24">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24">
             {mounted && filteredPosts.map((post, i) => (
               <article 
@@ -117,7 +117,7 @@ export default function BlogsPage() {
                       {post.title}
                     </h3>
                   </Link>
-                  <p className="text-sm font-light text-muted-foreground leading-relaxed line-clamp-3">
+                  <p className="text-sm font-light text-muted-foreground leading-relaxed line-clamp-3 text-justify">
                     {post.description}
                   </p>
                   <Link href={`/blogs/${post.slug}`}>
@@ -154,17 +154,41 @@ export default function BlogsPage() {
         </div>
       </section>
 
+      {/* LinkedIn Section relocated from Home */}
+      <section className="py-24 bg-background border-t border-black/5">
+        <div className="container mx-auto px-4 md:px-24">
+          <div className="max-w-4xl mx-auto bg-white p-12 md:p-20 border border-black/5 text-center space-y-8 animate-fade-in shadow-sm">
+            <div className="flex flex-col items-center gap-6">
+              <div className="p-4 bg-[#0A66C2]/5 rounded-full text-center flex items-center justify-center">
+                <Linkedin className="w-12 h-12 text-[#0A66C2]" />
+              </div>
+              <h3 className="text-3xl font-headline font-bold uppercase tracking-tight">Connect On LinkedIn</h3>
+            </div>
+            <p className="text-lg text-muted-foreground font-light max-w-lg mx-auto leading-relaxed">
+              Follow our executive feed for real-time updates on global scaling, strategic partnerships, and institutional intelligence.
+            </p>
+            <div className="pt-4">
+              <Link href="https://www.linkedin.com/company/bsummitdotnet/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="rounded-none border-black/10 px-12 h-16 text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-black hover:text-white transition-all">
+                  View Official Profile
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Section */}
       <section className="py-32 bg-primary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/10 -skew-x-12 translate-x-20"></div>
-        <div className="container mx-auto px-4 md:px-24 relative z-10">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24 relative z-10">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Strategic Intelligence</span>
               <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-tight">
                 Subscribe to our <br /> Executive Insights
               </h2>
-              <p className="text-lg font-light text-white/40">
+              <p className="text-lg font-light text-white/40 text-justify">
                 Direct intelligence on global expansion and funding architecture delivered to your headquarters.
               </p>
             </div>

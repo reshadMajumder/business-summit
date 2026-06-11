@@ -55,31 +55,17 @@ export default function WebinarPage() {
     <main className="relative min-h-screen bg-background">
       <Navbar variant="solid" />
       
-      {/* Narrative Hero - Highly compressed to show content below */}
-      <section className="relative pt-20 pb-8 md:pt-24 md:pb-10 overflow-hidden bg-white border-b border-black/5">
+      {/* Narrative Hero */}
+      <section className="relative pt-48 pb-32 overflow-hidden border-b border-black/5 bg-white text-center">
         <div className="container mx-auto px-4 md:px-24">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
-            <div className="space-y-6 md:space-y-8 animate-fade-in">
-              <div className="space-y-2 md:space-y-4">
-                <span className="text-[10px] md:text-xs font-bold tracking-[0.5em] text-accent uppercase">Educational Core</span>
-                <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline font-bold uppercase leading-[0.9]">Webinar</h1>
-              </div>
-              <p className="text-base md:text-xl font-light leading-relaxed text-muted-foreground max-w-lg">
-                Exclusive digital masterclasses designed for the modern executive. Access global intelligence from the comfort of your headquarters.
-              </p>
+          <div className="max-w-4xl mx-auto space-y-12 animate-fade-in">
+            <div className="space-y-4">
+              <span className="text-[10px] md:text-xs font-bold tracking-[0.5em] text-accent uppercase">Educational Core</span>
+              <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Webinar</h1>
             </div>
-            
-            <div className="relative aspect-video bg-muted border border-black/5 overflow-hidden group max-h-[180px] md:max-h-[280px]">
-              {featuredImg && (
-                <Image 
-                  src={featuredImg.imageUrl} 
-                  alt="Featured Webinar" 
-                  fill 
-                  className="object-contain transition-transform duration-1000 group-hover:scale-105"
-                />
-              )}
-              <div className="absolute inset-0 bg-black/5"></div>
-            </div>
+            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-3xl mx-auto text-justify">
+              Exclusive digital masterclasses designed for the modern executive. Access global intelligence from the comfort of your headquarters.
+            </p>
           </div>
         </div>
       </section>
@@ -118,7 +104,7 @@ export default function WebinarPage() {
                     </div>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-headline font-bold uppercase tracking-tight leading-tight">{webinar.title}</h3>
-                  <p className="text-sm font-light text-muted-foreground leading-relaxed">{webinar.description}</p>
+                  <p className="text-sm font-light text-muted-foreground leading-relaxed text-justify">{webinar.description}</p>
                 </div>
                 
                 <Button className="w-full h-14 md:h-16 rounded-none bg-black text-white hover:bg-accent transition-all text-[10px] font-bold tracking-[0.3em] uppercase group">
@@ -139,7 +125,7 @@ export default function WebinarPage() {
               <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Insights Archive</span>
               <h2 className="text-5xl font-headline font-bold uppercase">Past <br /> Webinars</h2>
             </div>
-            <p className="max-w-xs text-left md:text-right text-white/40 font-light text-sm uppercase tracking-widest">
+            <p className="max-w-xs text-left md:text-right text-white/40 font-light text-sm uppercase tracking-widest text-justify">
               Access the vault of institutional knowledge and strategic dialogues.
             </p>
           </div>

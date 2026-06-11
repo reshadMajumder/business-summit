@@ -2,27 +2,32 @@
 "use client"
 
 import Image from "next/image"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 const boardMembers = [
   {
+    name: "Tun Dr. Mahathir Mohamad",
+    role: "Former Prime Minister of Malaysia & Founding Father of Modern Malaysia",
+    image: PlaceHolderImages.find(img => img.id === 'advisor-mahathir')?.imageUrl || "https://picsum.photos/seed/board1/800/1000",
+    imageHint: "statesman portrait"
+  },
+  {
+    name: "Dr. Goodluck Ebele Jonathan",
+    role: "Former President of the Federal Republic of Nigeria",
+    image: PlaceHolderImages.find(img => img.id === 'advisor-goodluck')?.imageUrl || "https://picsum.photos/seed/board2/800/1000",
+    imageHint: "official portrait"
+  },
+  {
     name: "Dr. Jonathan Vane",
     role: "Global Strategy Advisor",
-    image: "https://picsum.photos/seed/board1/800/1000",
+    image: "https://picsum.photos/seed/board3/800/1000",
+    imageHint: "executive portrait"
   },
   {
     name: "Elena Rossi",
-    role: "Financial Architecture",
-    image: "https://picsum.photos/seed/board2/800/1000",
-  },
-  {
-    name: "Marcus Thorne",
-    role: "Institutional Relations",
-    image: "https://picsum.photos/seed/board3/800/1000",
-  },
-  {
-    name: "Sarah Jenkins",
-    role: "Innovation Consultant",
+    role: "Financial Architecture Consultant",
     image: "https://picsum.photos/seed/board4/800/1000",
+    imageHint: "professional portrait"
   },
 ]
 
@@ -49,7 +54,7 @@ export function AdvisoryBoard() {
                   alt={member.name} 
                   fill 
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                  data-ai-hint="executive portrait"
+                  data-ai-hint={member.imageHint}
                 />
               </div>
               <div className="space-y-1">
