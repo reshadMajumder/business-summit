@@ -29,7 +29,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
         <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <Link href="/blogs" className="inline-flex items-center gap-3 text-[10px] font-bold tracking-[0.3em] uppercase text-accent hover:text-primary transition-colors mb-8 sm:mb-12">
             <ArrowLeft className="w-4 h-4" />
-            Back to Insights
+            Back to Editorial Core
           </Link>
           
           <div className="max-w-5xl space-y-8 sm:space-y-10">

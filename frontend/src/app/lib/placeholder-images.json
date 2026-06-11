@@ -34,13 +34,13 @@
     {
       "id": "advisor-mahathir",
       "description": "Tun Dr. Mahathir Mohamad",
-      "imageUrl": "https://picsum.photos/seed/mahathir/800/1000",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781176162/477fb353-fbe9-447e-9adb-6af0828f0319.png",
       "imageHint": "statesman portrait"
     },
     {
       "id": "advisor-goodluck",
       "description": "Dr. Goodluck Ebele Jonathan",
-      "imageUrl": "https://picsum.photos/seed/goodluck/800/1000",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781176294/e358512b-950a-4fa5-b2e4-62189e42b28a.png",
       "imageHint": "official portrait"
     },
     {

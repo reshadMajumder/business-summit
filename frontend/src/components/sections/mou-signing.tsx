@@ -14,18 +14,18 @@ import Autoplay from "embla-carousel-autoplay"
 
 export function MOUSigning() {
   const mouImages = [
-    { ...PlaceHolderImages.find(img => img.id === 'mou-1'), caption: "Preparing the Strategic Alliance" },
-    { ...PlaceHolderImages.find(img => img.id === 'mou-2'), caption: "Formal Handshake with the Governor" },
+    { ...PlaceHolderImages.find(img => img.id === 'mou-1'), caption: "MOU signing with Governor of Plateau State" },
+    { ...PlaceHolderImages.find(img => img.id === 'mou-2'), caption: "MOU signing with Governor of Plateau State" },
     { 
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781115307/mic_gta4lj.jpg", 
       description: "Official Address", 
-      caption: "Committing to Regional Excellence", 
+      caption: "MOU signing with Governor of Plateau State", 
       imageHint: "official address" 
     },
     { 
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781115307/chairman-sign_fxsccx.jpg", 
       description: "Chairman Signing", 
-      caption: "Mapping Global Expansion", 
+      caption: "MOU signing with Governor of Plateau State", 
       imageHint: "contract signing" 
     }
   ].filter(img => img.imageUrl)
@@ -36,7 +36,9 @@ export function MOUSigning() {
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
           <div className="space-y-4">
             <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Diplomatic Milestone</span>
-            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-none">Diplomatic <br /> Milestones</h2>
+            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-none">
+              Diplomatic <br /> <span className="text-accent">Milestones</span>
+            </h2>
           </div>
           <p className="max-w-xs text-right text-muted-foreground font-light text-sm uppercase tracking-widest">
             Formalizing strategic collaboration for regional excellence.

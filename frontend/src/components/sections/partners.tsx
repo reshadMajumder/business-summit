@@ -16,7 +16,10 @@ export function Partners() {
         <div className="flex flex-col md:flex-row items-end justify-between gap-8">
           <div className="space-y-4">
             <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Collaborators</span>
-            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-none">Strategic <br />Partners</h2>
+            <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-none">
+              Strategic <br />
+              <span className="text-accent">Partners</span>
+            </h2>
           </div>
           <p className="max-w-xs text-right text-muted-foreground font-light text-sm uppercase tracking-widest">
             Aligned with global leaders in technology and innovation.

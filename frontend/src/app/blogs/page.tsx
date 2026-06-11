@@ -39,12 +39,8 @@ export default function BlogsPage() {
         <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <div className="max-w-4xl mx-auto space-y-12 animate-fade-in">
             <div className="space-y-4">
-              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Editorial Core</span>
-              <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Blogs</h1>
+              <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Editorial Core</h1>
             </div>
-            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-3xl mx-auto text-justify">
-              Gain insights into current Global News & Recent Business Summit Happenings.
-            </p>
           </div>
         </div>
       </section>

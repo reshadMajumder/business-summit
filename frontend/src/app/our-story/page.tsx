@@ -6,11 +6,31 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Shield, Globe, Users, Landmark, UserCircle } from "lucide-react"
 
 const coreTeam = [
-  { name: "Dr. M. Haider Uzzaman", role: "Chairman & Founder", image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781114636/9fef9adf-dcd8-4ad9-b24e-bc734c8a2502.png" },
-  { name: "Abid Haider", role: "Director", image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781115307/mic_gta4lj.jpg" },
-  { name: "Avishek Busviah", role: "Executive Director", image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781114312/avishek_szlhj1.jpg" },
-  { name: "Lima Akter", role: "Management Lead", image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781114518/d3045420-41ce-4b2a-8bec-6365800b19e7.png" },
-  { name: "Sharafat Hossain", role: "Operations Lead", image: "https://picsum.photos/seed/sharafat/800/1000" },
+  { 
+    name: "Dr M Haider Uzzaman", 
+    role: "President", 
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781170321/Hon_Chairman_Sir_Profile_Photo.jpg_doq1pj.jpg" 
+  },
+  { 
+    name: "Avishek Busviah", 
+    role: "Vice President", 
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781170319/Avishek_Busviah_fv8v7m.jpg" 
+  },
+  { 
+    name: "Abid Haider", 
+    role: "Head of Strategy", 
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781170320/Abid-Haider_f82nxd.jpg" 
+  },
+  { 
+    name: "Lima Akter", 
+    role: "Manager, Coordination", 
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781170320/Lima-akter_j6mtcx.jpg" 
+  },
+  { 
+    name: "Sharafat Hossain", 
+    role: "Assistant Manager, Communication & IT", 
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781170320/sharafat-hossian_gajmou.jpg" 
+  },
 ]
 
 const countryDirectors = [
@@ -67,19 +87,31 @@ export default function OurStory() {
       <section className="py-32 bg-primary text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 translate-x-20"></div>
         <div className="container mx-auto px-6 sm:px-12 md:px-24 relative z-10">
-          <div className="max-w-5xl mx-auto space-y-24">
-            {/* Values */}
-            <div className="text-center space-y-12">
+          <div className="max-w-6xl mx-auto space-y-24">
+            {/* Values - Triangular Layout */}
+            <div className="text-center space-y-16">
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Our Foundation</span>
-              <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
-                {["Trust", "Credibility", "Professionalism"].map((val) => (
-                  <div key={val} className="space-y-4 group">
-                    <h2 className="text-4xl md:text-6xl font-headline font-bold uppercase tracking-tighter group-hover:text-accent transition-colors">
-                      {val}
-                    </h2>
-                    <div className="w-12 h-1 bg-accent mx-auto"></div>
-                  </div>
-                ))}
+              
+              <div className="flex flex-col items-center gap-12 md:gap-16">
+                {/* First Line: Credibility */}
+                <div className="group space-y-6">
+                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-headline font-bold uppercase tracking-tighter group-hover:text-accent transition-colors leading-none">
+                    Credibility
+                  </h2>
+                  <div className="w-12 h-1 bg-accent mx-auto"></div>
+                </div>
+
+                {/* Second Line: Trust & Professionalism with increased gap */}
+                <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-64">
+                  {["Trust", "Professionalism"].map((val) => (
+                    <div key={val} className="space-y-6 group">
+                      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-headline font-bold uppercase tracking-tighter group-hover:text-accent transition-colors leading-none">
+                        {val}
+                      </h2>
+                      <div className="w-12 h-1 bg-accent mx-auto"></div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 

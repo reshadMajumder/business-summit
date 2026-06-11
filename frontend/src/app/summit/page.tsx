@@ -81,7 +81,7 @@ export default function SummitPage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-24">
            <div className="mb-12 border-l-4 border-accent pl-8">
-             <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block mb-2">Roadmap</span>
+             <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block mb-2">Upcoming Summit</span>
              <h2 className="text-5xl font-headline font-bold uppercase">Investors Summit <br /> Nigeria 2026</h2>
            </div>
           <div className="grid md:grid-cols-2 gap-px bg-black/5 border border-black/5">
@@ -116,43 +116,35 @@ export default function SummitPage() {
 
       {/* Key People Scrolling Section */}
       <section className="py-32 bg-primary text-white overflow-hidden">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="mb-20 space-y-4 text-center md:text-left">
+        <div className="container mx-auto px-4 md:px-24 mb-20">
+          <div className="space-y-4 text-center md:text-left">
              <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block">Dignitaries</span>
             <h2 className="text-5xl font-headline font-bold uppercase">Key People</h2>
           </div>
-          
-          <Carousel 
-            opts={{ align: "start", loop: true }}
-            plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-12">
-              {keyPeople.map((person, i) => (
-                <CarouselItem key={i} className="pl-12 md:basis-1/2 lg:basis-1/2">
-                  <div className="space-y-8 group">
-                    <div className="relative aspect-[4/5] bg-white/5 overflow-hidden border border-white/5">
-                      <Image 
-                        src={`https://picsum.photos/seed/${person.id}/800/1000`} 
-                        alt={person.name} 
-                        fill 
-                        className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                        data-ai-hint="official portrait"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="text-2xl font-headline font-bold uppercase tracking-tight">{person.name}</h4>
-                      <p className="text-xs font-bold text-accent tracking-[0.2em] uppercase leading-relaxed">{person.role}</p>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-end gap-4 mt-12 px-4">
-              <CarouselPrevious className="static translate-y-0 rounded-none w-14 h-14 border-white/10" />
-              <CarouselNext className="static translate-y-0 rounded-none w-14 h-14 border-white/10" />
-            </div>
-          </Carousel>
+        </div>
+        
+        <div className="relative flex overflow-hidden">
+          <div className="flex gap-12 animate-scroll-left whitespace-nowrap">
+            {/* Doubling for seamless scroll */}
+            {[...keyPeople, ...keyPeople, ...keyPeople, ...keyPeople].map((person, i) => (
+              <div key={i} className="space-y-6 group w-72 shrink-0 inline-block whitespace-normal">
+                <div className="relative aspect-[4/5] bg-white/5 overflow-hidden border border-white/10 shadow-2xl transition-all duration-700">
+                  <Image 
+                    src={`https://picsum.photos/seed/${person.id}/800/1000`} 
+                    alt={person.name} 
+                    fill 
+                    className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                    data-ai-hint="official portrait"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                </div>
+                <div className="space-y-2 px-1">
+                  <h4 className="text-xl font-headline font-bold uppercase tracking-tight leading-tight">{person.name}</h4>
+                  <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase leading-relaxed opacity-80">{person.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

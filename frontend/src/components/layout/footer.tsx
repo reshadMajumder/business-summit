@@ -13,7 +13,14 @@ export function Footer() {
     { name: "InvEX", href: "/invex" },
     { name: "Summit", href: "/summit" },
     { name: "Shop", href: "/shop" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Editorial Core", href: "/blogs" },
+  ]
+
+  const infoLinks = [
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms of Service", href: "/terms-of-service" },
+    { name: "Cookie Policy", href: "/cookie-policy" },
+    { name: "Contact Us", href: "/contact" },
   ]
 
   return (
@@ -40,7 +47,9 @@ export function Footer() {
               </p>
             </div>
             <div className="flex gap-6">
-              <Linkedin className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
+              <Link href="https://www.linkedin.com/company/bsummitdotnet/posts/?feedView=all" target="_blank">
+                <Linkedin className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
+              </Link>
               <Twitter className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
               <Instagram className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
             </div>
@@ -62,10 +71,11 @@ export function Footer() {
           <div className="md:col-span-1 space-y-6">
             <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-white/80">Information</h4>
             <div className="flex flex-col gap-4 text-sm font-light text-white/40">
-              <Link href="#" className="hover:text-accent transition-colors">Privacy Policy</Link>
-              <Link href="#" className="hover:text-accent transition-colors">Terms of Service</Link>
-              <Link href="#" className="hover:text-accent transition-colors">Cookie Policy</Link>
-              <Link href="#" className="hover:text-accent transition-colors">Contact Us</Link>
+              {infoLinks.map((link) => (
+                <Link key={link.name} href={link.href} className="hover:text-accent transition-colors">
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

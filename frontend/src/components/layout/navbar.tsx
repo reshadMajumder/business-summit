@@ -47,7 +47,7 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
     { name: "InvEX", href: "/invex" },
     { name: "SUMMIT", href: "/summit" },
     { name: "SHOP", href: "/shop" },
-    { name: "BLOGS", href: "/blogs" },
+    { name: "EDITORIAL CORE", href: "/blogs" },
   ]
 
   const isScrolled = mounted ? (scrolled || variant === "solid") : (variant === "solid")
