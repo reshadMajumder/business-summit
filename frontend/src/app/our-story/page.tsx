@@ -34,12 +34,26 @@ const coreTeam = [
 ]
 
 const countryDirectors = [
-  { region: "Canada", name: "Regional Director" },
-  { region: "Malaysia", name: "Regional Director" },
-  { region: "UAE", name: "Regional Director" },
-  { region: "Portugal", name: "Regional Director" },
-  { region: "Nigeria", name: "Regional Director" },
-  { region: "Kosovo", name: "Regional Director" },
+  { 
+    name: "Mr. Gonçalo Terenas", 
+    role: "Head of Corporate & International Business",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250976/Mr.-Gon%C3%A7alo-Terenas_--Head-of-Corporate-_-International-Business-at-Tuga-Innovations-Inc.-Head-of-Committee-at-Diaspora-Prime-Portugal-_-Executive-Board-Member-at-RCCPM-_CDO-at-HHERF-Foundation_w6tkvc.jpg"
+  },
+  { 
+    name: "Prof. Ahmed Bin Salawudeen", 
+    role: "Regional Director",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250974/Prof.-Ahmed-Bin-Salawudeen_rtyc71.jpg"
+  },
+  { 
+    name: "Ms. Teresa do Brito Apolónia", 
+    role: "Founder Partner, ASA Lawyers",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250974/Ms.-Teresa-do-Brito-Apol%C3%B3ni_--Founder-Partner-ASA-Lawyers_bcuzpr.jpg"
+  },
+  { 
+    name: "Susan Gong", 
+    role: "President and CEO, Altec Global Inc.",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250973/Susan_Gong_President_and_CEO_Altec_Global_Inc._vezmpy.jpg"
+  },
 ]
 
 export default function OurStory() {
@@ -182,22 +196,31 @@ export default function OurStory() {
              <h2 className="text-5xl font-headline font-bold uppercase">Country Directors</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-black/5 border border-black/5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {countryDirectors.map((director, i) => (
-              <div key={i} className="bg-white p-12 space-y-6 hover:bg-muted/30 transition-all group">
-                <div className="flex items-center justify-between">
-                  <div className="p-3 bg-accent/10 rounded-full">
-                    <Globe className="w-5 h-5 text-accent" />
-                  </div>
-                  <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">{director.region}</span>
+              <div key={i} className="group space-y-6">
+                <div className="relative aspect-[4/5] overflow-hidden bg-white border border-black/5 transition-all duration-700 hover:shadow-2xl">
+                  {director.image ? (
+                    <Image 
+                      src={director.image} 
+                      alt={director.name} 
+                      fill 
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-muted/30 flex items-center justify-center">
+                      <UserCircle className="w-16 h-16 text-muted-foreground/20" />
+                    </div>
+                  )}
                 </div>
-                <div className="space-y-2">
-                  <h4 className="text-2xl font-headline font-bold uppercase tracking-tight">{director.name}</h4>
-                  <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase">Regional Command</p>
-                </div>
-                <div className="pt-6 flex items-center gap-2 text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest">
-                  <UserCircle className="w-3 h-3" />
-                  Profile Pending
+                <div className="space-y-1">
+                  <h4 className="text-xl font-headline font-bold uppercase tracking-tight leading-tight">{director.name}</h4>
+                  <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase">{director.role}</p>
+                  {!director.image && (
+                    <p className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest pt-2">
+                      Profile Pending
+                    </p>
+                  )}
                 </div>
               </div>
             ))}

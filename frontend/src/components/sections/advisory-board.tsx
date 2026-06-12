@@ -17,18 +17,6 @@ const boardMembers = [
     image: PlaceHolderImages.find(img => img.id === 'advisor-goodluck')?.imageUrl || "https://picsum.photos/seed/board2/800/1000",
     imageHint: "official portrait"
   },
-  {
-    name: "Dr. Jonathan Vane",
-    role: "Global Strategy Advisor",
-    image: "https://picsum.photos/seed/board3/800/1000",
-    imageHint: "executive portrait"
-  },
-  {
-    name: "Elena Rossi",
-    role: "Financial Architecture Consultant",
-    image: "https://picsum.photos/seed/board4/800/1000",
-    imageHint: "professional portrait"
-  },
 ]
 
 export function AdvisoryBoard() {
@@ -47,7 +35,7 @@ export function AdvisoryBoard() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 max-w-5xl">
           {boardMembers.map((member, i) => (
             <div key={i} className="group space-y-6">
               <div className="relative aspect-[4/5] overflow-hidden bg-muted border border-black/5 shadow-sm transition-all duration-700 hover:shadow-xl">
