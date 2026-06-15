@@ -14,6 +14,11 @@ import Autoplay from "embla-carousel-autoplay"
 export function MOUSigning() {
   const mouImages = [
     { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781434828/DSC06276.2_mmasc4.jpg", 
+      description: "INVESTORS SUMMIT KUALA LUMPUR 2024", 
+      imageHint: "summit event" 
+    },
+    { 
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202688/10_Lunching-Hertz-in-Bangladesh_waekuu.jpg", 
       description: "LUNCHING HERTZ IN BANGLADESH", 
       imageHint: "business launch" 

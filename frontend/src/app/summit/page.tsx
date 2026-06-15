@@ -179,7 +179,7 @@ export default function SummitPage() {
             
             <div className="relative aspect-video bg-black overflow-hidden shadow-2xl group">
                <iframe
-                src="https://www.youtube.com/embed/euR3i1M0Gs8?autoplay=1&mute=1&loop=1&playlist=euR3i1M0Gs8&controls=0&modestbranding=1&rel=0"
+                src="https://www.youtube.com/embed/PSRqPrqL8pg?autoplay=1&mute=0&loop=1&playlist=PSRqPrqL8pg&controls=0&modestbranding=1&rel=0"
                 className="absolute inset-0 w-full h-full border-0 opacity-80 group-hover:opacity-100 transition-opacity"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

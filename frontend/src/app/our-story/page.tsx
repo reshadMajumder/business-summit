@@ -76,33 +76,58 @@ export default function OurStory() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="relative aspect-[4/3] bg-muted overflow-hidden group shadow-2xl">
-              <Image 
-                src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202851/14_Best-Air-Experience1_ifyoaq.jpg" 
-                alt="BEST AIR EXPERIENCE" 
-                fill 
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
-              <div className="absolute bottom-8 left-8 text-white z-10 text-left">
-                <p className="text-[10px] font-bold tracking-[0.4em] uppercase opacity-60 mb-2">Strategic Milestone</p>
-                <h3 className="text-2xl font-headline font-bold uppercase">BEST AIR EXPERIENCE</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+            {/* Milestone 1 */}
+            <div className="group space-y-6">
+              <div className="relative aspect-[4/3] bg-muted overflow-hidden shadow-2xl">
+                <Image 
+                  src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202851/14_Best-Air-Experience1_ifyoaq.jpg" 
+                  alt="BEST AIR EXPERIENCE" 
+                  fill 
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
+              </div>
+              <div className="text-left space-y-2">
+                <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-accent">Strategic Milestone</p>
+                <h3 className="text-xl font-headline font-bold uppercase leading-tight">BEST AIR EXPERIENCE</h3>
               </div>
             </div>
-            <div className="relative aspect-[4/3] bg-muted overflow-hidden group shadow-2xl">
-              <Image 
-                src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202800/12_best-air-launching-flight-to-Srilanka-and-Maldives_z0xdif.jpg" 
-                alt="BEST AIR LAUNCHING FLIGHT TO SRILANKA AND MALDIVES" 
-                fill 
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
-              <div className="absolute bottom-8 left-8 text-white z-10 text-left">
-                <p className="text-[10px] font-bold tracking-[0.4em] uppercase opacity-60 mb-2">Regional Expansion</p>
-                <h3 className="text-2xl font-headline font-bold uppercase leading-tight">BEST AIR LAUNCHING FLIGHT TO SRILANKA AND MALDIVES</h3>
+
+            {/* Milestone 2 */}
+            <div className="group space-y-6">
+              <div className="relative aspect-[4/3] bg-muted overflow-hidden shadow-2xl">
+                <Image 
+                  src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202800/12_best-air-launching-flight-to-Srilanka-and-Maldives_z0xdif.jpg" 
+                  alt="BEST AIR LAUNCHING FLIGHT TO SRILANKA AND MALDIVES" 
+                  fill 
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
+              </div>
+              <div className="text-left space-y-2">
+                <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-accent">Regional Expansion</p>
+                <h3 className="text-xl font-headline font-bold uppercase leading-tight">BEST AIR LAUNCHING FLIGHT TO SRILANKA AND MALDIVES</h3>
+              </div>
+            </div>
+
+            {/* Milestone 3 */}
+            <div className="group space-y-6">
+              <div className="relative aspect-[4/3] bg-muted overflow-hidden shadow-2xl">
+                <Image 
+                  src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781432990/21_During-the-inaugural-phuket-Air-flight-Bangkok-To-Chittagong_aj9ix2.jpg" 
+                  alt="PHUKET AIR INAUGURAL FLIGHT" 
+                  fill 
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
+              </div>
+              <div className="text-left space-y-2">
+                <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-accent">Aviation Milestone</p>
+                <h3 className="text-xl font-headline font-bold uppercase leading-tight">PHUKET AIR INAUGURAL FLIGHT BANGKOK TO CHITTAGONG</h3>
               </div>
             </div>
           </div>
