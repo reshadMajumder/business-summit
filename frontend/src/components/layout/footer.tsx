@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import Image from "next/image"
 import { Twitter, Linkedin, Instagram } from "lucide-react"
@@ -11,7 +10,7 @@ export function Footer() {
     { name: "Home", href: "/" },
     { name: "Our Story", href: "/our-story" },
     { name: "InvEX", href: "/invex" },
-    { name: "Summit", href: "/summit" },
+    { name: "Experiences", href: "/experiences" },
     { name: "Shop", href: "/shop" },
     { name: "Editorial Core", href: "/blogs" },
   ]

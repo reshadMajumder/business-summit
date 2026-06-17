@@ -91,9 +91,11 @@ export default function SummitPage() {
       {/* Upcoming Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-24">
-           <div className="mb-12 border-l-4 border-accent pl-8">
-             <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block mb-2">Upcoming Summit</span>
-             <h2 className="text-5xl font-headline font-bold uppercase">Investors Summit <br /> Nigeria 2026</h2>
+           <div className="mb-20 text-center space-y-6 animate-fade-in">
+             <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block">Upcoming Summit</span>
+             <h2 className="text-5xl md:text-7xl lg:text-8xl font-headline font-bold uppercase leading-none">
+               Investors Summit <br /> <span className="text-accent">Nigeria</span> 2026
+             </h2>
            </div>
           <div className="grid md:grid-cols-2 gap-px bg-black/5 border border-black/5">
             {events.map((event, i) => (

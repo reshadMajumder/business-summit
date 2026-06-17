@@ -27,8 +27,8 @@ export default function ShopPage() {
       <section className="relative pt-32 pb-12 sm:pt-48 sm:pb-32 overflow-hidden border-b border-black/5 bg-white text-center">
         <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-8xl font-headline font-bold uppercase leading-[0.9] text-accent tracking-tighter">
-              Executive <br /> Boutique
+            <h1 className="text-5xl md:text-8xl font-headline font-bold uppercase leading-[0.9] tracking-tighter">
+              <span className="text-black">Executive</span> <br /> <span className="text-accent">Boutique</span>
             </h1>
           </div>
         </div>

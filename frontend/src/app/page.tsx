@@ -39,8 +39,7 @@ export default function Home() {
               <div className="pt-6">
                 <Link href="/invex">
                   <Button className="h-16 px-14 bg-black text-white hover:bg-accent transition-all duration-500 rounded-none text-[10px] font-bold tracking-[0.4em] uppercase group shadow-2xl">
-                    Access Exchange
-                    <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                    Coming <span className="text-accent ml-2">Soon</span>
                   </Button>
                 </Link>
               </div>

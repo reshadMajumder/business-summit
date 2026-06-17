@@ -39,7 +39,9 @@ export default function BlogsPage() {
         <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <div className="max-w-4xl mx-auto space-y-12 animate-fade-in">
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Editorial Core</h1>
+              <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">
+                Editorial <br /> <span className="text-accent">Core</span>
+              </h1>
             </div>
           </div>
         </div>

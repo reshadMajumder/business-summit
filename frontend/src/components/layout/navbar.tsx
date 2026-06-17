@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState, useEffect } from "react"
@@ -45,7 +44,7 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
     { name: "HOME", href: "/" },
     { name: "OUR STORY", href: "/our-story" },
     { name: "InvEX", href: "/invex" },
-    { name: "SUMMIT", href: "/summit" },
+    { name: "EXPERIENCES", href: "/experiences" },
     { name: "SHOP", href: "/shop" },
     { name: "EDITORIAL CORE", href: "/blogs" },
   ]

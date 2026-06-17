@@ -3,6 +3,14 @@
 
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 const boardMembers = [
   {
@@ -35,25 +43,37 @@ export function AdvisoryBoard() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 max-w-5xl">
-          {boardMembers.map((member, i) => (
-            <div key={i} className="group space-y-6">
-              <div className="relative aspect-[4/5] overflow-hidden bg-muted border border-black/5 shadow-sm transition-all duration-700 hover:shadow-xl">
-                <Image 
-                  src={member.image} 
-                  alt={member.name} 
-                  fill 
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                  data-ai-hint={member.imageHint}
-                />
-              </div>
-              <div className="space-y-1">
-                <h4 className="text-xl font-headline font-bold uppercase tracking-tight">{member.name}</h4>
-                <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase">{member.role}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Carousel 
+          opts={{ align: "center", loop: true }}
+          plugins={[Autoplay({ delay: 6000, stopOnInteraction: false })]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-6 justify-center">
+            {boardMembers.map((member, i) => (
+              <CarouselItem key={i} className="pl-6 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div key={i} className="group space-y-4">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-muted border border-black/5 shadow-sm transition-all duration-700 hover:shadow-xl">
+                    <Image 
+                      src={member.image} 
+                      alt={member.name} 
+                      fill 
+                      className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                      data-ai-hint={member.imageHint}
+                    />
+                  </div>
+                  <div className="space-y-1 text-center">
+                    <h4 className="text-sm font-headline font-bold uppercase tracking-tight leading-tight">{member.name}</h4>
+                    <p className="text-[8px] font-bold text-accent tracking-[0.2em] uppercase leading-relaxed">{member.role}</p>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-end gap-3 mt-12">
+            <CarouselPrevious className="static translate-y-0 rounded-none w-10 h-10 border-black/10" />
+            <CarouselNext className="static translate-y-0 rounded-none w-10 h-10 border-black/10" />
+          </div>
+        </Carousel>
       </div>
     </section>
   )

@@ -29,7 +29,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
             <div className="space-y-4">
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Strategic Liaison</span>
-              <h1 className="text-5xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Contact <br /> Us</h1>
+              <h1 className="text-5xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Contact <br /> <span className="text-accent">Us</span></h1>
             </div>
             <p className="text-lg md:text-2xl font-light leading-relaxed text-muted-foreground max-w-3xl mx-auto">
               Initiate a dialogue with our global expansion and funding architecture team.
@@ -83,18 +83,49 @@ export default function ContactPage() {
                 <h2 className="text-3xl font-headline font-bold uppercase tracking-tight">Global Presence</h2>
                 <div className="grid gap-8">
                   {[
-                    { country: "Canada", type: "North American Command" },
-                    { country: "Malaysia", type: "Asian Regional Hub" },
-                    { country: "UAE", type: "Middle Eastern HQ" },
-                    { country: "Nigeria", type: "African Strategic Hub" }
+                    { 
+                      title: "Canada Office", 
+                      type: "North American Command",
+                      address: "40 Norbury Drive, Markham, ON L3S 3V2, Canada"
+                    },
+                    { 
+                      title: "Portugal Office", 
+                      type: "European Strategic Hub",
+                      address: "Rua Santo António da Glória No. 4-3º Dtº, 1250-117 Lisbon, Portugal"
+                    },
+                    { 
+                      title: "Dubai Office", 
+                      type: "Middle Eastern HQ",
+                      address: "Office 904, Oxford Tower, Business Bay, Dubai, United Arab Emirates (UAE)"
+                    },
+                    { 
+                      title: "Malaysia Office", 
+                      type: "Asian Regional Hub",
+                      address: "36th Floor, Menara Maxis, Kuala Lumpur City Centre (KLCC), 50088 Kuala Lumpur, Malaysia"
+                    },
+                    { 
+                      title: "Bangladesh Office", 
+                      type: "South Asian Gateway",
+                      address: "Unit 7B, House #297, Lane #04, Baridhara DOHS, Dhaka 1206, Bangladesh"
+                    },
+                    { 
+                      title: "Lagos Office", 
+                      type: "African Strategic Hub",
+                      address: "33 Victoria Arobieke Street, Off Admiralty Way, Lekki Phase 1, Lagos, Nigeria"
+                    }
                   ].map((office, i) => (
-                    <div key={i} className="flex items-center gap-6 p-8 bg-white border border-black/5 hover:border-accent transition-colors group">
-                      <div className="w-12 h-12 bg-accent/5 flex items-center justify-center rounded-full group-hover:bg-accent group-hover:text-white transition-all">
+                    <div key={i} className="flex items-start gap-6 p-8 bg-white border border-black/5 hover:border-accent transition-colors group">
+                      <div className="w-12 h-12 bg-accent/5 flex items-center justify-center rounded-full group-hover:bg-accent group-hover:text-white transition-all shrink-0 mt-1">
                         <Globe className="w-6 h-6" />
                       </div>
-                      <div>
-                        <h4 className="text-xl font-headline font-bold uppercase">{office.country}</h4>
-                        <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest">{office.type}</p>
+                      <div className="space-y-2">
+                        <div className="space-y-0.5">
+                          <h4 className="text-xl font-headline font-bold uppercase leading-tight">{office.title}</h4>
+                          <p className="text-[9px] font-bold text-accent uppercase tracking-widest">{office.type}</p>
+                        </div>
+                        <p className="text-xs font-light text-muted-foreground leading-relaxed">
+                          {office.address}
+                        </p>
                       </div>
                     </div>
                   ))}

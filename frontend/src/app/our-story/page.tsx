@@ -67,7 +67,7 @@ export default function OurStory() {
           <div className="max-w-4xl mx-auto space-y-12 animate-fade-in mb-20">
             <div className="space-y-4">
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">The Genesis</span>
-              <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Our <br />Story</h1>
+              <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Our <br /> <span className="text-accent">Story</span></h1>
             </div>
             <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground text-justify">
               Business Summit is the brainchild of a highly respected business innovator, <span className="text-primary font-medium">Dr. M. Haider Uzzaman</span>. 
