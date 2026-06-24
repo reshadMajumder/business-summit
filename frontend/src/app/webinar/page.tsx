@@ -1,12 +1,15 @@
 
-"use client"
-
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, Play, ArrowRight } from "lucide-react"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Webinars | Institutional Intelligence Digital Masterclasses',
+  description: 'Exclusive digital sessions designed for rapid institutional scaling, operational optimization, and high-stakes global growth.',
+}
 
 const upcomingWebinars = [
   {
@@ -49,8 +52,6 @@ const previousWebinars = [
 ]
 
 export default function WebinarPage() {
-  const featuredImg = PlaceHolderImages.find(img => img.id === 'webinar-featured')
-
   return (
     <main className="relative min-h-screen bg-background">
       <Navbar variant="solid" />
@@ -84,7 +85,7 @@ export default function WebinarPage() {
             {upcomingWebinars.map((webinar, i) => (
               <div key={i} className="group bg-white border border-black/5 p-8 md:p-12 space-y-6 md:space-y-8 hover:border-accent transition-all duration-500 shadow-sm">
                 <div className="relative aspect-video overflow-hidden">
-                  <Image src={webinar.image} alt={webinar.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                  <Image src={webinar.image} alt={`Thumbnail for ${webinar.title}`} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
                   <div className="absolute top-4 left-4 md:top-6 md:left-6">
                     <span className="px-3 py-1.5 md:px-4 md:py-2 bg-black text-white text-[8px] md:text-[9px] font-bold tracking-widest uppercase">
                       {webinar.status}
@@ -134,7 +135,7 @@ export default function WebinarPage() {
             {previousWebinars.map((webinar, i) => (
               <div key={i} className="group cursor-pointer space-y-6">
                 <div className="relative aspect-video overflow-hidden border border-white/10">
-                  <Image src={webinar.image} alt={webinar.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" />
+                  <Image src={webinar.image} alt={`Archive thumbnail for ${webinar.title}`} fill className="object-cover transition-all duration-1000" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100 group-hover:bg-black/20 transition-all">
                     <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Play className="w-6 h-6 text-white fill-white ml-1" />

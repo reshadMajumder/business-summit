@@ -8,20 +8,36 @@ import { cn } from "@/lib/utils"
 export default function PrivacyPolicyPage() {
   const sections = [
     {
-      title: "1. Data Collection",
-      content: "Business Summit collects institutional and professional data necessary to facilitate high-level networking and investment matchmaking. This includes corporate identity, professional background, and strategic goals provided during registration or session matching."
+      title: "1. Scope of Policy",
+      content: "This Privacy Policy governs the collection, processing, and management of institutional and professional data for all delegates, speakers, sponsors, and participants of the Business Summit Limited. This framework applies to all digital interactions through our portal, the InvEX Marketplace, and physical engagements at our global venues."
     },
     {
-      title: "2. Strategic Use of Information",
-      content: "Information collected is utilized to architect personalized summit experiences, verify project data in the InvEX Marketplace, and facilitate G2G/B2B connections. We do not sell executive data to third-party marketing entities."
+      title: "2. Information Collection & Institutional Intelligence",
+      content: "We collect high-level professional data including corporate identities, professional biographies, investment interests, and strategic expansion goals. This encompasses information provided during registration, data submitted to the AI Executive Matcher, and verified project documentation required for participation in the InvEX investment ecosystem."
     },
     {
-      title: "3. Information Security",
-      content: "We implement institutional-grade security protocols to safeguard your data. Access to sensitive project information within InvEX is restricted to verified and vetted partners."
+      title: "3. Strategic Data Utilization",
+      content: "Data is utilized exclusively to architect personalized summit experiences, verify the viability of project data within the InvEX Marketplace, and facilitate direct G2G, G2B, and B2B collaborations. Our neural engines process institutional intelligence to ensure capital is connected to the most relevant high-impact opportunities with mathematical precision."
     },
     {
-      title: "4. Global Compliance",
-      content: "As a global entity operating across Canada, Malaysia, Nigeria, and the UAE, we adhere to international data protection standards, including GDPR and regional equivalents, ensuring your privacy is maintained across borders."
+      title: "4. Security Architecture",
+      content: "Business Summit Limited employs institutional-grade security protocols, including advanced encryption and restricted access controls, to safeguard executive intelligence. Access to sensitive project data within the InvEX Marketplace is strictly limited to verified and vetted institutional partners who have completed our comprehensive due diligence process."
+    },
+    {
+      title: "5. Global Compliance & Cross-Border Transfers",
+      content: "As a global entity operating in Canada, Portugal, Nigeria, Malaysia, Bangladesh, and the UAE, we adhere to the highest international data protection standards, including GDPR and regional equivalents. Your data may be transferred across borders to facilitate international partnerships, maintained at all times under strict institutional oversight."
+    },
+    {
+      title: "6. Third-Party Disclosure Policy",
+      content: "We do not sell, trade, or rent executive data to third-party marketing entities. Information is shared only with authorized partners, government liaisons, and service providers necessary for the execution of summit activities and the facilitation of investment matchmaking."
+    },
+    {
+      title: "7. Executive Rights & Data Autonomy",
+      content: "Participants retain full rights to access, rectify, or request the erasure of their professional data stored within our systems. Such requests are handled with priority by our dedicated institutional compliance team to ensure executive privacy is maintained without compromise."
+    },
+    {
+      title: "8. Data Retention & Audit",
+      content: "We retain institutional data only for the duration required to fulfill the strategic networking goals and investment cycles defined during the engagement. All data retention practices comply with international legal and audit requirements governing global financial and business services."
     }
   ]
 
@@ -35,11 +51,10 @@ export default function PrivacyPolicyPage() {
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
             <div className="space-y-4">
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Institutional Compliance</span>
-              <h1 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-[0.9]">Privacy <br /> Policy</h1>
+              <h1 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-[0.9]">
+                Privacy <br /> <span className="text-accent">Policy</span>
+              </h1>
             </div>
-            <p className="text-lg md:text-xl font-light leading-relaxed text-muted-foreground max-w-2xl mx-auto">
-              Our commitment to safeguarding executive intelligence and institutional data.
-            </p>
           </div>
         </div>
       </section>
@@ -58,12 +73,6 @@ export default function PrivacyPolicyPage() {
                 </p>
               </div>
             ))}
-            
-            <div className="pt-12 border-t border-black/5">
-              <p className="text-xs font-bold tracking-widest text-muted-foreground uppercase">
-                Last Updated: October 2024
-              </p>
-            </div>
           </div>
         </div>
       </section>

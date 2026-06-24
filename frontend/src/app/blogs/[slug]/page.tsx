@@ -1,6 +1,4 @@
 
-"use client"
-
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
@@ -8,12 +6,33 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Calendar, User } from "lucide-react"
 import { posts } from "@/lib/blog-data"
-import { use } from "react"
 import { notFound } from "next/navigation"
 import { cn } from "@/lib/utils"
+import type { Metadata } from 'next'
 
-export default function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params)
+type Props = {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const post = posts.find(p => p.slug === slug)
+  
+  if (!post) return {}
+
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [post.image],
+    }
+  }
+}
+
+export default async function BlogDetailPage({ params }: Props) {
+  const { slug } = await params
   const post = posts.find(p => p.slug === slug)
 
   if (!post) {
@@ -106,7 +125,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ slug: str
       {/* Related Footer CTA */}
       <section className="py-24 sm:py-32 bg-primary text-white">
         <div className="container mx-auto px-6 sm:px-12 md:px-24 text-center">
-          <div className="max-w-2xl mx-auto space-y-8 sm:space-y-10">
+          <div className="max-w-2xl mx-auto space-y-10">
             <h2 className="text-3xl sm:text-4xl font-headline font-bold uppercase">Ready to scale your business?</h2>
             <p className="text-white/60 font-light leading-relaxed">
               Join the next Business Summit and connect with global leaders who can take your company to the next level of financial performance.

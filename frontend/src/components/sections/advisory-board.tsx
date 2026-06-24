@@ -25,6 +25,18 @@ const boardMembers = [
     image: PlaceHolderImages.find(img => img.id === 'advisor-goodluck')?.imageUrl || "https://picsum.photos/seed/board2/800/1000",
     imageHint: "official portrait"
   },
+  {
+    name: "GOVERNOR H.E. CALEB MUTFWANG",
+    role: "EXECUTIVE GOVERNOR OF PLATEAU STATE",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203005/Governor_H.E._Caleb_Mutfwang_imdcn5.jpg",
+    imageHint: "official portrait"
+  },
+  {
+    name: "H.E. SENATOR ANYIM PIUS ANYIM",
+    role: "FORMER SECRETARY TO THE GOVERNMENT OF THE FEDERATION",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202999/H.E._Senator_Anyim_Pius_Anyim_uvmoov.jpg",
+    imageHint: "official portrait"
+  },
 ]
 
 export function AdvisoryBoard() {
@@ -33,7 +45,7 @@ export function AdvisoryBoard() {
       <div className="container mx-auto px-4 md:px-24">
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
           <div className="space-y-4">
-            <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">The Council</span>
+            <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block">The Council</span>
             <h2 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-none">
               Advisory <br /> <span className="text-accent">Board</span>
             </h2>
@@ -51,13 +63,13 @@ export function AdvisoryBoard() {
           <CarouselContent className="-ml-6 justify-center">
             {boardMembers.map((member, i) => (
               <CarouselItem key={i} className="pl-6 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div key={i} className="group space-y-4">
+                <div className="group space-y-4">
                   <div className="relative aspect-[4/5] overflow-hidden bg-muted border border-black/5 shadow-sm transition-all duration-700 hover:shadow-xl">
                     <Image 
                       src={member.image} 
                       alt={member.name} 
                       fill 
-                      className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                      className="object-cover transition-all duration-1000 group-hover:scale-105"
                       data-ai-hint={member.imageHint}
                     />
                   </div>

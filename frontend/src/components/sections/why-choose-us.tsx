@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 const stats = [
   { value: "100", suffix: "+", label: "PROJECTS\nMANAGED", targetHeight: "45%" },
   { value: "98", suffix: "%", label: "CLIENT\nRETENTION RATE", targetHeight: "55%" },
-  { value: "145", suffix: "+", label: "GLOBAL FOOTPRINT:\nCOUNTRIES", targetHeight: "70%" },
+  { value: "150", suffix: "+", label: "GLOBAL FOOTPRINT:\nCOUNTRIES", targetHeight: "70%" },
   { value: "500M", suffix: "+", label: "CAPITAL\nCONNECTED", targetHeight: "90%" },
 ]
 
@@ -46,8 +46,6 @@ export function WhyChooseUs() {
             >
               <div className="p-6 md:p-8 relative z-30 mix-blend-difference">
                 <div className="flex flex-col items-start">
-                  {/* @ts-ignore - prefix might be missing in some objects */}
-                  {stat.prefix && <span className="text-sm font-headline font-bold text-white/40 mb-1">{stat.prefix}</span>}
                   <div className="flex items-start">
                     <span className="text-6xl md:text-7xl lg:text-8xl font-headline font-bold tracking-tighter leading-none text-white">
                       {stat.value}

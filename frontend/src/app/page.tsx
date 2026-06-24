@@ -8,8 +8,13 @@ import { AdvisoryBoard } from "@/components/sections/advisory-board"
 import { WhyChooseUs } from "@/components/sections/why-choose-us"
 import { Footer } from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
-import { ChevronRight } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Business Summit | Get Funded, Build Partnerships, Expand Globally',
+  description: 'The pinnacle of corporate leadership and innovation. Connecting global investors with high-impact projects through InvEX and high-level cross-border collaboration.',
+}
 
 export default function Home() {
   return (
@@ -37,11 +42,9 @@ export default function Home() {
                 Join our latest & state of the art exchange to secure your investment. EXchange ideas, EXchange projects, EXchange capital.
               </p>
               <div className="pt-6">
-                <Link href="/invex">
-                  <Button className="h-16 px-14 bg-black text-white hover:bg-accent transition-all duration-500 rounded-none text-[10px] font-bold tracking-[0.4em] uppercase group shadow-2xl">
-                    Coming <span className="text-accent ml-2">Soon</span>
-                  </Button>
-                </Link>
+                <Button disabled className="h-16 px-14 bg-black text-white rounded-none text-[10px] font-bold tracking-[0.4em] uppercase opacity-50 cursor-not-allowed shadow-2xl">
+                  Coming <span className="text-accent ml-2">Soon</span>
+                </Button>
               </div>
             </div>
           </div>

@@ -47,7 +47,7 @@ export default function MentoringPage() {
                   src={drHaiderImg.imageUrl} 
                   alt="Dr. M. Haider Uzzaman" 
                   fill 
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                  className="object-cover transition-all duration-1000"
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>

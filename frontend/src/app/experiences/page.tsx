@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Navbar } from "@/components/layout/navbar"
@@ -63,7 +64,7 @@ export default function ExperiencesPage() {
                     src={exp.image} 
                     alt={exp.title} 
                     fill 
-                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                    className="object-cover transition-all duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute top-6 left-6">
                     <span className="px-4 py-2 bg-black text-white text-[9px] font-bold tracking-widest uppercase">

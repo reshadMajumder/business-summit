@@ -42,7 +42,7 @@ export function Speakers() {
                           src={image.imageUrl} 
                           alt={speaker.name} 
                           fill
-                          className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                          className="object-cover transition-all duration-1000 group-hover:scale-105"
                         />
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 space-y-4">

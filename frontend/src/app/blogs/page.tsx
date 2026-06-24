@@ -152,7 +152,7 @@ export default function BlogsPage() {
         </div>
       </section>
 
-      {/* LinkedIn Section relocated from Home */}
+      {/* LinkedIn Section */}
       <section className="py-24 bg-background border-t border-black/5">
         <div className="container mx-auto px-4 md:px-24">
           <div className="max-w-4xl mx-auto bg-white p-12 md:p-20 border border-black/5 text-center space-y-8 animate-fade-in shadow-sm">

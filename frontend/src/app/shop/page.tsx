@@ -1,6 +1,4 @@
 
-"use client"
-
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
@@ -8,14 +6,19 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, ShoppingCart, BookOpen, Briefcase, UserCheck } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Executive Boutique | Presidential Counsel & Masterclasses',
+  description: 'Access exclusive coaching, business blueprint architecture, and masterclasses from the core faculty of Business Summit.',
+}
 
 export default function ShopPage() {
   const bookImg = PlaceHolderImages.find(img => img.id === 'book-featured')
 
   const masterclasses = [
-    { name: "Strategic Architecture", faculty: "Dr. M. Haider Uzzaman", price: "$2,500" },
-    { name: "Global Operations", faculty: "Abid Haider", price: "$1,500" },
-    { name: "Institutional Sales", faculty: "Avishek Busviah", price: "$1,500" },
+    { name: "Marketing Masterclass", faculty: "Abid Haider", price: "$1,500" },
+    { name: "Relationship Management", faculty: "Avishek Busviah", price: "$1,500" },
     { name: "Executive Duo Session", faculty: "Abid Haider & Avishek Busviah", price: "$2,500" },
   ]
 
@@ -35,26 +38,26 @@ export default function ShopPage() {
       </section>
 
       <section className="py-24 container mx-auto px-6 sm:px-12 md:px-24">
-        {/* Flagship: Direct Counsel - Fully Responsive Flagship */}
+        {/* Flagship: Presidential Counsel */}
         <div className="mb-16 animate-fade-in">
           <div className="group bg-white border border-black/5 overflow-hidden shadow-2xl flex flex-col lg:flex-row max-w-6xl mx-auto h-auto lg:min-h-[600px]">
             <div className="relative lg:w-[45%] h-[350px] sm:h-[450px] lg:h-auto bg-muted overflow-hidden">
                 <Image 
                   src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781205426/b1e86619-ef1d-468a-aa65-c249c335b3fd.png" 
-                  alt="Dr. M. Haider Uzzaman" 
+                  alt="Dr. M. Haider Uzzaman - Presidential Counsel" 
                   fill 
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                  className="object-cover transition-all duration-1000"
                 />
             </div>
             
             <div className="p-8 sm:p-12 lg:p-14 flex-1 flex flex-col bg-white">
               <div className="space-y-6 flex-1 flex flex-col pt-4 lg:pt-8">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-headline font-bold uppercase leading-[0.9]">
-                  Direct <br /> Counsel <br /> With the <br /> 
-                  <span className="text-accent">Chairman</span>
+                  Presidential <br /> 
+                  <span className="text-accent">Counsel</span>
                 </h2>
                 <p className="text-sm sm:text-base font-light text-muted-foreground leading-relaxed max-w-lg text-justify">
-                  A personalized 60-minute coaching architecture designed to audit your business model, identify strategic bottlenecks, and map a definitive path for global expansion and funding procurement.
+                  A personalized 60 minute session with the President of Business Summit, Dr M Haider Uzzaman. Receive insights into industry growth, direct contacts and connections from his portfolio and an exclusive 1-on-1 on any matter.
                 </p>
               </div>
 
@@ -71,18 +74,18 @@ export default function ShopPage() {
           </div>
         </div>
 
-        {/* Advisory & Intelligence Grid - 2 Columns on Desktop */}
+        {/* Advisory & Intelligence Grid */}
         <div className="grid lg:grid-cols-2 gap-12 mb-24">
-          {/* Business Plan Development */}
+          {/* Business Blueprint */}
           <Card className="rounded-none border border-black/5 shadow-xl group hover:border-accent transition-all duration-500 bg-white overflow-hidden">
             <CardContent className="p-12 space-y-8 flex flex-col items-center text-center">
               <div className="p-6 bg-accent/5 rounded-full">
                 <Briefcase className="w-12 h-12 text-accent" />
               </div>
               <div className="space-y-4">
-                <h3 className="text-3xl font-headline font-bold uppercase tracking-tight">Business Plan <br />Architecture</h3>
+                <h3 className="text-3xl font-headline font-bold uppercase tracking-tight">Business <br />Blueprint</h3>
                 <p className="text-sm font-light text-muted-foreground leading-relaxed text-justify">
-                  Professional institutional blueprints architected for global funding rounds, M&A activity, and G2G expansion. Our plans are vetted by a network of over 100 high-net-worth and institutional investors.
+                  Professional Business Blueprint and Business Plan crafted by Business Summit. Our plans are vetted by industry experts and our exclusive investor base. Set to meet all industry standards to ensure a successful result for your business.
                 </p>
               </div>
               <div className="pt-8 border-t border-black/5 w-full">
@@ -94,11 +97,11 @@ export default function ShopPage() {
             </CardContent>
           </Card>
 
-          {/* Digital Library */}
+          {/* Librairie */}
           <Card className="rounded-none border border-black/5 shadow-xl group hover:border-accent transition-all duration-500 bg-white overflow-hidden">
             <div className="relative aspect-[21/9] bg-muted border-b border-black/5 overflow-hidden">
               {bookImg && (
-                <Image src={bookImg.imageUrl} alt="Strategic Publications" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                <Image src={bookImg.imageUrl} alt="Strategic Publications - Business Summit Digital Library" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
               )}
               <div className="absolute inset-0 bg-black/20"></div>
               <div className="absolute top-6 left-6">
@@ -107,10 +110,10 @@ export default function ShopPage() {
             </div>
             <CardContent className="p-12 space-y-8">
               <div className="space-y-4">
-                <span className="text-[9px] font-bold tracking-[0.4em] text-accent uppercase">Strategic Publications</span>
-                <h3 className="text-3xl font-headline font-bold uppercase leading-tight">Digital Library <br />by Dr. Haider</h3>
+                <span className="text-[9px] font-bold tracking-[0.4em] text-accent uppercase">Presidential Collection</span>
+                <h3 className="text-3xl font-headline font-bold uppercase leading-tight">Librairie</h3>
                 <p className="text-sm font-light text-muted-foreground leading-relaxed text-justify">
-                  Distilled institutional intelligence for the modern visionary. Access a curated collection of guidelines on business architecture, international expansion, and funding procurement.
+                  Access exclusive titles from our President and beyond. Distilled institutional intelligence for the modern visionary ready to architect global success.
                 </p>
               </div>
               <Button variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
@@ -130,18 +133,18 @@ export default function ShopPage() {
             </div>
             <h3 className="text-4xl md:text-6xl font-headline font-bold uppercase leading-none">Executive <br /> Masterclasses</h3>
             <p className="text-base font-light text-white/40 text-justify">
-              Exclusive digital sessions from our core faculty designed for rapid institutional scaling, operational optimization, and high-stakes global sales.
+              Exclusive digital sessions from our core faculty designed for rapid institutional scaling, operational optimization, and high-stakes global growth.
             </p>
           </div>
           <div className="hidden lg:block w-[1px] h-32 bg-white/10 mx-12"></div>
           <div className="text-center md:text-right space-y-4">
             <p className="text-[10px] font-bold text-accent tracking-[0.3em] uppercase">Status: Live Access</p>
-            <p className="text-2xl font-headline font-bold">4 Modules Available</p>
+            <p className="text-2xl font-headline font-bold">{masterclasses.length} Modules Available</p>
           </div>
         </div>
 
         {/* Masterclasses Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
           {masterclasses.map((mc, i) => (
             <div key={i} className="bg-white border border-black/5 p-10 space-y-8 hover:shadow-2xl transition-all duration-500 border-t-4 hover:border-t-accent group">
                <div className="space-y-3">

@@ -31,9 +31,6 @@ export default function ContactPage() {
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Strategic Liaison</span>
               <h1 className="text-5xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Contact <br /> <span className="text-accent">Us</span></h1>
             </div>
-            <p className="text-lg md:text-2xl font-light leading-relaxed text-muted-foreground max-w-3xl mx-auto">
-              Initiate a dialogue with our global expansion and funding architecture team.
-            </p>
           </div>
         </div>
       </section>

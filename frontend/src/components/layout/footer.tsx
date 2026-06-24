@@ -1,3 +1,4 @@
+
 import Link from "next/link"
 import Image from "next/image"
 import { Twitter, Linkedin, Instagram } from "lucide-react"
@@ -10,7 +11,8 @@ export function Footer() {
     { name: "Home", href: "/" },
     { name: "Our Story", href: "/our-story" },
     { name: "InvEX", href: "/invex" },
-    { name: "Experiences", href: "/experiences" },
+    { name: "SUMMIT", href: "/summit" },
+    { name: "WEBINARS", href: "/webinar" },
     { name: "Shop", href: "/shop" },
     { name: "Editorial Core", href: "/blogs" },
   ]
@@ -18,7 +20,6 @@ export function Footer() {
   const infoLinks = [
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms of Service", href: "/terms-of-service" },
-    { name: "Cookie Policy", href: "/cookie-policy" },
     { name: "Contact Us", href: "/contact" },
   ]
 
@@ -58,11 +59,15 @@ export function Footer() {
             <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-white/80">Navigation</h4>
             <div className="flex flex-col gap-4 text-sm font-light text-white/40">
               {navLinks.map((link) => (
-                <Link key={link.name} href={link.href} className="hover:text-accent transition-colors flex items-center gap-1">
-                  {link.name === "InvEX" ? (
-                    <>Inv<span className="text-accent">EX</span></>
-                  ) : link.name}
-                </Link>
+                link.name === "InvEX" ? (
+                  <div key={link.name} className="flex items-center gap-1 opacity-50 cursor-not-allowed">
+                    Inv<span className="text-accent">EX</span>
+                  </div>
+                ) : (
+                  <Link key={link.name} href={link.href} className="hover:text-accent transition-colors flex items-center gap-1">
+                    {link.name}
+                  </Link>
+                )
               ))}
             </div>
           </div>

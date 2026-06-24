@@ -42,7 +42,7 @@ export function MentoringCTA() {
                   src={promoImage.imageUrl}
                   alt={promoImage.description}
                   fill
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  className="object-cover transition-all duration-1000 group-hover:scale-105"
                   data-ai-hint={promoImage.imageHint}
                 />
               )}

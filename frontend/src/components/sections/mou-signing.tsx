@@ -25,7 +25,7 @@ export function MOUSigning() {
     },
     { 
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202675/MOU_signing_with_Governor_of_Plateau_State_1_ow6ixj.jpg", 
-      description: "", 
+      description: "DryPort MOU Signing with H.E Caleb Mutfwang, Executive Governor of Plateau State", 
       imageHint: "mou ceremony" 
     }
   ]

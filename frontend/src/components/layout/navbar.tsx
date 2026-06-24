@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState, useEffect } from "react"
@@ -44,7 +45,8 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
     { name: "HOME", href: "/" },
     { name: "OUR STORY", href: "/our-story" },
     { name: "InvEX", href: "/invex" },
-    { name: "EXPERIENCES", href: "/experiences" },
+    { name: "SUMMIT", href: "/summit" },
+    { name: "WEBINARS", href: "/webinar" },
     { name: "SHOP", href: "/shop" },
     { name: "EDITORIAL CORE", href: "/blogs" },
   ]
@@ -77,44 +79,31 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
             )}
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href}
-                className={cn(
-                  "text-[9px] font-bold tracking-[0.3em] transition-all duration-300 hover:text-accent flex items-center",
-                  isScrolled ? "text-black" : "text-white/80"
-                )}
-              >
-                {link.name === "InvEX" ? (
-                  <>Inv<span className="text-accent">EX</span></>
-                ) : link.name}
-              </Link>
+              link.name === "InvEX" ? (
+                <div 
+                  key={link.name}
+                  className={cn(
+                    "text-[9px] font-bold tracking-[0.3em] transition-all duration-300 flex items-center cursor-not-allowed opacity-50",
+                    isScrolled ? "text-black" : "text-white/80"
+                  )}
+                >
+                  Inv<span className="text-accent">EX</span>
+                </div>
+              ) : (
+                <Link 
+                  key={link.name} 
+                  href={link.href}
+                  className={cn(
+                    "text-[9px] font-bold tracking-[0.3em] transition-all duration-300 hover:text-accent flex items-center",
+                    isScrolled ? "text-black" : "text-white/80"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
-            <div className="flex items-center gap-4 ml-4 pl-4 border-l border-black/10">
-              <Link href="/login">
-                <Button 
-                  variant="ghost"
-                  className={cn(
-                    "rounded-none h-10 text-[9px] font-bold tracking-[0.2em] uppercase transition-all duration-300",
-                    isScrolled ? "text-black hover:text-accent" : "text-white/80 hover:text-white"
-                  )}
-                >
-                  LOG IN
-                </Button>
-              </Link>
-              <Link href="/register">
-                <Button 
-                  className={cn(
-                    "rounded-none px-6 h-10 text-[9px] font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-xl",
-                    isScrolled ? "bg-black text-white hover:bg-accent" : "bg-white text-black hover:bg-accent hover:text-white"
-                  )}
-                >
-                  JOIN
-                </Button>
-              </Link>
-            </div>
           </div>
 
           <button 
@@ -153,32 +142,24 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
         >
           <div className="flex-1 flex flex-col justify-center gap-8 mt-12">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-lg font-headline font-bold uppercase tracking-[0.2em] text-black hover:text-accent transition-colors border-b border-black/5 pb-2"
-              >
-                {link.name === "InvEX" ? (
-                  <>Inv<span className="text-accent">EX</span></>
-                ) : link.name}
-              </Link>
+              link.name === "InvEX" ? (
+                <div 
+                  key={link.name}
+                  className="text-lg font-headline font-bold uppercase tracking-[0.2em] text-black/50 cursor-not-allowed border-b border-black/5 pb-2 flex items-center"
+                >
+                  Inv<span className="text-accent">EX</span>
+                </div>
+              ) : (
+                <Link 
+                  key={link.name} 
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-headline font-bold uppercase tracking-[0.2em] text-black hover:text-accent transition-colors border-b border-black/5 pb-2"
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
-            <Link 
-              href="/login" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-lg font-headline font-bold uppercase tracking-[0.2em] text-accent hover:text-black transition-colors"
-            >
-              LOG IN
-            </Link>
-          </div>
-
-          <div className="mt-auto">
-            <Link href="/register" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full h-16 bg-black text-white rounded-none text-[10px] font-bold tracking-[0.4em] uppercase">
-                JOIN NOW
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
