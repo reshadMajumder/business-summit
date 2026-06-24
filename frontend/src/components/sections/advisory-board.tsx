@@ -40,6 +40,9 @@ const boardMembers = [
 ]
 
 export function AdvisoryBoard() {
+  // Duplicating board members to ensure smooth infinite loop
+  const duplicatedMembers = [...boardMembers, ...boardMembers]
+
   return (
     <section className="py-32 bg-white">
       <div className="container mx-auto px-4 md:px-24">
@@ -56,13 +59,13 @@ export function AdvisoryBoard() {
         </div>
 
         <Carousel 
-          opts={{ align: "center", loop: true }}
+          opts={{ align: "start", loop: true }}
           plugins={[Autoplay({ delay: 6000, stopOnInteraction: false })]}
           className="w-full"
         >
-          <CarouselContent className="-ml-6 justify-center">
-            {boardMembers.map((member, i) => (
-              <CarouselItem key={i} className="pl-6 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+          <CarouselContent className="-ml-4 sm:-ml-6">
+            {duplicatedMembers.map((member, i) => (
+              <CarouselItem key={i} className="pl-4 sm:pl-6 basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <div className="group space-y-4">
                   <div className="relative aspect-[4/5] overflow-hidden bg-muted border border-black/5 shadow-sm transition-all duration-700 hover:shadow-xl">
                     <Image 

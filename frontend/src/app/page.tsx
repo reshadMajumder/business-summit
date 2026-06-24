@@ -28,21 +28,21 @@ export default function Home() {
       <MOUSigning />
       
       {/* InvEX Introduction Section */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="max-w-4xl mx-auto text-center space-y-12">
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24">
+          <div className="max-w-4xl mx-auto text-center space-y-8 md:space-y-12">
             <div className="space-y-4">
               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase">Institutional Portal</span>
-              <h2 className="text-5xl md:text-8xl font-headline font-bold leading-none">
+              <h2 className="text-4xl sm:text-6xl md:text-8xl font-headline font-bold leading-none">
                 Inv<span className="text-accent">EX</span>
               </h2>
             </div>
-            <div className="space-y-8">
-              <p className="text-2xl md:text-3xl font-light leading-relaxed text-foreground max-w-3xl mx-auto text-center">
+            <div className="space-y-6 md:space-y-8">
+              <p className="text-xl sm:text-2xl md:text-3xl font-light leading-relaxed text-foreground max-w-3xl mx-auto text-center">
                 Join our latest & state of the art exchange to secure your investment. EXchange ideas, EXchange projects, EXchange capital.
               </p>
-              <div className="pt-6">
-                <Button disabled className="h-16 px-14 bg-black text-white rounded-none text-[10px] font-bold tracking-[0.4em] uppercase opacity-50 cursor-not-allowed shadow-2xl">
+              <div className="pt-4 md:pt-6">
+                <Button disabled className="h-14 md:h-16 px-8 md:px-14 bg-black text-white rounded-none text-[10px] font-bold tracking-[0.4em] uppercase opacity-50 cursor-not-allowed shadow-2xl">
                   Coming <span className="text-accent ml-2">Soon</span>
                 </Button>
               </div>

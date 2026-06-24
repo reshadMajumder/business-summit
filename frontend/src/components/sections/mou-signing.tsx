@@ -50,9 +50,9 @@ export function MOUSigning() {
           plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
           className="w-full"
         >
-          <CarouselContent className="-ml-8">
+          <CarouselContent className="-ml-4 sm:-ml-8">
             {mouImages.map((img, i) => (
-              <CarouselItem key={i} className="pl-8 md:basis-1/2 lg:basis-2/3">
+              <CarouselItem key={i} className="pl-4 sm:pl-8 basis-[85%] md:basis-1/2 lg:basis-2/3">
                 <div className="relative group">
                   <div className="relative aspect-video overflow-hidden border border-black/5 bg-muted">
                     <Image
