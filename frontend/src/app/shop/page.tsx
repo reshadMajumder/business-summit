@@ -2,6 +2,7 @@
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, ShoppingCart, BookOpen, Briefcase, UserCheck } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
@@ -65,9 +66,11 @@ export default function ShopPage() {
                 <div className="text-2xl md:text-3xl font-headline font-bold uppercase tracking-tight">
                   $5,000.00 <span className="text-[10px] text-muted-foreground font-body font-normal">/ SESSION</span>
                 </div>
-                <Button className="h-14 px-8 rounded-none bg-black text-white hover:bg-accent transition-all duration-500 text-[10px] font-bold tracking-[0.3em] uppercase group flex items-center gap-4 w-full sm:w-auto">
-                  BOOK NOW
-                  <ShoppingCart className="w-4 h-4" />
+                <Button asChild className="h-14 px-8 rounded-none bg-black text-white hover:bg-accent transition-all duration-500 text-[10px] font-bold tracking-[0.3em] uppercase group flex items-center gap-4 w-full sm:w-auto">
+                  <Link href="mailto:info@businesssummit.net">
+                    BOOK NOW
+                    <ShoppingCart className="w-4 h-4" />
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -90,8 +93,10 @@ export default function ShopPage() {
               </div>
               <div className="pt-8 border-t border-black/5 w-full">
                 <p className="text-2xl font-headline font-bold uppercase mb-6">Starting at $3,500</p>
-                <Button variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
-                  Inquire Service
+                <Button asChild variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
+                  <Link href="mailto:info@businesssummit.net">
+                    Inquire Service
+                  </Link>
                 </Button>
               </div>
             </CardContent>
@@ -116,9 +121,11 @@ export default function ShopPage() {
                   Access exclusive titles from our President and beyond. Distilled institutional intelligence for the modern visionary ready to architect global success.
                 </p>
               </div>
-              <Button variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
-                View on Amazon
-                <ArrowRight className="ml-3 w-4 h-4" />
+              <Button asChild variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
+                <Link href="https://www.amazon.com" target="_blank">
+                  View on Amazon
+                  <ArrowRight className="ml-3 w-4 h-4" />
+                </Link>
               </Button>
             </CardContent>
           </Card>
@@ -153,8 +160,10 @@ export default function ShopPage() {
                </div>
                <div className="pt-6 border-t border-black/5 flex items-center justify-between">
                  <span className="text-xl font-headline font-bold">{mc.price}</span>
-                 <Button variant="link" className="p-0 h-auto text-[10px] font-bold tracking-widest uppercase text-black hover:text-accent group">
-                   Details <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                 <Button asChild variant="link" className="p-0 h-auto text-[10px] font-bold tracking-widest uppercase text-black hover:text-accent group">
+                   <Link href="mailto:info@businesssummit.net">
+                     Details <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                   </Link>
                  </Button>
                </div>
             </div>

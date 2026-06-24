@@ -78,7 +78,7 @@ export default function SummitPage() {
                 An Exclusive & Premier 4-day Annual Event in a major city crowdsourced from around the world to convene Investors, HNWI’s, Government Dignitaries & Project owners from 100+ countries. Investors Summit has been running since 2016 acting as a vehicle for connection, funding and growth. Designed as a platform to facilitate G2G, G2B, B2B engagements, the summit is built on one mission; High-Level Cross Border Collaboration.
               </p>
               <div className="pt-6">
-                <Link href="https://www.eventbrite.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.eventbrite.ca/e/investors-summit-nigeria-2026-tickets-1977017519621?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer">
                   <Button className="h-16 px-12 bg-black text-white hover:bg-accent transition-all duration-500 rounded-none text-[10px] font-bold tracking-[0.4em] uppercase group shadow-2xl">
                     Purchase Ticket
                     <Ticket className="ml-3 w-4 h-4 group-hover:rotate-12 transition-transform" />

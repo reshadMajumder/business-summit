@@ -7,7 +7,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 export function Partners() {
   const logos = PlaceHolderImages.filter(img => img.id.startsWith('partner-'))
 
-  // Duplicating for seamless loop
+  // Duplicating logos to ensure a seamless and long scroll
   const duplicatedLogos = [...logos, ...logos]
 
   return (
@@ -28,7 +28,7 @@ export function Partners() {
       </div>
 
       <div className="space-y-12">
-        {/* Row 1: Scrolling Left - Faster speed for more logos */}
+        {/* Row 1: Scrolling Left */}
         <div className="relative flex overflow-hidden">
           <div className="flex gap-12 animate-scroll-left whitespace-nowrap">
             {duplicatedLogos.map((logo, index) => (
@@ -41,7 +41,7 @@ export function Partners() {
                     src={logo.imageUrl}
                     alt={logo?.description || "Partner"}
                     fill
-                    className="object-contain p-2 transition-all group-hover:scale-110"
+                    className="object-contain p-4 transition-all group-hover:scale-110"
                     data-ai-hint={logo?.imageHint}
                   />
                 )}
@@ -63,7 +63,7 @@ export function Partners() {
                     src={logo.imageUrl}
                     alt={logo?.description || "Partner"}
                     fill
-                    className="object-contain p-2 transition-all group-hover:scale-110"
+                    className="object-contain p-4 transition-all group-hover:scale-110"
                     data-ai-hint={logo?.imageHint}
                   />
                 )}

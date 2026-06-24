@@ -2,6 +2,7 @@
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, Play, ArrowRight } from "lucide-react"
 import type { Metadata } from 'next'
@@ -77,7 +78,7 @@ export default function WebinarPage() {
           <div className="flex flex-col md:flex-row items-end justify-between mb-12 md:mb-16 gap-6 md:gap-8">
             <div className="space-y-2 md:space-y-4">
               <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Live Sessions</span>
-              <h2 className="text-3xl md:text-5xl font-headline font-bold uppercase">Upcoming <br /> Masterclasses</h2>
+              <h2 className="text-3xl md:text-5xl font-headline font-bold uppercase">Upcoming <br /> <span className="text-accent">Masterclasses</span></h2>
             </div>
           </div>
 
@@ -85,7 +86,12 @@ export default function WebinarPage() {
             {upcomingWebinars.map((webinar, i) => (
               <div key={i} className="group bg-white border border-black/5 p-8 md:p-12 space-y-6 md:space-y-8 hover:border-accent transition-all duration-500 shadow-sm">
                 <div className="relative aspect-video overflow-hidden">
-                  <Image src={webinar.image} alt={`Thumbnail for ${webinar.title}`} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                  <Image 
+                    src={webinar.image} 
+                    alt={`Thumbnail for ${webinar.title}`} 
+                    fill 
+                    className="object-cover transition-transform duration-1000 group-hover:scale-105" 
+                  />
                   <div className="absolute top-4 left-4 md:top-6 md:left-6">
                     <span className="px-3 py-1.5 md:px-4 md:py-2 bg-black text-white text-[8px] md:text-[9px] font-bold tracking-widest uppercase">
                       {webinar.status}
@@ -108,9 +114,11 @@ export default function WebinarPage() {
                   <p className="text-sm font-light text-muted-foreground leading-relaxed text-justify">{webinar.description}</p>
                 </div>
                 
-                <Button className="w-full h-14 md:h-16 rounded-none bg-black text-white hover:bg-accent transition-all text-[10px] font-bold tracking-[0.3em] uppercase group">
-                  Register For Access
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <Button asChild className="w-full h-14 md:h-16 rounded-none bg-black text-white hover:bg-accent transition-all text-[10px] font-bold tracking-[0.3em] uppercase group">
+                  <Link href="mailto:info@businesssummit.net">
+                    Register For Access
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </div>
             ))}
@@ -135,7 +143,12 @@ export default function WebinarPage() {
             {previousWebinars.map((webinar, i) => (
               <div key={i} className="group cursor-pointer space-y-6">
                 <div className="relative aspect-video overflow-hidden border border-white/10">
-                  <Image src={webinar.image} alt={`Archive thumbnail for ${webinar.title}`} fill className="object-cover transition-all duration-1000" />
+                  <Image 
+                    src={webinar.image} 
+                    alt={`Archive thumbnail for ${webinar.title}`} 
+                    fill 
+                    className="object-cover transition-all duration-1000" 
+                  />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100 group-hover:bg-black/20 transition-all">
                     <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Play className="w-6 h-6 text-white fill-white ml-1" />
@@ -154,8 +167,10 @@ export default function WebinarPage() {
           </div>
 
           <div className="mt-20 text-center">
-            <Button variant="outline" className="h-16 px-12 rounded-none border-white/10 text-white hover:bg-white hover:text-black transition-all text-[10px] font-bold tracking-[0.4em] uppercase">
-              Explore Full Archive
+            <Button asChild variant="outline" className="h-16 px-12 rounded-none border-accent/30 text-accent hover:bg-accent hover:text-white transition-all text-[10px] font-bold tracking-[0.4em] uppercase">
+              <Link href="mailto:info@businesssummit.net">
+                Explore Full Archive
+              </Link>
             </Button>
           </div>
         </div>
