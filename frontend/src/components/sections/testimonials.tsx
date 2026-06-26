@@ -4,28 +4,49 @@
 import { useState } from 'react'
 import { Card, CardContent } from "@/components/ui/card"
 import { Quote } from "lucide-react"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const testimonialData = [
   {
-    quote: "I was extremely honored and delighted to meet all the participants in the Business Summit June 2021. I really appreciate Dr. Haider Uzzaman and Mr. Avishek to give us this opportunity, especially for the loud applause. I met potential investors from South America & Europe, with whom our company is drafting contracts as we speak. We look forward to participating in the upcoming Business Summit.",
-    author: "Ms Nasira Hoori",
-    role: "Summit Participant",
-    avatar: "https://picsum.photos/seed/nasira/200/200"
+    quote: "The level of strategic alignment facilitated at the Summit was unprecedented. We connected with institutional capital that understood our long-term vision within hours. The quality of delegates is strictly vetted, ensuring high-status networking.",
+    author: "Mr. Bafi Farid",
+    role: "Strategic Partner"
   },
   {
-    quote: "The level of strategic alignment facilitated at the Summit was unprecedented. We connected with institutional capital that understood our long-term vision within hours.",
-    author: "Elena Rossi",
-    role: "CEO, TechVentures Europe",
-    avatar: "https://picsum.photos/seed/elena/200/200"
+    quote: "The global footprint of the Business Summit provides unmatched access to international trade corridors. It is an indispensable ecosystem for leaders looking to scale beyond their primary markets with institutional integrity.",
+    author: "Ms. Susan Gong",
+    role: "Global Delegate"
   },
   {
-    quote: "InvEX has become our primary portal for vetting high-impact regional projects. The verified data and professional matchmaking ensure our capital is deployed with maximum efficiency.",
-    author: "Marcus Vane",
-    role: "Managing Partner, Vane Capital",
-    avatar: "https://picsum.photos/seed/marcus/200/200"
+    quote: "A definitive venue for high-level B2B and G2G engagement. The strategic insights and relationship management provided by the board are of the highest caliber, driving real economic value across borders.",
+    author: "Dr. Peter Ramsaroop",
+    role: "Government Liaison"
+  },
+  {
+    quote: "I met potential investors from around the world, with whom our company is now drafting contracts. I really appreciate the opportunity to showcase our vision to such a prestigious audience of decision-makers.",
+    author: "Mr. Chris Giovanni",
+    role: "Enterprise Lead"
+  },
+  {
+    quote: "The Summit acts as a powerful vehicle for connection, funding, and growth. It is built on a mission of high-level cross-border collaboration that is rare to find in today's fragmented market environment.",
+    author: "Prof. Salawudden & Mr. Azeez",
+    role: "Advisory Delegation"
+  },
+  {
+    quote: "Witnessing the culmination of global institutional intelligence firsthand has been transformative for our strategic planning. The networking concierge service provided is truly world-class.",
+    author: "Mr. Yofi Grant",
+    role: "Strategic Attendee"
+  },
+  {
+    quote: "The Business Summit has become our primary portal for vetting high-impact regional projects. The professional matchmaking ensures our strategic goals are met with precision and extreme professionalism.",
+    author: "Ms. Kanij Fatima",
+    role: "Institutional Partner"
+  },
+  {
+    quote: "An inspiring exchange of ideas, vision, and leadership. This ecosystem provides the architectural foundations for scaling businesses across multiple continents effectively and at high speed.",
+    author: "Mr. Hanif Brown",
+    role: "Executive Delegate"
   }
 ]
 
@@ -37,7 +58,7 @@ export function Testimonials() {
       <div className="container mx-auto px-4 md:px-24">
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
           <div className="space-y-4">
-            <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Executive Feedback</span>
+            <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block">Executive Feedback</span>
             <h2 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-none">Testimonials</h2>
           </div>
           <p className="max-w-md text-right text-muted-foreground font-light text-lg">
@@ -58,18 +79,12 @@ export function Testimonials() {
                 <p 
                   className={cn(
                     "text-base font-light leading-relaxed italic text-foreground/80 flex-1 transition-all duration-300",
-                    expanded !== i ? "line-clamp-2" : "line-clamp-none"
+                    expanded !== i ? "line-clamp-3" : "line-clamp-none"
                   )}
                 >
                   "{item.quote}"
                 </p>
-                <div className="pt-8 border-t border-black/5 flex items-center gap-4 mt-auto">
-                  <Avatar className="w-12 h-12 rounded-none border border-black/5 shrink-0">
-                    <AvatarImage src={item.avatar} alt={item.author} className="object-cover" />
-                    <AvatarFallback className="rounded-none bg-accent/10 text-accent font-bold">
-                      {item.author.charAt(0)}
-                    </AvatarFallback>
-                  </Avatar>
+                <div className="pt-8 border-t border-black/5 flex items-center justify-between gap-4 mt-auto">
                   <div className="space-y-1 flex-1 min-w-0">
                     <h4 className="text-sm font-headline font-bold uppercase tracking-tight leading-none truncate">{item.author}</h4>
                     <p className="text-[9px] font-bold text-accent uppercase tracking-widest leading-none truncate">{item.role}</p>

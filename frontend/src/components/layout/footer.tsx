@@ -8,19 +8,19 @@ export function Footer() {
   const logo = PlaceHolderImages.find(img => img.id === 'app-logo')
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Our Story", href: "/our-story" },
+    { name: "HOME", href: "/" },
+    { name: "OUR STORY", href: "/our-story" },
     { name: "InvEX", href: "/invex" },
     { name: "SUMMIT", href: "/summit" },
     { name: "WEBINARS", href: "/webinar" },
-    { name: "Shop", href: "/shop" },
-    { name: "Editorial Core", href: "/blogs" },
+    { name: "SHOP", href: "/shop" },
+    { name: "EDITORIAL CORE", href: "/blogs" },
   ]
 
   const infoLinks = [
-    { name: "Privacy Policy", href: "/privacy-policy" },
-    { name: "Terms of Service", href: "/terms-of-service" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "PRIVACY POLICY", href: "/privacy-policy" },
+    { name: "TERMS OF SERVICE", href: "/terms-of-service" },
+    { name: "CONTACT US", href: "/contact" },
   ]
 
   return (

@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, Play, ArrowRight } from "lucide-react"
+import { Calendar, Clock, Play, ArrowRight, Video } from "lucide-react"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -14,42 +14,32 @@ export const metadata: Metadata = {
 
 const upcomingWebinars = [
   {
-    title: "Strategic Global Expansion Masterclass",
-    date: "OCTOBER 15, 2026",
-    time: "02:00 PM GMT",
-    description: "Learn the architectural foundations of scaling your business across four continents with Dr. Haider.",
-    image: "https://picsum.photos/seed/web1/800/600",
+    title: "Monthly Webinar",
+    date: "TBA",
+    time: "Monthly Congregation",
+    description: "A monthly congregation of the Business Summit family to discuss all things business!",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782465438/webiner-june_f2imkw.jpg",
+    imageHint: "webinar banner",
     status: "Upcoming"
   },
   {
-    title: "Institutional Capital Procurement",
-    date: "NOVEMBER 05, 2026",
-    time: "11:00 AM GMT",
-    description: "Navigate the complexities of institutional investment and secure the capital your venture deserves.",
-    image: "https://picsum.photos/seed/web2/800/600",
-    status: "Upcoming"
+    title: "Youth Masterclass",
+    date: "TBA",
+    time: "Pathway Session",
+    description: "A session to discuss current challenges as a young entrepreneur and craft pathways to overcome them.",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782282849/team_nmeljm.jpg",
+    imageHint: "executives in suits",
+    status: "Special Session"
   }
 ]
 
 const previousWebinars = [
-  {
-    title: "Digital Banking Infrastructure in West Africa",
-    date: "JUNE 2024",
-    duration: "45 Mins",
-    image: "https://picsum.photos/seed/web3/800/600"
-  },
-  {
-    title: "M&A Strategies for Growth-Stage Companies",
-    date: "MAY 2024",
-    duration: "60 Mins",
-    image: "https://picsum.photos/seed/web4/800/600"
-  },
-  {
-    title: "The Future of Sustainable Manufacturing",
-    date: "MARCH 2024",
-    duration: "55 Mins",
-    image: "https://picsum.photos/seed/web5/800/600"
-  }
+  { id: "leKMyN2JD1A", title: "Global Strategic Engagement Session" },
+  { id: "-XdKtVpsih8", title: "Institutional Capital Procurement" },
+  { id: "xFj3ylnXeBM", title: "Cross-Border Business Architecture" },
+  { id: "RwrV0h6G2Ag", title: "Scaling Corporate Operations" },
+  { id: "UunzUZ0DYVY", title: "Strategic Expansion Dialogue" },
+  { id: "eJeBPIBWV4g", title: "Executive Leadership Masterclass" }
 ]
 
 export default function WebinarPage() {
@@ -66,7 +56,7 @@ export default function WebinarPage() {
               <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Webinar</h1>
             </div>
             <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-3xl mx-auto text-justify">
-              Exclusive digital masterclasses designed for the modern executive. Access global intelligence from the comfort of your headquarters.
+              Exclusive Digital Sessions designed to create connection and prosper collectively. Access growth opportunities from the comfort of the Internet.
             </p>
           </div>
         </div>
@@ -78,7 +68,7 @@ export default function WebinarPage() {
           <div className="flex flex-col md:flex-row items-end justify-between mb-12 md:mb-16 gap-6 md:gap-8">
             <div className="space-y-2 md:space-y-4">
               <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Live Sessions</span>
-              <h2 className="text-3xl md:text-5xl font-headline font-bold uppercase">Upcoming <br /> <span className="text-accent">Masterclasses</span></h2>
+              <h2 className="text-3xl md:text-5xl font-headline font-bold uppercase">Upcoming <br /> <span className="text-accent">Sessions</span></h2>
             </div>
           </div>
 
@@ -91,6 +81,7 @@ export default function WebinarPage() {
                     alt={`Thumbnail for ${webinar.title}`} 
                     fill 
                     className="object-cover transition-transform duration-1000 group-hover:scale-105" 
+                    data-ai-hint={webinar.imageHint}
                   />
                   <div className="absolute top-4 left-4 md:top-6 md:left-6">
                     <span className="px-3 py-1.5 md:px-4 md:py-2 bg-black text-white text-[8px] md:text-[9px] font-bold tracking-widest uppercase">
@@ -141,13 +132,13 @@ export default function WebinarPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {previousWebinars.map((webinar, i) => (
-              <div key={i} className="group cursor-pointer space-y-6">
+              <Link key={i} href={`https://youtu.be/${webinar.id}`} target="_blank" className="group cursor-pointer space-y-6">
                 <div className="relative aspect-video overflow-hidden border border-white/10">
                   <Image 
-                    src={webinar.image} 
+                    src={`https://img.youtube.com/vi/${webinar.id}/mqdefault.jpg`} 
                     alt={`Archive thumbnail for ${webinar.title}`} 
                     fill 
-                    className="object-cover transition-all duration-1000" 
+                    className="object-cover transition-all duration-1000 group-hover:scale-110" 
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100 group-hover:bg-black/20 transition-all">
                     <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -155,20 +146,21 @@ export default function WebinarPage() {
                     </div>
                   </div>
                   <div className="absolute bottom-4 right-4 text-[9px] font-bold tracking-widest uppercase bg-black/60 px-3 py-1">
-                    {webinar.duration}
+                    <Video className="w-3 h-3 inline-block mr-1" />
+                    REPLAY
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-[10px] font-bold text-accent tracking-widest uppercase">{webinar.date}</p>
+                  <p className="text-[10px] font-bold text-accent tracking-widest uppercase">Archive Session</p>
                   <h4 className="text-xl font-headline font-bold uppercase tracking-tight group-hover:text-accent transition-colors">{webinar.title}</h4>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
           <div className="mt-20 text-center">
             <Button asChild variant="outline" className="h-16 px-12 rounded-none border-accent/30 text-accent hover:bg-accent hover:text-white transition-all text-[10px] font-bold tracking-[0.4em] uppercase">
-              <Link href="mailto:info@businesssummit.net">
+              <Link href="https://www.youtube.com/@BSummitdotNet" target="_blank">
                 Explore Full Archive
               </Link>
             </Button>

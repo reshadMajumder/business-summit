@@ -42,13 +42,13 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
   }, [mobileMenuOpen])
 
   const navLinks = [
-    { name: "HOME", href: "/" },
-    { name: "OUR STORY", href: "/our-story" },
+    { name: "Home", href: "/" },
+    { name: "Our Story", href: "/our-story" },
     { name: "InvEX", href: "/invex" },
-    { name: "SUMMIT", href: "/summit" },
-    { name: "WEBINARS", href: "/webinar" },
-    { name: "SHOP", href: "/shop" },
-    { name: "EDITORIAL CORE", href: "/blogs" },
+    { name: "Summit", href: "/summit" },
+    { name: "Webinars", href: "/webinar" },
+    { name: "Shop", href: "/shop" },
+    { name: "Editorial Core", href: "/blogs" },
   ]
 
   const isScrolled = mounted ? (scrolled || variant === "solid") : (variant === "solid")
@@ -96,7 +96,7 @@ export function Navbar({ variant = "transparent" }: NavbarProps) {
                   key={link.name} 
                   href={link.href}
                   className={cn(
-                    "text-[9px] font-bold tracking-[0.3em] transition-all duration-300 hover:text-accent flex items-center",
+                    "text-[9px] font-bold tracking-[0.3em] transition-all duration-300 hover:text-accent flex items-center uppercase",
                     isScrolled ? "text-black" : "text-white/80"
                   )}
                 >

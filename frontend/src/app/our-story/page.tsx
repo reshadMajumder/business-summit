@@ -11,26 +11,31 @@ export const metadata: Metadata = {
   description: 'The journey of Dr. M. Haider Uzzaman and the evolution of Business Summit Limited into a global engine of economic opportunity across 150+ countries.',
 }
 
-const countryDirectors = [
+const regionalDirectors = [
   { 
     name: "Mr. Gonçalo Terenas", 
-    role: "Head of Corporate & International Business",
+    region: "Europe",
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250976/Mr.-Gon%C3%A7alo-Terenas_--Head-of-Corporate-_-International-Business-at-Tuga-Innovations-Inc.-Head-of-Committee-at-Diaspora-Prime-Portugal-_-Executive-Board-Member-at-RCCPM-_CDO-at-HHERF-Foundation_w6tkvc.jpg"
   },
   { 
-    name: "Prof. Ahmed Bin Salawudeen", 
-    role: "Regional Director",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250974/Prof.-Ahmed-Bin-Salawudeen_rtyc71.jpg"
+    name: "Mr. Abdul Azeez", 
+    region: "Africa",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782463714/Mr.-abdul-aziz_b8hz7w.jpg"
   },
   { 
     name: "Ms. Teresa do Brito Apolónia", 
-    role: "Founder Partner, ASA Lawyers",
+    region: "Europe",
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250974/Ms.-Teresa-do-Brito-Apol%C3%B3ni_--Founder-Partner-ASA-Lawyers_bcuzpr.jpg"
   },
   { 
     name: "Susan Gong", 
-    role: "President and CEO, Altec Global Inc.",
+    region: "North America",
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250973/Susan_Gong_President_and_CEO_Altec_Global_Inc._vezmpy.jpg"
+  },
+  { 
+    name: "Dr. Jacky", 
+    region: "Asia",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782463714/Mr.-Jacky-OngFounder-ChairmanCHG-Global-Organization-1_rndmfr.jpg"
   },
 ]
 
@@ -127,8 +132,8 @@ export default function OurStory() {
             </div>
             <div className="relative aspect-[4/3] bg-muted overflow-hidden shadow-2xl animate-fade-in delay-200 border border-black/5 group">
               <Image 
-                src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781432990/21_During-the-inaugural-phuket-Air-flight-Bangkok-To-Chittagong_aj9ix2.jpg" 
-                alt="Global Reach - International Collaboration" 
+                src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782462059/Investors_Summit_Malaysia_2018_eam99u.jpg" 
+                alt="Group photo of the first Investors Summit in Malaysia 2018" 
                 fill 
                 className="object-cover transition-all duration-1000 group-hover:scale-105"
               />
@@ -221,24 +226,24 @@ export default function OurStory() {
         </div>
       </section>
 
-      {/* Country Directors Section */}
+      {/* Regional Directors Section */}
       <section className="py-32 bg-background">
         <div className="container mx-auto px-4 md:px-24">
           <div className="mb-20">
              <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block mb-4">Global Network</span>
              <h2 className="text-5xl font-headline font-bold uppercase">
-               Country <span className="text-accent">Directors</span>
+               Regional <span className="text-accent">Directors</span>
              </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {countryDirectors.map((director, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+            {regionalDirectors.map((director, i) => (
               <div key={i} className="group space-y-6">
                 <div className="relative aspect-[4/5] overflow-hidden bg-white border border-black/5 transition-all duration-700 hover:shadow-2xl">
                   {director.image ? (
                     <Image 
                       src={director.image} 
-                      alt={`${director.name} - ${director.role}`} 
+                      alt={`${director.name} - ${director.region}`} 
                       fill 
                       className="object-cover transition-all duration-1000 group-hover:scale-110"
                     />
@@ -250,7 +255,7 @@ export default function OurStory() {
                 </div>
                 <div className="space-y-1 text-center md:text-left">
                   <h4 className="text-xl font-headline font-bold uppercase tracking-tight leading-tight">{director.name}</h4>
-                  <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase">{director.role}</p>
+                  <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase">{director.region}</p>
                 </div>
               </div>
             ))}

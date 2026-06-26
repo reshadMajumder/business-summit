@@ -27,6 +27,21 @@ export function MOUSigning() {
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202675/MOU_signing_with_Governor_of_Plateau_State_1_ow6ixj.jpg", 
       description: "DryPort MOU Signing with H.E Caleb Mutfwang, Executive Governor of Plateau State", 
       imageHint: "mou ceremony" 
+    },
+    {
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250974/Prof.-Ahmed-Bin-Salawudeen_rtyc71.jpg",
+      description: "Prof. Dr. Ahmed bin Salawudeen - President, Standard Insurance Consultants Limited, Nigeria",
+      imageHint: "executive milestone"
+    },
+    {
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782457169/Screenshot_2026-06-26_125836_smcv8z.png",
+      description: "Prof. Dr. Abu Yousuf Md. Abdullah - Director, Institute of Business Administration, University of Dhaka",
+      imageHint: "academic collaboration"
+    },
+    {
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782457169/Screenshot_2026-06-26_125907_ijgwbz.png",
+      description: "Mr. Shaher Mousli - Founder & Chairman, Gulf Land Property Developers",
+      imageHint: "industrial partnership"
     }
   ]
 
@@ -50,9 +65,9 @@ export function MOUSigning() {
           plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
           className="w-full"
         >
-          <CarouselContent className="-ml-4 sm:-ml-8">
+          <CarouselContent className="-ml-8">
             {mouImages.map((img, i) => (
-              <CarouselItem key={i} className="pl-4 sm:pl-8 basis-[85%] md:basis-1/2 lg:basis-2/3">
+              <CarouselItem key={i} className="pl-8 md:basis-1/2 lg:basis-2/3">
                 <div className="relative group">
                   <div className="relative aspect-video overflow-hidden border border-black/5 bg-muted">
                     <Image

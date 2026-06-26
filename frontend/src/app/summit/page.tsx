@@ -57,6 +57,11 @@ const keyPeople = [
     role: "FORMER SECRETARY TO THE GOVERNMENT OF THE FEDERATION", 
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202999/H.E._Senator_Anyim_Pius_Anyim_uvmoov.jpg" 
   },
+  {
+    name: "PROF. DR. AHMED BIN SALAWUDEEN",
+    role: "PRESIDENT, STANDARD INSURANCE CONSULTANTS LIMITED",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782464301/copy_of_screenshot_2026-06-26_115825_xv0bni.png"
+  }
 ]
 
 export default function SummitPage() {
@@ -141,11 +146,11 @@ export default function SummitPage() {
         <div className="relative flex overflow-hidden">
           <div className={cn(
             "flex gap-12",
-            isScrolling ? "animate-scroll-left whitespace-nowrap" : "container mx-auto px-4 md:px-24 justify-center md:justify-start flex-wrap"
+            isScrolling ? "animate-scroll-left whitespace-nowrap" : "container mx-auto px-4 md:px-24 justify-center flex-wrap"
           )}>
             {(isScrolling ? [...keyPeople, ...keyPeople, ...keyPeople, ...keyPeople] : keyPeople).map((person, i) => (
-              <div key={i} className="space-y-6 group w-72 shrink-0 inline-block whitespace-normal">
-                <div className="relative aspect-[4/5] bg-white/5 overflow-hidden border border-white/10 shadow-2xl transition-all duration-700">
+              <div key={i} className="space-y-6 group w-full md:w-[400px] shrink-0 inline-block whitespace-normal">
+                <div className="relative aspect-[3/2] bg-white/5 overflow-hidden border border-white/10 shadow-2xl transition-all duration-700">
                   <Image 
                     src={person.image} 
                     alt={`${person.name} - ${person.role}`} 
@@ -154,7 +159,7 @@ export default function SummitPage() {
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
-                <div className="space-y-2 px-1">
+                <div className="space-y-2 px-1 text-center">
                   <h4 className="text-xl font-headline font-bold uppercase tracking-tight leading-tight">{person.name}</h4>
                   <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase leading-relaxed opacity-80">{person.role}</p>
                 </div>
