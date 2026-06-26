@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -22,13 +21,13 @@ const boardMembers = [
   {
     name: "Prof. Dr. Abu Yousuf Md. Abdullah",
     role: "Director, Institute of Business Administration, University of Dhaka, Bangladesh",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782457169/Screenshot_2026-06-26_125836_smcv8z.png",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471519/Prof._Dr._Abu_Yousuf_Md._Abdullah_q2arww.jpg",
     imageHint: "academic director"
   },
   {
     name: "Mr. Shaher Mousli",
     role: "Founder & Chairman, Gulf Land Property Developers",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782457169/Screenshot_2026-06-26_125907_ijgwbz.png",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471517/Mr._Shaher_Mousli_poiidp.jpg",
     imageHint: "founder portrait"
   },
 ]

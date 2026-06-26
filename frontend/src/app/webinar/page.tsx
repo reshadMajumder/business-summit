@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, Play, ArrowRight, Video } from "lucide-react"
+import { Calendar, Clock, Play, ArrowRight, Video, Users } from "lucide-react"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const upcomingWebinars = [
   {
     title: "Monthly Webinar",
-    date: "TBA",
+    date: "27th June",
     time: "Monthly Congregation",
     description: "A monthly congregation of the Business Summit family to discuss all things business!",
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782465438/webiner-june_f2imkw.jpg",
@@ -27,7 +27,7 @@ const upcomingWebinars = [
     date: "TBA",
     time: "Pathway Session",
     description: "A session to discuss current challenges as a young entrepreneur and craft pathways to overcome them.",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782282849/team_nmeljm.jpg",
+    image: null,
     imageHint: "executives in suits",
     status: "Special Session"
   }
@@ -55,9 +55,6 @@ export default function WebinarPage() {
               <span className="text-[10px] md:text-xs font-bold tracking-[0.5em] text-accent uppercase">Educational Core</span>
               <h1 className="text-6xl md:text-8xl font-headline font-bold uppercase leading-[0.9]">Webinar</h1>
             </div>
-            <p className="text-xl md:text-2xl font-light leading-relaxed text-muted-foreground max-w-3xl mx-auto text-justify">
-              Exclusive Digital Sessions designed to create connection and prosper collectively. Access growth opportunities from the comfort of the Internet.
-            </p>
           </div>
         </div>
       </section>
@@ -75,14 +72,20 @@ export default function WebinarPage() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {upcomingWebinars.map((webinar, i) => (
               <div key={i} className="group bg-white border border-black/5 p-8 md:p-12 space-y-6 md:space-y-8 hover:border-accent transition-all duration-500 shadow-sm">
-                <div className="relative aspect-video overflow-hidden">
-                  <Image 
-                    src={webinar.image} 
-                    alt={`Thumbnail for ${webinar.title}`} 
-                    fill 
-                    className="object-cover transition-transform duration-1000 group-hover:scale-105" 
-                    data-ai-hint={webinar.imageHint}
-                  />
+                <div className="relative aspect-video overflow-hidden border border-black/5 bg-muted">
+                  {webinar.image ? (
+                    <Image 
+                      src={webinar.image} 
+                      alt={`Thumbnail for ${webinar.title}`} 
+                      fill 
+                      className="object-contain transition-transform duration-1000 group-hover:scale-105" 
+                      data-ai-hint={webinar.imageHint}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-muted/50">
+                      <Users className="w-16 h-16 text-accent/40" />
+                    </div>
+                  )}
                   <div className="absolute top-4 left-4 md:top-6 md:left-6">
                     <span className="px-3 py-1.5 md:px-4 md:py-2 bg-black text-white text-[8px] md:text-[9px] font-bold tracking-widest uppercase">
                       {webinar.status}

@@ -1,7 +1,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Twitter, Linkedin, Instagram } from "lucide-react"
+import { Linkedin, Facebook } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export function Footer() {
@@ -47,11 +47,12 @@ export function Footer() {
               </p>
             </div>
             <div className="flex gap-6">
-              <Link href="https://www.linkedin.com/company/bsummitdotnet/posts/?feedView=all" target="_blank">
+              <Link href="https://www.linkedin.com/company/bsummitdotnet/" target="_blank">
                 <Linkedin className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
               </Link>
-              <Twitter className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
-              <Instagram className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
+              <Link href="https://www.facebook.com/share/18gbhEGHCR/" target="_blank">
+                <Facebook className="w-5 h-5 text-white/20 hover:text-accent cursor-pointer transition-colors" />
+              </Link>
             </div>
           </div>
 

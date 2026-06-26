@@ -15,8 +15,6 @@ export const metadata: Metadata = {
 }
 
 export default function ShopPage() {
-  const bookImg = PlaceHolderImages.find(img => img.id === 'book-featured')
-
   const masterclasses = [
     { name: "Marketing Masterclass", faculty: "Abid Haider", price: "$1,500" },
     { name: "Relationship Management", faculty: "Avishek Busviah", price: "$1,500" },
@@ -104,16 +102,10 @@ export default function ShopPage() {
 
           {/* Librairie */}
           <Card className="rounded-none border border-black/5 shadow-xl group hover:border-accent transition-all duration-500 bg-white overflow-hidden">
-            <div className="relative aspect-[21/9] bg-muted border-b border-black/5 overflow-hidden">
-              {bookImg && (
-                <Image src={bookImg.imageUrl} alt="Strategic Publications - Business Summit Digital Library" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-              )}
-              <div className="absolute inset-0 bg-black/20"></div>
-              <div className="absolute top-6 left-6">
-                 <BookOpen className="w-6 h-6 text-white" />
+            <CardContent className="p-12 space-y-8 flex flex-col items-center text-center">
+              <div className="p-6 bg-accent/5 rounded-full">
+                <BookOpen className="w-12 h-12 text-accent" />
               </div>
-            </div>
-            <CardContent className="p-12 space-y-8">
               <div className="space-y-4">
                 <span className="text-[9px] font-bold tracking-[0.4em] text-accent uppercase">Presidential Collection</span>
                 <h3 className="text-3xl font-headline font-bold uppercase leading-tight">Librairie</h3>
@@ -121,12 +113,15 @@ export default function ShopPage() {
                   Access exclusive titles from our President and beyond. Distilled institutional intelligence for the modern visionary ready to architect global success.
                 </p>
               </div>
-              <Button asChild variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
-                <Link href="https://www.amazon.com" target="_blank">
-                  View on Amazon
-                  <ArrowRight className="ml-3 w-4 h-4" />
-                </Link>
-              </Button>
+              <div className="pt-8 border-t border-black/5 w-full">
+                <p className="text-2xl font-headline font-bold uppercase mb-6">Presidential Archives</p>
+                <Button asChild variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
+                  <Link href="https://www.amazon.com" target="_blank">
+                    View on Amazon
+                    <ArrowRight className="ml-3 w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>

@@ -38,7 +38,7 @@ export const posts: BlogPost[] = [
     content: "Abuja was abuzz with energy as leaders, investors, and policymakers gathered for the Northern Nigeria Investment and Industrialization Summit. Dr. M. Haider Uzzaman, Chairman of the Business Summit, was received as a VIP guest, underscoring the summit's growing influence in African economic circles.\n\nThe summit focused on regional industrialization and attracting foreign direct investment (FDI) to Northern Nigeria. Dr. Haider participated in high-level discussions regarding infrastructure development and the creation of economic zones that can compete on a global scale. His presence marked a significant milestone in fostering cross-continental business partnerships and identifying high-potential sectors for global investors. This engagement highlights our ongoing commitment to connecting institutional capital with high-impact regional projects in emerging markets.",
     date: "May 12, 2024",
     author: "Editorial Team",
-    image: "https://picsum.photos/seed/abuja/1200/800",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782476275/Dr._Haider_Shines_as_VIP_Guest_at_the_Northern_Nigeria_Investment_and_Industrialization_Summit_in_Abuja_yfqcvm.jpg",
     category: "Summit Happenings"
   },
   {

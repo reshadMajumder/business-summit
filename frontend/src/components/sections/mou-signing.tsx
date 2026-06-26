@@ -14,9 +14,29 @@ import Autoplay from "embla-carousel-autoplay"
 export function MOUSigning() {
   const mouImages = [
     { 
-      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203873/Dr._M_Haider_Uzzaman_in_a_strategic_high-level_meeting_with_the_Deputy_Foreign_Minister_of_Kosovo_exploring_international_trade_opportunities_and_bilateral_economic_cooperation._asyzxj.jpg", 
-      description: "Dr M Haider Uzzaman with H.E Kreshnik Ahmeti Deputy Minister of Foreign Affairs, Kosovo", 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782454388/BS-Team-is-honoured-to-have-met-Tun-Mahathir-Bin-Moha_hvuxsk.jpg", 
+      description: "Business Summit Team with Tun Mahathir Mohamad, Former Prime Minister of Malaysia", 
       imageHint: "diplomatic meeting" 
+    },
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782452968/Governors_House_with_team_abvoss.jpg", 
+      description: "Business Summit Team with Senator Anyim Pius Anyim, Former Senate President of Nigeria", 
+      imageHint: "government meeting" 
+    },
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782452965/Dhu_with_President_of_Guyana_vtwqny.jpg", 
+      description: "Dr. Haider with the President of Guyana", 
+      imageHint: "presidential meeting" 
+    },
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781434828/DSC06276.2_mmasc4.jpg", 
+      description: "Investors Summit Kuala Lumpur 2024", 
+      imageHint: "summit stage" 
+    },
+    { 
+      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203873/Dr._M_Haider_Uzzaman_in_a_strategic_high-level_meeting_with_the_Deputy_Foreign_Minister_of_Kosovo_exploring_international_trade_opportunities_and_bilateral_economic_cooperation._asyzxj.jpg", 
+      description: "Strategic high-level meeting with the Deputy Foreign Minister of Kosovo", 
+      imageHint: "diplomatic dialogue" 
     },
     { 
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202675/Dr._M_Haider_Uzzaman_in_a_strategic_high-level_meeting_with_the_Deputy_Foreign_Minister_of_Kosovo_exploring_international_trade_opportunities_and_bilateral_economic_cooperation._1_ifbepm.jpg", 
@@ -27,21 +47,6 @@ export function MOUSigning() {
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202675/MOU_signing_with_Governor_of_Plateau_State_1_ow6ixj.jpg", 
       description: "DryPort MOU Signing with H.E Caleb Mutfwang, Executive Governor of Plateau State", 
       imageHint: "mou ceremony" 
-    },
-    {
-      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250974/Prof.-Ahmed-Bin-Salawudeen_rtyc71.jpg",
-      description: "Prof. Dr. Ahmed bin Salawudeen - President, Standard Insurance Consultants Limited, Nigeria",
-      imageHint: "executive milestone"
-    },
-    {
-      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782457169/Screenshot_2026-06-26_125836_smcv8z.png",
-      description: "Prof. Dr. Abu Yousuf Md. Abdullah - Director, Institute of Business Administration, University of Dhaka",
-      imageHint: "academic collaboration"
-    },
-    {
-      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782457169/Screenshot_2026-06-26_125907_ijgwbz.png",
-      description: "Mr. Shaher Mousli - Founder & Chairman, Gulf Land Property Developers",
-      imageHint: "industrial partnership"
     }
   ]
 
@@ -50,7 +55,7 @@ export function MOUSigning() {
       <div className="container mx-auto px-4 md:px-24">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
           <div className="space-y-4">
-            <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Diplomatic Milestone</span>
+            <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block">Diplomatic Milestone</span>
             <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-none">
               Diplomatic <br /> <span className="text-accent">Milestones</span>
             </h2>

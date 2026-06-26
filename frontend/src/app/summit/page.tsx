@@ -60,7 +60,7 @@ const keyPeople = [
   {
     name: "PROF. DR. AHMED BIN SALAWUDEEN",
     role: "PRESIDENT, STANDARD INSURANCE CONSULTANTS LIMITED",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782464301/copy_of_screenshot_2026-06-26_115825_xv0bni.png"
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782467091/Screenshot_2026-06-26_115825_giv3jp.png"
   }
 ]
 

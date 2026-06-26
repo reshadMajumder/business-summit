@@ -15,10 +15,10 @@ const regionalDirectors = [
   { 
     name: "Mr. Gonçalo Terenas", 
     region: "Europe",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250976/Mr.-Gon%C3%A7alo-Terenas_--Head-of-Corporate-_-International-Business-at-Tuga-Innovations-Inc.-Head-of-Committee-at-Diaspora-Prime-Portugal-_-Executive-Board-Member-at-RCCPM-_CDO-at-HHERF-Foundation_w6tkvc.jpg"
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471548/jacky_ueshnm.jpg"
   },
   { 
-    name: "Mr. Abdul Azeez", 
+    name: "Mr. ABDULAZEEZ JUBRIL", 
     region: "Africa",
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782463714/Mr.-abdul-aziz_b8hz7w.jpg"
   },
@@ -28,14 +28,14 @@ const regionalDirectors = [
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250974/Ms.-Teresa-do-Brito-Apol%C3%B3ni_--Founder-Partner-ASA-Lawyers_bcuzpr.jpg"
   },
   { 
-    name: "Susan Gong", 
+    name: "MS. SUSAN GONG", 
     region: "North America",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250973/Susan_Gong_President_and_CEO_Altec_Global_Inc._vezmpy.jpg"
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782470690/ms-suzan_hv6sks.jpg"
   },
   { 
-    name: "Dr. Jacky", 
+    name: "DR. JACKY ONG", 
     region: "Asia",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782463714/Mr.-Jacky-OngFounder-ChairmanCHG-Global-Organization-1_rndmfr.jpg"
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471172/dr-jackiy_go3y3l.jpg"
   },
 ]
 
@@ -63,7 +63,7 @@ export default function OurStory() {
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-2">
                 <span className="text-[10px] font-bold tracking-[0.4em] text-accent uppercase">Origin</span>
-                <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-tight">The <br /> Visionary</h2>
+                <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-tight">Regional <br /> <span className="text-accent">Expansion</span></h2>
               </div>
               <div className="space-y-6 text-lg font-light leading-relaxed text-muted-foreground text-justify">
                 <p>
@@ -76,8 +76,8 @@ export default function OurStory() {
             </div>
             <div className="relative aspect-[4/3] bg-muted overflow-hidden shadow-2xl animate-fade-in delay-200 border border-black/5 group">
               <Image 
-                src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202851/14_Best-Air-Experience1_ifyoaq.jpg" 
-                alt="BEST AIR EXPERIENCE - Historical Milestone" 
+                src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202800/12_best-air-launching-flight-to-Srilanka-and-Maldives_z0xdif.jpg" 
+                alt="Regional Expansion - Best Air Launch" 
                 fill 
                 className="object-cover transition-all duration-1000 group-hover:scale-105"
                 priority
@@ -93,8 +93,8 @@ export default function OurStory() {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="relative aspect-[4/3] bg-muted overflow-hidden shadow-2xl order-2 lg:order-1 animate-fade-in border border-black/5 group">
               <Image 
-                src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781202800/12_best-air-launching-flight-to-Srilanka-and-Maldives_z0xdif.jpg" 
-                alt="Regional Expansion - Best Air Launch" 
+                src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782469466/puket_ky2efl.jpg" 
+                alt="Executive Strategic Session - Historical Milestone" 
                 fill 
                 className="object-cover transition-all duration-1000 group-hover:scale-105"
               />
@@ -119,7 +119,7 @@ export default function OurStory() {
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-2">
                 <span className="text-[10px] font-bold tracking-[0.4em] text-accent uppercase">Reach</span>
-                <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-tight">150+ <br /> Countries</h2>
+                <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-tight">150+ <br /> <span className="text-accent">Countries</span></h2>
               </div>
               <div className="space-y-6 text-lg font-light leading-relaxed text-muted-foreground text-justify">
                 <p>
@@ -216,7 +216,7 @@ export default function OurStory() {
 
           <div className="relative aspect-[16/9] w-full overflow-hidden">
             <Image 
-              src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782282849/team_nmeljm.jpg" 
+              src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782474366/team-update_ihx1kn.jpg" 
               alt="Business Summit Core Team Leadership Architecture" 
               fill 
               className="object-contain"
