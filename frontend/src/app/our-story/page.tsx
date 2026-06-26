@@ -15,7 +15,7 @@ const regionalDirectors = [
   { 
     name: "Mr. Gonçalo Terenas", 
     region: "Europe",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471548/jacky_ueshnm.jpg"
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782478194/Mr_Goncalo_Terenas_eh7mbd.jpg"
   },
   { 
     name: "Mr. ABDULAZEEZ JUBRIL", 
