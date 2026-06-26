@@ -27,8 +27,8 @@ const upcomingWebinars = [
     date: "TBA",
     time: "Pathway Session",
     description: "A session to discuss current challenges as a young entrepreneur and craft pathways to overcome them.",
-    image: null,
-    imageHint: "executives in suits",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782499767/business-blueprint_ev7wkv.jpg",
+    imageHint: "faculty portrait",
     status: "Special Session"
   }
 ]
@@ -78,7 +78,7 @@ export default function WebinarPage() {
                       src={webinar.image} 
                       alt={`Thumbnail for ${webinar.title}`} 
                       fill 
-                      className="object-contain transition-transform duration-1000 group-hover:scale-105" 
+                      className="object-cover transition-transform duration-1000 group-hover:scale-105" 
                       data-ai-hint={webinar.imageHint}
                     />
                   ) : (
@@ -86,11 +86,6 @@ export default function WebinarPage() {
                       <Users className="w-16 h-16 text-accent/40" />
                     </div>
                   )}
-                  <div className="absolute top-4 left-4 md:top-6 md:left-6">
-                    <span className="px-3 py-1.5 md:px-4 md:py-2 bg-black text-white text-[8px] md:text-[9px] font-bold tracking-widest uppercase">
-                      {webinar.status}
-                    </span>
-                  </div>
                 </div>
                 
                 <div className="space-y-4 md:space-y-6">
@@ -105,6 +100,9 @@ export default function WebinarPage() {
                     </div>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-headline font-bold uppercase tracking-tight leading-tight">{webinar.title}</h3>
+                  {webinar.title === "Youth Masterclass" && (
+                    <p className="text-[10px] font-bold text-accent tracking-widest uppercase">Faculty: Mr. Abid Haider & Avishek Busviah</p>
+                  )}
                   <p className="text-sm font-light text-muted-foreground leading-relaxed text-justify">{webinar.description}</p>
                 </div>
                 

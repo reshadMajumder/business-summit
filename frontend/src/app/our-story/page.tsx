@@ -35,7 +35,7 @@ const regionalDirectors = [
   { 
     name: "DR. JACKY ONG", 
     region: "Asia",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471172/dr-jackiy_go3y3l.jpg"
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471548/jacky_ueshnm.jpg"
   },
 ]
 

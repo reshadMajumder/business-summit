@@ -25,17 +25,12 @@ export function MOUSigning() {
     },
     { 
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782452965/Dhu_with_President_of_Guyana_vtwqny.jpg", 
-      description: "Dr. Haider with the President of Guyana", 
+      description: "Dr Haider with H.E Irfaan Ali, President of Guyana", 
       imageHint: "presidential meeting" 
     },
     { 
-      imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781434828/DSC06276.2_mmasc4.jpg", 
-      description: "Investors Summit Kuala Lumpur 2024", 
-      imageHint: "summit stage" 
-    },
-    { 
       imageUrl: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203873/Dr._M_Haider_Uzzaman_in_a_strategic_high-level_meeting_with_the_Deputy_Foreign_Minister_of_Kosovo_exploring_international_trade_opportunities_and_bilateral_economic_cooperation._asyzxj.jpg", 
-      description: "Strategic high-level meeting with the Deputy Foreign Minister of Kosovo", 
+      description: "Dr Haider with H.E Kreshnik Ahmeti, Deputy Minister, MOFA Kosovo", 
       imageHint: "diplomatic dialogue" 
     },
     { 

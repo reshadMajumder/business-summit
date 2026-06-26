@@ -83,6 +83,7 @@ export default function ShopPage() {
               <div className="p-6 bg-accent/5 rounded-full">
                 <Briefcase className="w-12 h-12 text-accent" />
               </div>
+              
               <div className="space-y-4">
                 <h3 className="text-3xl font-headline font-bold uppercase tracking-tight">Business <br />Blueprint</h3>
                 <p className="text-sm font-light text-muted-foreground leading-relaxed text-justify">
@@ -107,17 +108,15 @@ export default function ShopPage() {
                 <BookOpen className="w-12 h-12 text-accent" />
               </div>
               <div className="space-y-4">
-                <span className="text-[9px] font-bold tracking-[0.4em] text-accent uppercase">Presidential Collection</span>
                 <h3 className="text-3xl font-headline font-bold uppercase leading-tight">Librairie</h3>
                 <p className="text-sm font-light text-muted-foreground leading-relaxed text-justify">
                   Access exclusive titles from our President and beyond. Distilled institutional intelligence for the modern visionary ready to architect global success.
                 </p>
               </div>
               <div className="pt-8 border-t border-black/5 w-full">
-                <p className="text-2xl font-headline font-bold uppercase mb-6">Presidential Archives</p>
                 <Button asChild variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
-                  <Link href="https://www.amazon.com" target="_blank">
-                    View on Amazon
+                  <Link href="mailto:info@businesssummit.net">
+                    Inquire Access
                     <ArrowRight className="ml-3 w-4 h-4" />
                   </Link>
                 </Button>
