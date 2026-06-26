@@ -1,18 +1,23 @@
 
 "use client"
 
+import { cn } from "@/lib/utils"
+
 export function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      <div className="absolute inset-0 z-0 video-container">
+    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-black">
+      {/* Native Video Layer */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-black/40 z-10"></div> {/* Technical Overlay */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="h-full w-full object-cover scale-125 origin-center"
+          className="absolute inset-0 w-full h-full object-cover opacity-80"
         >
-          <source src="https://video.wixstatic.com/video/aeffa8_a5b1c4ede328407284baacb3c9986f58/1080p/mp4/file.mp4" type="video/mp4" />
+          <source src="/videos/hero-background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
       </div>
 

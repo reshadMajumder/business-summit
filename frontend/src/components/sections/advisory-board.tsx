@@ -15,7 +15,7 @@ const boardMembers = [
   {
     name: "Prof. Dr. Ahmed bin Salawudeen",
     role: "President, Standard Insurance Consultants Limited, Nigeria",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250974/Prof.-Ahmed-Bin-Salawudeen_rtyc71.jpg",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782480846/PROF._DR._AHMED_BIN_SALAWUDEEN_rw83mn.jpg",
     imageHint: "executive portrait"
   },
   {
@@ -42,7 +42,7 @@ export function AdvisoryBoard() {
           src={member.image} 
           alt={member.name} 
           fill 
-          className="object-cover transition-all duration-1000 group-hover:scale-105"
+          className="object-cover object-top transition-all duration-1000 group-hover:scale-105"
           data-ai-hint={member.imageHint}
         />
       </div>

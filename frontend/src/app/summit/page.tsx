@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
@@ -60,7 +59,7 @@ const keyPeople = [
   {
     name: "PROF. DR. AHMED BIN SALAWUDEEN",
     role: "PRESIDENT, STANDARD INSURANCE CONSULTANTS LIMITED",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782467091/Screenshot_2026-06-26_115825_giv3jp.png"
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782480846/PROF._DR._AHMED_BIN_SALAWUDEEN_rw83mn.jpg"
   }
 ]
 
@@ -149,13 +148,13 @@ export default function SummitPage() {
             isScrolling ? "animate-scroll-left whitespace-nowrap" : "container mx-auto px-4 md:px-24 justify-center flex-wrap"
           )}>
             {(isScrolling ? [...keyPeople, ...keyPeople, ...keyPeople, ...keyPeople] : keyPeople).map((person, i) => (
-              <div key={i} className="space-y-6 group w-full md:w-[400px] shrink-0 inline-block whitespace-normal">
-                <div className="relative aspect-[3/2] bg-white/5 overflow-hidden border border-white/10 shadow-2xl transition-all duration-700">
+              <div key={i} className="space-y-6 group w-full md:w-[320px] shrink-0 inline-block whitespace-normal">
+                <div className="relative aspect-[4/5] bg-white/5 overflow-hidden border border-white/10 shadow-2xl transition-all duration-700">
                   <Image 
                     src={person.image} 
                     alt={`${person.name} - ${person.role}`} 
                     fill 
-                    className="object-cover transition-all duration-1000 group-hover:scale-105"
+                    className="object-cover object-top transition-all duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                 </div>
@@ -187,7 +186,7 @@ export default function SummitPage() {
             
             <div className="relative aspect-video bg-black overflow-hidden shadow-2xl group">
                <iframe
-                src="https://www.youtube.com/embed/PSRqPrqL8pg?autoplay=1&mute=0&loop=1&playlist=PSRqPrqL8pg&controls=0&modestbranding=1&rel=0"
+                src="https://www.youtube.com/embed/PSRqPrqL8pg?autoplay=0&mute=0&loop=1&playlist=PSRqPrqL8pg&controls=1&modestbranding=1&rel=0"
                 className="absolute inset-0 w-full h-full border-0 transition-opacity"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
