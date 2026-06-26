@@ -15,7 +15,7 @@ const boardMembers = [
   {
     name: "Prof. Dr. Ahmed bin Salawudeen",
     role: "President, Standard Insurance Consultants Limited, Nigeria",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782453803/Screenshot_2026-06-26_120219_mhegnp.png",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781250974/Prof.-Ahmed-Bin-Salawudeen_rtyc71.jpg",
     imageHint: "executive portrait"
   },
   {
