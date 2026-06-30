@@ -1,6 +1,7 @@
 
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
+import { CoreTeam } from "@/components/sections/core-team"
 import Image from "next/image"
 import { Shield, Globe, Users, Landmark, UserCircle, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -204,27 +205,7 @@ export default function OurStory() {
         </div>
       </section>
 
-      {/* Core Team Section */}
-      <section className="py-32 bg-white border-b border-black/5">
-        <div className="container mx-auto px-6 sm:px-12 md:px-24">
-          <div className="text-center mb-24 space-y-4">
-            <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase">Leadership</span>
-            <h2 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-none text-center">
-              Core <br /> <span className="text-accent">Team</span>
-            </h2>
-          </div>
-
-          <div className="relative aspect-[16/9] w-full overflow-hidden">
-            <Image 
-              src="https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782474366/team-update_ihx1kn.jpg" 
-              alt="Business Summit Core Team Leadership Architecture" 
-              fill 
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-      </section>
+      <CoreTeam />
 
       {/* Regional Directors Section */}
       <section className="py-32 bg-background">

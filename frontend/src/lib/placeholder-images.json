@@ -39,25 +39,217 @@
     {
       "id": "partner-1",
       "description": "Partner Logo 1",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_3c20512e52384a689b5d97796f765737mv2.jpg",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501217/VIP-JET_szyppn.jpg",
       "imageHint": "company logo"
     },
     {
       "id": "partner-2",
       "description": "Partner Logo 2",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_4eb779ddaa2d480ea2a98cf706fcdab4mv2.png",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501217/TUGA-INNOVATIONS_rabsxp.jpg",
       "imageHint": "corporate identity"
     },
     {
       "id": "partner-3",
       "description": "Partner Logo 3",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_7a5d6a920a61419593e290d401d21e7bmv2.jpg",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501216/TREE-HOUSE_cxfa7i.jpg",
       "imageHint": "brand mark"
     },
     {
       "id": "partner-4",
       "description": "Partner Logo 4",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_032d1a8d3cc3484a95d6353c0154d6f1mv2.png",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501216/THE-GOLDEN-PHOENIX_zr4cwf.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-5",
+      "description": "Partner Logo 5",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501216/STONE-CASTLE_t0lkaq.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-6",
+      "description": "Partner Logo 6",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501215/SIGNATURE-GLOBAL_qjw0bx.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-7",
+      "description": "Partner Logo 7",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501215/REGENT-FINANCIAL_elevgj.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-8",
+      "description": "Partner Logo 8",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501214/PROBASI-POLLI_hbknyi.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-9",
+      "description": "Partner Logo 9",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501214/PORTO-MONTENEGREO_wxyfdi.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-10",
+      "description": "Partner Logo 10",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501213/PASSPORT-LEGACY_eqtxxi.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-11",
+      "description": "Partner Logo 11",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501213/PARADISE-HILLS_ds8b9c.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-12",
+      "description": "Partner Logo 12",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501212/OBORSEANA_ldfxa2.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-13",
+      "description": "Partner Logo 13",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501212/MILLINER-WEARS-ACCESSORIES-LTD_jglfse.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-14",
+      "description": "Partner Logo 14",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501212/KENYA-AIRWAYS_brt4bl.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-15",
+      "description": "Partner Logo 15",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501212/KNIGHT-CAPITAL_khry5j.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-16",
+      "description": "Partner Logo 16",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501211/K3-TELECOM_m8dpjs.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-17",
+      "description": "Partner Logo 17",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501211/ISAYYES_uhsu2o.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-18",
+      "description": "Partner Logo 18",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501210/IPSSL-GROUP_jkjcav.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-19",
+      "description": "Partner Logo 19",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501210/INVEST-SA_s2kvd1.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-20",
+      "description": "Partner Logo 20",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501209/HYDROKAPILLARE_egyhuc.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-21",
+      "description": "Partner Logo 21",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501209/HER-VENTURE-HUB_boicgc.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-22",
+      "description": "Partner Logo 22",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501209/HELLO-AIR_ujojpd.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-23",
+      "description": "Partner Logo 23",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501208/GREEN-BOND_p29ymf.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-24",
+      "description": "Partner Logo 24",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501208/GOVERNMENT-OF-PLATEAU-STATE-OF-NIGERIA_qwx0n8.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-25",
+      "description": "Partner Logo 25",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501208/DIASPORA-PRIME-PORTUGAL_bhgif1.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-26",
+      "description": "Partner Logo 26",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501207/DESIGNERS-DO-FUTURO_fpbf4c.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-27",
+      "description": "Partner Logo 27",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501205/CAPITAL-88_czamye.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-28",
+      "description": "Partner Logo 28",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501205/CISW-HOLDING-GROUP_btnvcy.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-29",
+      "description": "Partner Logo 29",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501205/BANDLMAGE_pixnzp.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-30",
+      "description": "Partner Logo 30",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501205/CENTUREON_rgtuxv.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-31",
+      "description": "Partner Logo 31",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/ALTEC-GLOBAL_uqy8bo.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-32",
+      "description": "Partner Logo 32",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/ASPIRE-WORLD-INVESTMENT_fnd87m.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-33",
+      "description": "Partner Logo 33",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/ARTHUR-MACKENZY_xvpda0.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-34",
+      "description": "Partner Logo 34",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/alkebulan_s7wjgu.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-35",
+      "description": "Partner Logo 35",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/aim-congress_qvdyqd.jpg",
+      "imageHint": "logo design"
+    },
+    {
+      "id": "partner-36",
+      "description": "Partner Logo 36",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/Africa-GCC-COUNCIL_ls5rq7.jpg",
       "imageHint": "logo design"
     },
     {

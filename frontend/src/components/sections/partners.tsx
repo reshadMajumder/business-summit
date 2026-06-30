@@ -5,10 +5,14 @@ import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export function Partners() {
-  const logos = PlaceHolderImages.filter(img => img.id.startsWith('partner-'))
+  const allLogos = PlaceHolderImages.filter(img => img.id.startsWith('partner-'))
+
+  const row1Logos = allLogos.slice(0, 18)
+  const row2Logos = allLogos.slice(18)
 
   // Duplicating logos to ensure a seamless and long scroll
-  const duplicatedLogos = [...logos, ...logos]
+  const duplicatedRow1Logos = [...row1Logos, ...row1Logos]
+  const duplicatedRow2Logos = [...row2Logos, ...row2Logos]
 
   return (
     <section className="py-24 bg-white overflow-hidden border-y border-black/5">
@@ -31,7 +35,7 @@ export function Partners() {
         {/* Row 1: Scrolling Left */}
         <div className="relative flex overflow-hidden">
           <div className="flex gap-12 animate-scroll-left whitespace-nowrap">
-            {duplicatedLogos.map((logo, index) => (
+            {duplicatedRow1Logos.map((logo, index) => (
               <div 
                 key={`row1-${index}`} 
                 className="relative w-32 h-16 md:w-48 md:h-24 bg-white flex items-center justify-center p-4 border border-black/5 transition-all duration-500 hover:border-accent group shrink-0"
@@ -53,7 +57,7 @@ export function Partners() {
         {/* Row 2: Scrolling Right */}
         <div className="relative flex overflow-hidden">
           <div className="flex gap-12 animate-scroll-right whitespace-nowrap">
-            {duplicatedLogos.map((logo, index) => (
+            {duplicatedRow2Logos.map((logo, index) => (
               <div 
                 key={`row2-${index}`} 
                 className="relative w-32 h-16 md:w-48 md:h-24 bg-white flex items-center justify-center p-4 border border-black/5 transition-all duration-500 hover:border-accent group shrink-0"
