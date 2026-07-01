@@ -1,3 +1,4 @@
+"use client"
 
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
@@ -5,20 +6,19 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, Play, ArrowRight, Video, Users } from "lucide-react"
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Webinars | Institutional Intelligence Digital Masterclasses',
-  description: 'Exclusive digital sessions designed for rapid institutional scaling, operational optimization, and high-stakes global growth.',
-}
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 const upcomingWebinars = [
   {
     title: "Monthly Webinar",
-    date: "27th June",
+    date: "25th July 2026",
     time: "Monthly Congregation",
     description: "A monthly congregation of the Business Summit family to discuss all things business!",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782465438/webiner-june_f2imkw.jpg",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782900421/july-webinar-25th-july_p1gxax.jpg",
     imageHint: "webinar banner",
     status: "Upcoming"
   },
@@ -72,21 +72,36 @@ export default function WebinarPage() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {upcomingWebinars.map((webinar, i) => (
               <div key={i} className="group bg-white border border-black/5 p-8 md:p-12 space-y-6 md:space-y-8 hover:border-accent transition-all duration-500 shadow-sm">
-                <div className="relative aspect-video overflow-hidden border border-black/5 bg-muted">
-                  {webinar.image ? (
-                    <Image 
-                      src={webinar.image} 
-                      alt={`Thumbnail for ${webinar.title}`} 
-                      fill 
-                      className="object-cover transition-transform duration-1000 group-hover:scale-105" 
-                      data-ai-hint={webinar.imageHint}
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-muted/50">
-                      <Users className="w-16 h-16 text-accent/40" />
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="relative aspect-video overflow-hidden border border-black/5 bg-muted cursor-zoom-in">
+                      {webinar.image ? (
+                        <Image 
+                          src={webinar.image} 
+                          alt={`Thumbnail for ${webinar.title}`} 
+                          fill 
+                          className="object-cover transition-transform duration-1000 group-hover:scale-105" 
+                          data-ai-hint={webinar.imageHint}
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-muted/50">
+                          <Users className="w-16 h-16 text-accent/40" />
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-[90vw] md:max-w-5xl p-0 overflow-hidden bg-transparent border-none">
+                    <div className="relative aspect-video w-full">
+                      <Image 
+                        src={webinar.image} 
+                        alt={webinar.title} 
+                        fill 
+                        className="object-contain" 
+                        priority
+                      />
+                    </div>
+                  </DialogContent>
+                </Dialog>
                 
                 <div className="space-y-4 md:space-y-6">
                   <div className="flex flex-wrap gap-4 md:gap-6 text-[9px] md:text-[10px] font-bold tracking-widest text-muted-foreground uppercase">
