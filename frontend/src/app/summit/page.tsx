@@ -22,17 +22,17 @@ export const metadata: Metadata = {
 const events = [
   {
     city: "ABUJA, NIGERIA",
-    hotel: "ABUJA CONTINENTAL VENUE",
+    hotel: "ABUJA CONTINENTAL HOTEL",
     room: "GRAND BALLROOM",
     dates: "10 & 11 NOVEMBER 2026",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781211529/55f0a1b7-a2db-49c8-ae29-ef732a86c1b6.png"
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782831266/Screenshot_2026-06-30_204428_ox1xs8.png"
   },
   {
     city: "LAGOS, NIGERIA",
     hotel: "LAGOS CONTINENTAL HOTEL",
     room: "GRAND BALLROOM",
     dates: "13 & 14 NOVEMBER 2026",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781211325/bfdd5376-3520-4a60-8345-9f2618bde2fd.png"
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782832022/Screenshot_2026-06-30_210630_znrcqi.png"
   }
 ]
 
@@ -82,7 +82,7 @@ export default function SummitPage() {
                 An Exclusive & Premier 4-day Congregation in a major city crowdsourced from around the world to convene Investors, HNWI’s, Government Dignitaries & Project owners from 100+ countries. Investors Summit has been running since 2016 acting as a vehicle for connection, funding and growth. Designed as a platform to facilitate G2G, G2B, B2B engagements, the summit is built on one mission; High-Level Cross Border Collaboration.
               </p>
               <div className="pt-6">
-                <Link href="https://www.eventbrite.ca/get-funded-nigeria-tickets" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.eventbrite.com/e/investors-summit-nigeria-2026-tickets-1977017519621?aff=oddtdtcreator&keep_tld=true" target="_blank" rel="noopener noreferrer">
                   <Button className="h-16 px-12 bg-black text-white hover:bg-accent transition-all duration-500 rounded-none text-[10px] font-bold tracking-[0.4em] uppercase group shadow-2xl">
                     Purchase Ticket
                     <Ticket className="ml-3 w-4 h-4 group-hover:rotate-12 transition-transform" />
@@ -120,8 +120,8 @@ export default function SummitPage() {
                     <MapPin className="w-4 h-4" />
                     {event.city}
                   </div>
-                  <h3 className="text-3xl font-headline font-bold uppercase">{event.room}</h3>
-                  <p className="text-sm font-bold tracking-widest text-muted-foreground uppercase">{event.hotel}</p>
+                  <h3 className="text-3xl font-headline font-bold uppercase">{event.hotel}</h3>
+                  <p className="text-sm font-bold tracking-widest text-muted-foreground uppercase">{event.room}</p>
                   <div className="pt-6 flex items-center gap-4 text-xs font-bold tracking-[0.3em] uppercase border-t border-black/5">
                     <Calendar className="w-4 h-4 text-accent" />
                     {event.dates}
@@ -194,7 +194,7 @@ export default function SummitPage() {
               ></iframe>
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors pointer-events-none"></div>
               <div className="absolute bottom-6 left-6 text-white z-10 pointer-events-none">
-                <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-accent mb-1">Global Highlights</p>
+                <p className="text-[10px] font-bold tracking-0.4em uppercase text-accent mb-1">Global Highlights</p>
                 <h4 className="text-xl font-headline font-bold uppercase">The Investors Summit Experience</h4>
               </div>
             </div>

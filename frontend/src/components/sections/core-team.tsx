@@ -48,6 +48,11 @@ const coreTeam = [
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782803442/Ms.-Lima-Akter-1.1_rfymbc.jpg",
   },
   {
+    name: "Ms. Nafula Adongo Peace Matha",
+    role: "Regional Coordinator",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782803442/Ms.-Nafula-Adongo-Peace-Matha-1.1_jglptz.jpg",
+  },
+  {
     name: "Mr. Reshad Majumder",
     role: "Asst. Vice President, Digital Products",
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782803441/Mr.-Reshad-1.1_xkvfg5.jpg",
@@ -61,11 +66,6 @@ const coreTeam = [
     name: "Ms. Ranu Akter",
     role: "Asst. Vice President, Digital Marketing",
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782803440/Ms.-Ranu-akter-1.1_ckizbi.jpg",
-  },
-  {
-    name: "Ms. Nafula Adongo Peace Matha",
-    role: "Regional Coordinator",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782803442/Ms.-Nafula-Adongo-Peace-Matha-1.1_jglptz.jpg",
   }
 ]
 

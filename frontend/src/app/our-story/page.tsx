@@ -1,16 +1,20 @@
 
+"use client"
+
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import { CoreTeam } from "@/components/sections/core-team"
 import Image from "next/image"
 import { Shield, Globe, Users, Landmark, UserCircle, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Our Story | The Genesis of Business Summit',
-  description: 'The journey of Dr. M. Haider Uzzaman and the evolution of Business Summit Limited into a global engine of economic opportunity across 150+ countries.',
-}
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 const regionalDirectors = [
   { 
@@ -37,6 +41,11 @@ const regionalDirectors = [
     name: "DR. JACKY ONG", 
     region: "Asia",
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471548/jacky_ueshnm.jpg"
+  },
+  { 
+    name: "Oksana Schevchenko", 
+    region: "Switzerland",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782896700/Oksana_Schevchenko_Switzerland_aljcsx.jpg"
   },
 ]
 
@@ -207,40 +216,63 @@ export default function OurStory() {
 
       <CoreTeam />
 
-      {/* Regional Directors Section */}
-      <section className="py-32 bg-background">
-        <div className="container mx-auto px-4 md:px-24">
-          <div className="mb-20">
-             <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block mb-4">Global Network</span>
-             <h2 className="text-5xl font-headline font-bold uppercase">
-               Regional <span className="text-accent">Directors</span>
-             </h2>
-          </div>
+      {/* Regional Directors Section - Structured Auto Carousel */}
+      <section className="py-32 bg-background border-b border-black/5 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-24 mb-16">
+           <div className="flex flex-col md:flex-row items-end justify-between gap-8">
+             <div className="space-y-4">
+               <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block">Global Network</span>
+               <h2 className="text-5xl font-headline font-bold uppercase">
+                 Regional <span className="text-accent">Directors</span>
+               </h2>
+             </div>
+             <p className="max-w-xs text-right text-muted-foreground font-light text-sm uppercase tracking-widest">
+               Strategic leadership across major international corridors.
+             </p>
+           </div>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-            {regionalDirectors.map((director, i) => (
-              <div key={i} className="group space-y-6">
-                <div className="relative aspect-[4/5] overflow-hidden bg-white border border-black/5 transition-all duration-700 hover:shadow-2xl">
-                  {director.image ? (
-                    <Image 
-                      src={director.image} 
-                      alt={`${director.name} - ${director.region}`} 
-                      fill 
-                      className="object-cover transition-all duration-1000 group-hover:scale-110"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 bg-muted/30 flex items-center justify-center">
-                      <UserCircle className="w-16 h-16 text-muted-foreground/20" />
+        <div className="px-4 md:px-24">
+          <Carousel 
+            opts={{ align: "start", loop: true }}
+            plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-8">
+              {regionalDirectors.map((director, i) => (
+                <CarouselItem 
+                  key={i} 
+                  className="pl-8 basis-full sm:basis-1/2 lg:basis-1/4"
+                >
+                  <div className="group space-y-6">
+                    <div className="relative aspect-[4/5] overflow-hidden bg-white border border-black/5 transition-all duration-700 hover:shadow-2xl shadow-sm">
+                      {director.image ? (
+                        <Image 
+                          src={director.image} 
+                          alt={`${director.name} - ${director.region}`} 
+                          fill 
+                          className="object-cover transition-all duration-1000 group-hover:scale-110"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-muted/30 flex items-center justify-center">
+                          <UserCircle className="w-16 h-16 text-muted-foreground/20" />
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
                     </div>
-                  )}
-                </div>
-                <div className="space-y-1 text-center md:text-left">
-                  <h4 className="text-xl font-headline font-bold uppercase tracking-tight leading-tight">{director.name}</h4>
-                  <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase">{director.region}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+                    <div className="space-y-1">
+                      <h4 className="text-xl font-headline font-bold uppercase tracking-tight leading-tight group-hover:text-accent transition-colors">{director.name}</h4>
+                      <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase">{director.region}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-end gap-4 mt-8">
+              <CarouselPrevious className="static translate-y-0 rounded-none w-12 h-12 border-black/10 hover:bg-black hover:text-white transition-all" />
+              <CarouselNext className="static translate-y-0 rounded-none w-12 h-12 border-black/10 hover:bg-black hover:text-white transition-all" />
+            </div>
+          </Carousel>
         </div>
       </section>
 

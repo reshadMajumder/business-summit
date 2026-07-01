@@ -3,303 +3,285 @@
   "placeholderImages": [
     {
       "id": "app-logo",
-      "description": "Official Business Summit Corporate Logo",
-      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1780388039/bsl_aex2m3.png",
-      "imageHint": "corporate logo"
+      "description": "Business Summit Official Logo",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1779648074/bs_rsgucp.png",
+      "imageHint": "company logo"
     },
     {
       "id": "speaker-1",
-      "description": "Dr. M. Haider Uzzaman - Chairman and Founder portrait",
-      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781114636/9fef9adf-dcd8-4ad9-b24e-bc734c8a2502.png",
+      "description": "Dr. M. Haider Uzzaman - Chairman",
+      "imageUrl": "https://businesssummit.net/wp-content/uploads/2024/12/744786_5216b5a1ffdf404bae1d280ac96fa1cemv2.avif",
       "imageHint": "executive portrait"
     },
     {
       "id": "speaker-2",
-      "description": "Innovation Director speaking at corporate session",
+      "description": "Innovation Director speaking",
       "imageUrl": "https://picsum.photos/seed/apex2/800/1000",
       "imageHint": "executive portrait"
     },
     {
       "id": "speaker-3",
-      "description": "Global Strategic Business Advisor portrait",
+      "description": "Global Strategist",
       "imageUrl": "https://picsum.photos/seed/apex3/800/1000",
       "imageHint": "professional speaker"
     },
     {
       "id": "speaker-4",
-      "description": "Future Technology Leader executive portrait",
+      "description": "Future Tech Leader",
       "imageUrl": "https://picsum.photos/seed/apex4/800/1000",
       "imageHint": "business woman"
     },
     {
-      "id": "advisor-mahathir",
-      "description": "Tun Dr. Mahathir Mohamad - Advisory Board Member",
-      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781176162/477fb353-fbe9-447e-9adb-6af0828f0319.png",
-      "imageHint": "statesman portrait"
-    },
-    {
-      "id": "advisor-goodluck",
-      "description": "Dr. Goodluck Ebele Jonathan - Advisory Board Member",
-      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781176294/e358512b-950a-4fa5-b2e4-62189e42b28a.png",
-      "imageHint": "official portrait"
-    },
-    {
       "id": "live-keynote",
-      "description": "Live Global Keynote Presentation Stage",
+      "description": "Live keynote background",
       "imageUrl": "https://picsum.photos/seed/live/1200/800",
       "imageHint": "conference stage"
     },
     {
       "id": "partner-1",
-      "description": "Strategic Partner Logo 1",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_744c1d7199824d88884b9a0aa6226d93mv2-1.png",
-      "imageHint": "company logo"
+      "description": "Partner Logo 1",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501217/VIP-JET_szyppn.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-2",
-      "description": "Strategic Partner Logo 2",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_ad727ce1d7d0406bb4596753637e1357mv2.jpeg",
-      "imageHint": "corporate identity"
+      "description": "Partner Logo 2",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501217/TUGA-INNOVATIONS_rabsxp.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-3",
-      "description": "Strategic Partner Logo 3",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_b0b4461404b74fc29bc891bbba5013c0mv2.jpeg",
-      "imageHint": "brand mark"
+      "description": "Partner Logo 3",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501216/TREE-HOUSE_cxfa7i.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-4",
-      "description": "Strategic Partner Logo 4",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_bb1254d3faa54559a5c477b4d9ad35d3mv2.png",
+      "description": "Partner Logo 4",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501216/THE-GOLDEN-PHOENIX_zr4cwf.jpg",
       "imageHint": "logo design"
     },
     {
       "id": "partner-5",
-      "description": "Strategic Partner Logo 5",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_c891662052e743359bef5b0ff0334feemv2.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 5",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501216/STONE-CASTLE_t0lkaq.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-6",
-      "description": "Strategic Partner Logo 6",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_d4f1eed6178241afa1170333ebb8f22bmv2.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 6",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501215/SIGNATURE-GLOBAL_qjw0bx.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-7",
-      "description": "Strategic Partner Logo 7",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_d0142245e65b4024b4fce0ebe856675bmv2.jpg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 7",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501215/REGENT-FINANCIAL_elevgj.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-8",
-      "description": "Strategic Partner Logo 8",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_d559685d01a14f7f81b6c111a93a275bmv2.jpg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 8",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501214/PROBASI-POLLI_hbknyi.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-9",
-      "description": "Strategic Partner Logo 9",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_e8645b0c73324aaf817e05cfca3a21a8mv2.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 9",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501214/PORTO-MONTENEGREO_wxyfdi.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-10",
-      "description": "Strategic Partner Logo 10",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_0f9ba4cec986452897843067f70dab52mv2.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 10",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501213/PASSPORT-LEGACY_eqtxxi.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-11",
-      "description": "Strategic Partner Logo 11",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_1c3a2a86a61b4ef19bccc54709b778aemv2.jpg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 11",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501213/PARADISE-HILLS_ds8b9c.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-12",
-      "description": "Strategic Partner Logo 12",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_3c20512e52384a689b5d97796f765737mv2.jpg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 12",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501212/OBORSEANA_ldfxa2.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-13",
-      "description": "Strategic Partner Logo 13",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_4eb779ddaa2d480ea2a98cf706fcdab4mv2.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 13",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501212/MILLINER-WEARS-ACCESSORIES-LTD_jglfse.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-14",
-      "description": "Strategic Partner Logo 14",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_7a5d6a920a61419593e290d401d21e7bmv2.jpg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 14",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501212/KENYA-AIRWAYS_brt4bl.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-15",
-      "description": "Strategic Partner Logo 15",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_032d1a8d3cc3484a95d6353c0154d6f1mv2.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 15",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501212/KNIGHT-CAPITAL_khry5j.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-16",
-      "description": "Strategic Partner Logo 16",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_38a60325c2b34f1ca464ede410b996bamv2.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 16",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501211/K3-TELECOM_m8dpjs.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-17",
-      "description": "Strategic Partner Logo 17",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_66c16021c1424e36bf928e53413a8febmv2.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 17",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501211/ISAYYES_uhsu2o.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-18",
-      "description": "Strategic Partner Logo 18",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_a126293390e340a58a24b4fa9febeb1emv2.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 18",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501210/IPSSL-GROUP_jkjcav.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-19",
-      "description": "Strategic Partner Logo 19",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/744786_c9cd6f4cea73481ba7d7b54a75095789mv2.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 19",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501210/INVEST-SA_s2kvd1.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-20",
-      "description": "Strategic Partner Logo 20",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/logo_blue.avif",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 20",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501209/HYDROKAPILLARE_egyhuc.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-21",
-      "description": "Strategic Partner Logo 21",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-10-at-3.33.45-PM.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 21",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501209/HER-VENTURE-HUB_boicgc.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-22",
-      "description": "Strategic Partner Logo 22",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-10-at-3.32.58-PM.jpeg",
-      "imageHint": "partner logo"
+      "description": "Strategic Partner - HELLO AIR",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501209/HELLO-AIR_ujoipd.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-23",
-      "description": "Strategic Partner Logo 23",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/08/Milliner-logo-01.jpg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 23",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501208/GREEN-BOND_p29ymf.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-24",
-      "description": "Strategic Partner Logo 24",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-14-at-10.00.50-PM.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 24",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501208/GOVERNMENT-OF-PLATEAU-STATE-OF-NIGERIA_qwx0n8.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-25",
-      "description": "Strategic Partner Logo 25",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/02/Plateau-State.jpg.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 25",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501208/DIASPORA-PRIME-PORTUGAL_bhgif1.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-26",
-      "description": "Strategic Partner Logo 26",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/03/Diaspora-Prime-Portugal.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 26",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501207/DESIGNERS-DO-FUTURO_fpbf4c.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-27",
-      "description": "Strategic Partner Logo 27",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/03/Africa-gcc.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 27",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501205/CAPITAL-88_czamye.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-28",
-      "description": "Strategic Partner Logo 28",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/03/WhatsApp-Image-2026-02-26-at-4.23.22-PM.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 28",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501205/CISW-HOLDING-GROUP_btnvcy.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-29",
-      "description": "Strategic Partner Logo 29",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/03/WhatsApp-Image-2026-02-26-at-4.22.37-PM.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 29",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501205/BANDLMAGE_pixnzp.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-30",
-      "description": "Strategic Partner Logo 30",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/03/stone-cstle-logo.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 30",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501205/CENTUREON_rgtuxv.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-31",
-      "description": "Strategic Partner Logo 31",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_2ac4d2d9dd0240879d8bc7d51e4015b5mv2.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 31",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/ALTEC-GLOBAL_uqy8bo.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-32",
-      "description": "Strategic Partner Logo 32",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_3c65653d5e4d4c6983a1ae8d2b6609a7mv2.png",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 32",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/ASPIRE-WORLD-INVESTMENT_fnd87m.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-33",
-      "description": "Strategic Partner Logo 33",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_8e5175b14a054b67b76a4e1eff622fcemv2.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 33",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/ARTHUR-MACKENZY_xvpda0.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-34",
-      "description": "Strategic Partner Logo 34",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_8ec9260a0b794d45a837124d37e6bb0emv2.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 34",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/alkebulan_s7wjgu.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-35",
-      "description": "Strategic Partner Logo 35",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_255adb9ba05f4f50b4654b90e9c1018dmv2.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 35",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/aim-congress_qvdyqd.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "partner-36",
-      "description": "Strategic Partner Logo 36",
-      "imageUrl": "https://businesssummit.net/wp-content/uploads/2025/01/776ee8_732f82f39dfd4a4b9e23e60e8ba8eebamv2.jpeg",
-      "imageHint": "partner logo"
+      "description": "Partner Logo 36",
+      "imageUrl": "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782501204/Africa-GCC-COUNCIL_ls5rq7.jpg",
+      "imageHint": "logo design"
     },
     {
       "id": "mou-1",
-      "description": "Strategic Business Preparation and Meeting",
+      "description": "Preparation for MOU signing",
       "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/05/prepare.jpeg",
       "imageHint": "business preparation"
     },
     {
       "id": "mou-2",
-      "description": "Official MOU Signing and Handshake Ceremony",
+      "description": "MOU Handshake with Governor",
       "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/05/hand-shake-1024x768.jpeg",
       "imageHint": "official handshake"
     },
     {
       "id": "gallery-1",
-      "description": "Executive Panel Discussion at Investors Summit",
+      "description": "Summit Discussion Panel",
       "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/05/0901-1-1024x576.jpg",
       "imageHint": "conference discussion"
     },
     {
       "id": "gallery-2",
-      "description": "Global Investors Presentation Hall",
+      "description": "Summit Presentation Hall",
       "imageUrl": "https://businesssummit.net/wp-content/uploads/2026/05/DSC06283-1-1024x576.jpg",
       "imageHint": "keynote audience"
     },
     {
       "id": "mentoring-promo",
-      "description": "Executive Mentoring and Private Strategy Session",
+      "description": "Mentoring Session Promotion",
       "imageUrl": "https://businesssummit.net/wp-content/uploads/2024/12/744786_b5a796c4cac3481ea32160d99c82831emv2.avif",
       "imageHint": "business professional"
-    },
-    {
-      "id": "book-featured",
-      "description": "Strategic Business Architecture Digital Publication",
-      "imageUrl": "https://bookcover4u.com/pro/Business-book-cover-design-P1477724590BUB-Startup-Ideas-business-entrepreneurstartup-ideas.jpg",
-      "imageHint": "book cover"
     }
   ]
 }

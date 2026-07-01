@@ -48,7 +48,7 @@ export const posts: BlogPost[] = [
     content: "We are pleased to announce an official milestone in our regional expansion. Business Summit has received a formal invitation to join Connect Cities as the Director for Asia. This strategic partnership aims to bridge the gap between Asian markets and global investment opportunities.\n\nBy taking on this leadership role, Dr. Haider and the Business Summit team will facilitate new diplomatic business relations, helping enterprises navigate the complexities of international growth. This appointment reinforces our mission to be the world leader in connecting B2B and G2G business affairs, ensuring that our clients have direct access to the most dynamic economies in the Asian continent. The role involves overseeing strategic matchmaking between institutional investors and ready-to-go urban infrastructure projects across the region.",
     date: "April 28, 2024",
     author: "Strategic Board",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782804123/Letter_of_Invitation_to_Join_Connect_Cities_as_Director_for_Asia_hju8c6.jpg",
+    image: "https://picsum.photos/seed/asia/1200/800",
     category: "Global News"
   },
   {
@@ -58,7 +58,7 @@ export const posts: BlogPost[] = [
     content: "The landscape of global business is shifting towards foundational architecture. As explored in our latest executive roundtable, the strength of a business isn't just in its product, but in the infrastructure it occupies.\n\nIn emerging economies, particularly in regions like West Africa and Southeast Asia, the primary digital and physical banking structures are undergoing a radical transformation. Business Summit is at the forefront of this evolution, connecting neobanking visionaries with the capital needed to build these essential systems. This article explores why infrastructure-focused investments are yielding the most resilient returns in the current global economic climate.",
     date: "April 15, 2024",
     author: "Tech Insights",
-    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782804123/Architecting_the_Future_How_Infrastructure_Drives_Global_Scaling_jblalp.jpg",
+    image: "https://picsum.photos/seed/infra/1200/800",
     category: "Strategic Insights"
   },
   {
