@@ -1,4 +1,3 @@
-
 "use client"
 
 import { Navbar } from "@/components/layout/navbar"
@@ -70,12 +69,12 @@ export default function OurStory() {
       <section className="py-24 bg-white overflow-hidden border-b border-black/5">
         <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-8 animate-fade-in text-center lg:text-left">
               <div className="space-y-2">
                 <span className="text-[10px] font-bold tracking-[0.4em] text-accent uppercase">Origin</span>
                 <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-tight">Regional <br /> <span className="text-accent">Expansion</span></h2>
               </div>
-              <div className="space-y-6 text-lg font-light leading-relaxed text-muted-foreground text-justify">
+              <div className="space-y-6 text-lg font-light leading-relaxed text-muted-foreground text-center lg:text-justify">
                 <p>
                   Business Summit is the brainchild of renowned entrepreneur and global business leader, <span className="text-primary font-medium">Dr. M. Haider Uzzaman</span>.
                 </p>
@@ -109,12 +108,12 @@ export default function OurStory() {
                 className="object-cover transition-all duration-1000 group-hover:scale-105"
               />
             </div>
-            <div className="space-y-8 order-1 lg:order-2 animate-fade-in delay-200">
+            <div className="space-y-8 order-1 lg:order-2 animate-fade-in delay-200 text-center lg:text-left">
               <div className="space-y-2">
                 <span className="text-[10px] font-bold tracking-[0.4em] text-accent uppercase">Institutional Legacy</span>
                 <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-tight">An Ecosystem <br /> of <span className="text-accent">100,000</span></h2>
               </div>
-              <p className="text-lg font-light leading-relaxed text-muted-foreground text-justify">
+              <p className="text-lg font-light leading-relaxed text-muted-foreground text-center lg:text-justify">
                 At its peak, his business network employed over 100,000 people. This was not just a collection of companies, but a continental engine of economic opportunity. Dr. Haider's journey through traditional business sectors established a foundation of credibility that defines the Business Summit today.
               </p>
             </div>
@@ -126,12 +125,12 @@ export default function OurStory() {
       <section className="py-24 bg-white border-b border-black/5">
         <div className="container mx-auto px-6 sm:px-12 md:px-24">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-8 animate-fade-in text-center lg:text-left">
               <div className="space-y-2">
                 <span className="text-[10px] font-bold tracking-[0.4em] text-accent uppercase">Reach</span>
                 <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-tight">150+ <br /> <span className="text-accent">Countries</span></h2>
               </div>
-              <div className="space-y-6 text-lg font-light leading-relaxed text-muted-foreground text-justify">
+              <div className="space-y-6 text-lg font-light leading-relaxed text-muted-foreground text-center lg:text-justify">
                 <p>
                   Having travelled to more than 150 countries, including 42 across Africa, Dr. Haider built an extensive network of business leaders, investors, and entrepreneurs.
                 </p>
@@ -219,14 +218,14 @@ export default function OurStory() {
       {/* Regional Directors Section - Structured Auto Carousel */}
       <section className="py-32 bg-background border-b border-black/5 overflow-hidden">
         <div className="container mx-auto px-4 md:px-24 mb-16">
-           <div className="flex flex-col md:flex-row items-end justify-between gap-8">
-             <div className="space-y-4">
+           <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-8">
+             <div className="space-y-4 text-center lg:text-left">
                <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block">Global Network</span>
                <h2 className="text-5xl font-headline font-bold uppercase">
                  Regional <span className="text-accent">Directors</span>
                </h2>
              </div>
-             <p className="max-w-xs text-right text-muted-foreground font-light text-sm uppercase tracking-widest">
+             <p className="max-w-xs text-center lg:text-right text-muted-foreground font-light text-sm uppercase tracking-widest">
                Strategic leadership across major international corridors.
              </p>
            </div>

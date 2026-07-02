@@ -56,12 +56,12 @@ export function Testimonials() {
   return (
     <section className="py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-24">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
-          <div className="space-y-4">
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-between mb-20 gap-8">
+          <div className="space-y-4 text-center md:text-left">
             <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block">Executive Feedback</span>
             <h2 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-none">Testimonials</h2>
           </div>
-          <p className="max-w-md text-right text-muted-foreground font-light text-lg">
+          <p className="max-w-md text-center md:text-right text-muted-foreground font-light text-lg">
             Voices of global leaders who have transformed their strategic trajectories through the Summit.
           </p>
         </div>

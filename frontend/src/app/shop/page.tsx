@@ -115,8 +115,8 @@ export default function ShopPage() {
               </div>
               <div className="pt-8 border-t border-black/5 w-full">
                 <Button asChild variant="outline" className="w-full h-16 rounded-none border-black/10 text-[10px] font-bold tracking-widest uppercase hover:bg-black hover:text-white transition-all">
-                  <Link href="mailto:info@businesssummit.net">
-                    Inquire Access
+                  <Link href="https://www.amazon.com/stores/M-Haider-Uzzaman/author/B0H46KT1F3?_encoding=UTF8&pd_rd_w=Hwl4y&content-id=amzn1.sym.7e190e19-9f6f-4df8-807a-5a7608594741&pd_rd_wg=IxZyg&pd_rd_r=d28bdbca-442b-48f1-a514-ac7ba2c2fb13&ref=ap_rdr&shoppingPortalEnabled=true" target="_blank">
+                    VIEW ON AMAZON
                     <ArrowRight className="ml-3 w-4 h-4" />
                   </Link>
                 </Button>

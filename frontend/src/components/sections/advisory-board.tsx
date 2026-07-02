@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image"
@@ -30,6 +31,24 @@ const boardMembers = [
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471517/Mr._Shaher_Mousli_poiidp.jpg",
     imageHint: "founder portrait"
   },
+  {
+    name: "H.E. Dr. Ernest Ndukwe",
+    role: "Chairman, MTN Nigeria Limited",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1783006573/Mr_Ernest_Ndukwe_lhw4dd.png",
+    imageHint: "executive portrait"
+  },
+  {
+    name: "H.E. Sandra Bukane",
+    role: "Former Adviser to the Prime Minister of Latvia",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1783006572/H.E.-Sandra-Bukane_cirf2a.jpg",
+    imageHint: "diplomatic portrait"
+  },
+  {
+    name: "H.E. Raymond Ndong Sima",
+    role: "Former Prime Minister of Gabon",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1783006571/H.E.-Raymond-Ndong-Sima_rf0qdt.jpg",
+    imageHint: "dignitary portrait"
+  }
 ]
 
 export function AdvisoryBoard() {
@@ -56,7 +75,7 @@ export function AdvisoryBoard() {
   return (
     <section className="py-32 bg-white">
       <div className="container mx-auto px-4 md:px-24">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between mb-24 gap-8">
           <div className="space-y-4 text-center md:text-left">
             <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block">The Council</span>
             <h2 className="text-5xl md:text-7xl font-headline font-bold uppercase leading-none">

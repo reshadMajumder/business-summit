@@ -1,3 +1,6 @@
+
+"use client"
+
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import Image from "next/image"
@@ -11,13 +14,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 import { cn } from "@/lib/utils"
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Investors Summit | High-Level Cross Border Collaboration',
-  description: 'The premier global convening of investors, government dignitaries, and project owners. Facilitating G2G, G2B, and B2B engagements since 2016.',
-}
 
 const events = [
   {
@@ -51,6 +49,11 @@ const keyPeople = [
     role: "EXECUTIVE GOVERNOR OF PLATEAU STATE", 
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1781203005/Governor_H.E._Caleb_Mutfwang_imdcn5.jpg" 
   },
+  {
+    name: "MR. GONÇALO TERENAS",
+    role: "Co-Chair, Africa GCC Business Council",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1783008225/Gon%C3%A7alo_Terenas_qfqlmf.jpg"
+  },
   { 
     name: "H.E. SENATOR ANYIM PIUS ANYIM", 
     role: "FORMER SECRETARY TO THE GOVERNMENT OF THE FEDERATION", 
@@ -60,11 +63,34 @@ const keyPeople = [
     name: "PROF. DR. AHMED BIN SALAWUDEEN",
     role: "PRESIDENT, STANDARD INSURANCE CONSULTANTS LIMITED",
     image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782480846/PROF._DR._AHMED_BIN_SALAWUDEEN_rw83mn.jpg"
+  },
+  {
+    name: "MR. SHAHER MOUSLI",
+    role: "FOUNDER & CHAIRMAN, GULF LAND PROPERTY DEVELOPERS",
+    image: "https://res.cloudinary.com/dzgs1uhn0/image/upload/v1782471517/Mr._Shaher_Mousli_poiidp.jpg"
   }
 ]
 
 export default function SummitPage() {
-  const isScrolling = keyPeople.length > 4;
+  const isCarousel = keyPeople.length > 4;
+
+  const renderPersonCard = (person: typeof keyPeople[0], i: number) => (
+    <div key={i} className="space-y-6 group w-full max-w-[320px] mx-auto">
+      <div className="relative aspect-[4/5] bg-white/5 overflow-hidden border border-white/10 shadow-2xl transition-all duration-700">
+        <Image 
+          src={person.image} 
+          alt={`${person.name} - ${person.role}`} 
+          fill 
+          className="object-cover object-top transition-all duration-1000 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+      </div>
+      <div className="space-y-2 px-1 text-center">
+        <h4 className="text-xl font-headline font-bold uppercase tracking-tight leading-tight">{person.name}</h4>
+        <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase leading-relaxed opacity-80">{person.role}</p>
+      </div>
+    </div>
+  );
 
   return (
     <main className="relative min-h-screen bg-background">
@@ -136,35 +162,45 @@ export default function SummitPage() {
       {/* Key People Section */}
       <section className="py-32 bg-primary text-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-24 mb-20">
-          <div className="space-y-4 text-center md:text-left">
-             <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block">Dignitaries</span>
-            <h2 className="text-5xl font-headline font-bold uppercase">Key People</h2>
+          <div className="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between gap-8">
+            <div className="space-y-4 text-center md:text-left">
+               <span className="text-xs font-bold tracking-[0.5em] text-accent uppercase block">Dignitaries</span>
+              <h2 className="text-5xl font-headline font-bold uppercase">Key People</h2>
+            </div>
+            <p className="max-w-xs text-center md:text-right text-white/40 font-light text-sm uppercase tracking-widest">
+              Distinguished leaders shaping the future of global commerce.
+            </p>
           </div>
         </div>
         
-        <div className="relative flex overflow-hidden">
-          <div className={cn(
-            "flex gap-12",
-            isScrolling ? "animate-scroll-left whitespace-nowrap" : "container mx-auto px-4 md:px-24 justify-center flex-wrap"
-          )}>
-            {(isScrolling ? [...keyPeople, ...keyPeople, ...keyPeople, ...keyPeople] : keyPeople).map((person, i) => (
-              <div key={i} className="space-y-6 group w-full md:w-[320px] shrink-0 inline-block whitespace-normal">
-                <div className="relative aspect-[4/5] bg-white/5 overflow-hidden border border-white/10 shadow-2xl transition-all duration-700">
-                  <Image 
-                    src={person.image} 
-                    alt={`${person.name} - ${person.role}`} 
-                    fill 
-                    className="object-cover object-top transition-all duration-1000 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
-                </div>
-                <div className="space-y-2 px-1 text-center">
-                  <h4 className="text-xl font-headline font-bold uppercase tracking-tight leading-tight">{person.name}</h4>
-                  <p className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase leading-relaxed opacity-80">{person.role}</p>
-                </div>
+        <div className="px-4 md:px-24">
+          {isCarousel ? (
+            <Carousel 
+              opts={{ align: "start", loop: true }}
+              plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-8">
+                {keyPeople.map((person, i) => (
+                  <CarouselItem key={i} className="pl-8 md:basis-1/2 lg:basis-1/4">
+                    {renderPersonCard(person, i)}
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center md:justify-end gap-4 mt-12">
+                <CarouselPrevious className="static translate-y-0 rounded-none w-12 h-12 border-white/10 bg-transparent hover:bg-white hover:text-black transition-all" />
+                <CarouselNext className="static translate-y-0 rounded-none w-12 h-12 border-white/10 bg-transparent hover:bg-white hover:text-black transition-all" />
               </div>
-            ))}
-          </div>
+            </Carousel>
+          ) : (
+            <div className="flex flex-wrap justify-center gap-12">
+              {keyPeople.map((person, i) => (
+                <div key={i} className="w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(25%-2.25rem)]">
+                  {renderPersonCard(person, i)}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

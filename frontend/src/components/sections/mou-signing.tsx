@@ -1,4 +1,3 @@
-
 'use client'
 
 import Image from "next/image"
@@ -48,14 +47,13 @@ export function MOUSigning() {
   return (
     <section className="py-24 bg-white border-b border-black/5">
       <div className="container mx-auto px-4 md:px-24">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
-          <div className="space-y-4">
-            <span className="text-xs font-bold tracking-[0.4em] text-accent uppercase block">Diplomatic Milestone</span>
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between mb-16 gap-8">
+          <div className="space-y-4 text-center md:text-left">
             <h2 className="text-4xl md:text-5xl font-headline font-bold uppercase leading-none">
               Diplomatic <br /> <span className="text-accent">Milestones</span>
             </h2>
           </div>
-          <p className="max-w-xs text-right text-muted-foreground font-light text-sm uppercase tracking-widest">
+          <p className="max-w-xs text-center md:text-right text-muted-foreground font-light text-sm uppercase tracking-widest">
             Formalizing strategic collaboration for regional excellence.
           </p>
         </div>
